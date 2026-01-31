@@ -1,21 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #070707;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #070707;
   }
 }
 
@@ -23,4 +20,30 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.logo {
+    @apply w-[117px] h-8;
+}
+
+.navbar {
+    @apply text-white bg-[url("/layout/navbar/nav-bg.png")] bg-cover bg-center bg-no-repeat py-6;
+}
+
+.navbar-wrapper {
+    @apply flex justify-between;
+}
+
+.navbar-links-wrapper ul li{
+    @apply flex gap-6;
+}
+
+.link-wrapper:hover {
+    @apply bg-[#FFFFFF0A] px-6 py-2 rounded-[42px] border border-[#00D1FF0A];
 }
