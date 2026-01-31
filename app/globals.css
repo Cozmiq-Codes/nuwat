@@ -28,8 +28,8 @@ body {
 }
 
 @layer components {
-    .secondary-btn {
-        @apply relative inline-flex items-center justify-center overflow-hidden
+  .secondary-btn {
+    @apply relative inline-flex items-center justify-center overflow-hidden
         rounded-full px-6 py-[10px]
         text-[16px] font-medium text-white/95
         bg-white/10 backdrop-blur-xl
@@ -37,15 +37,24 @@ body {
         shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-1px_0_rgba(255,255,255,0.06),0_12px_30px_rgba(0,0,0,0.45)]
         transition hover:bg-white/12 active:scale-[0.99]
         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30;
-    }
+  }
 
-    .secondary-btn::before {
-        content: "";
-        @apply pointer-events-none absolute inset-0 rounded-full
+  .secondary-btn::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 rounded-full
         bg-gradient-to-b from-white/25 via-white/10 to-transparent opacity-60;
-    }
+  }
 }
 
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.secondary-btn:active {
+  transform: translateY(0);
+}
 
 /* Navbar */
 .logo {
@@ -57,7 +66,7 @@ body {
 }
 
 .navbar-wrapper {
-  @apply flex justify-between;
+  @apply flex justify-between items-center;
 }
 
 .navbar-links-wrapper ul {
@@ -65,12 +74,49 @@ body {
 }
 
 .navbar-links-wrapper ul li {
-  @apply flex gap-6;
+  @apply flex gap-3;
 }
 
 .link-wrapper {
   padding: 8px 24px;
-  @apply bg-[#FFFFFF0A] rounded-[42px] border border-[#00D1FF0A];
+  position: relative;
+  isolation: isolate;
+  border: 1px solid transparent;
+  @apply rounded-[42px] transition-colors duration-300;
+  background-color: transparent;
+}
+
+.link-wrapper:hover {
+  background-color: #ffffff0a;
+}
+
+.link-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 42px;
+  padding: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(81, 162, 255, 0.24),
+    rgba(0, 209, 255, 0.24)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.link-wrapper:hover::before {
+  opacity: 1;
 }
 
 .nav-buttons-wrapper {
@@ -84,26 +130,4 @@ body {
 
 .local-btn:hover {
   background: rgba(255, 255, 255, 0.05);
-}
-
-.secondary-btn {
-  @apply text-white px-8 py-2.5 rounded-[42px] cursor-pointer transition-all duration-300;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.1),
-    0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
-}
-
-.secondary-btn:active {
-  transform: translateY(0);
 }

@@ -22,11 +22,11 @@ const Navbar = () => {
           <div className={"navbar-links-wrapper"}>
             <ul>
               {NAVBAR_LINK.map((link, index) => (
-                <li key={index}>
-                  <div className={"link-wrapper"}>
-                    <Link href={link.url}>{link.name}</Link>
-                  </div>
-                </li>
+                <Link href={link.url} key={index}>
+                  <li>
+                    <div className={"link-wrapper"}>{link.name}</div>
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
