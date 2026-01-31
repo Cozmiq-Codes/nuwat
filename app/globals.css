@@ -9,6 +9,9 @@
   --color-background: var(--background);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --image-primary-btn: linear-gradient(180deg, #00D1FF 18.78%, #51A2FF 74.66%);
+  --image-primary-btn-hover: linear-gradient(180deg, #51A2FF 18.78%, #00D1FF 74.66%);
+  --shadow-secondary-btn: inset 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 0 rgba(255, 255, 255, 0.06), 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,20 +40,12 @@ body.menu-open {
 
 @layer components {
   .secondary-btn {
-    @apply relative inline-flex items-center justify-center overflow-hidden
-        rounded-full px-6 py-[10px]
-        text-[16px] font-medium text-white/95
-        bg-white/10 backdrop-blur-xl
-        border border-white/20
-        shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-1px_0_rgba(255,255,255,0.06),0_12px_30px_rgba(0,0,0,0.45)]
-        transition hover:bg-white/12 active:scale-[0.99]
-        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30;
+    @apply relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-[10px] text-[16px] font-medium text-white/95 bg-white/10 backdrop-blur-xl border border-white/20 shadow-secondary-btn transition hover:bg-white/12 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30;
   }
 
   .secondary-btn::before {
     content: "";
-    @apply pointer-events-none absolute inset-0 rounded-full
-        bg-gradient-to-b from-white/25 via-white/10 to-transparent opacity-60;
+    @apply pointer-events-none absolute inset-0 rounded-full bg-gradient-to-b from-white/25 via-white/10 to-transparent opacity-60;
   }
 }
 
@@ -104,11 +99,9 @@ body.menu-open {
   inset: -1px;
   border-radius: 42px;
   padding: 1px;
-  background: linear-gradient(
-    to right,
-    rgba(81, 162, 255, 0.24),
-    rgba(0, 209, 255, 0.24)
-  );
+  background: linear-gradient(to right,
+      rgba(81, 162, 255, 0.24),
+      rgba(0, 209, 255, 0.24));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -239,11 +232,30 @@ body.menu-open {
 }
 
 .primary_button {
-  @apply text-[#F2F7FE] mt-8 inline-flex items-center gap-2 rounded-[46px]
-    bg-[linear-gradient(180deg,_#00D1FF_18.78%,_#51A2FF_74.66%)]
-    px-6 py-3 font-medium transition;
+  @apply text-[#F2F7FE] inline-flex items-center gap-2 rounded-[46px] px-6 py-3 font-medium transition;
+  background: linear-gradient(180deg, #00D1FF 18.78%, #51A2FF 74.66%);
 }
 
 .primary_button:hover {
-  @apply bg-[linear-gradient(180deg,_#51A2FF_18.78%,_#00D1FF_74.66%)];
+  transform: translateY(-1px);
+}
+
+.heading_2 {
+  @apply text-[#F2F7FE] font-semibold lg:font-bold text-[28px] lg:text-[48px] leading-[1.32];
+}
+
+.paragraph_md {
+  @apply text-[#FFFFFF99] font-normal text-[14px] lg:text-[16px] leading-[28px];
+}
+
+.cta_content_wrap {
+  @apply flex flex-col items-center text-center gap-6 rounded-[24px] bg-[url('/layout/cta/cta-bg.png')] bg-cover bg-center bg-no-repeat px-[32px] md:px-[0px] py-[40px] sm:py-[80px] lg:py-[120px] px-4 md:px-8 lg:px-0 mt-[40px] lg:mt-[60px] mb-[60px] lg:mb-[120px] overflow-hidden border border-[#ffffff1a];
+}
+
+.cta_top_content {
+  @apply flex flex-col gap-[18px];
+}
+
+.cta_bottom_content {
+  @apply flex flex-col sm:flex-row items-center justify-center gap-4;
 }
