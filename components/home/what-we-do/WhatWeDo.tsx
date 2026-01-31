@@ -20,8 +20,7 @@ const WhatWeDo = () => {
                             <span className="text-cyan-400">of how business is done</span>.
                         </h3>
                         <div className={"what_we_do_btn"}>
-                            <button className="primary_button"><span><Image src="/layout/what-we-do/right_icon.svg" alt="Right Icon" width={24} height={24} /></span>About Nuwat
-                            </button>
+                            <button className="primary_button"><span><Image src="/layout/what-we-do/right_icon.svg" alt="Right Icon" width={24} height={24} /></span>About Nuwat</button>
                         </div>
                     </div>
                 </div>

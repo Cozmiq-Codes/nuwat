@@ -2,6 +2,7 @@
 
 :root {
   --background: #070707;
+  --foreground: #f2f7fe;
 }
 
 @theme inline {
@@ -13,6 +14,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #070707;
+    --foreground: #f2f7fe;
   }
 }
 
@@ -48,35 +50,41 @@ body {
   @apply bg-[#FFFFFF0A] px-6 py-2 rounded-[42px] border border-[#00D1FF0A];
 }
 
-/*What we do*/
+/* What we do */
 .what_we_do {
   @apply bg-[#ffffff0a];
 }
 
 .section-wrapper {
-  @apply flex flex-row gap-20 py-[120px] justify-between;
+  @apply flex flex-col lg:flex-row gap-10 lg:gap-20 py-[80px] lg:py-[120px] px-4 md:px-8 lg:px-0 justify-between;
 }
 
-.what_we_do_left{
-  @apply flex flex-col gap-4 justify-between;
+.what_we_do_left {
+  @apply flex flex-col gap-4 justify-between w-[100%] lg:w-[38%];
 }
 
 .what_we_do_right {
-  @apply flex flex-col gap-6 max-w-[750px];
+  @apply flex flex-col gap-6 w-[100%] lg:w-[62%];
 }
 
-.what_we_do_img img{
-  @apply rounded-2xl w-auto h-auto object-contain shrink-0;
+.what_we_do_img img {
+  @apply rounded-2xl w-[100%] h-[100%] object-contain shrink-0;
 }
 
-.wwdl_title{
+.wwdl_title {
   @apply text-[#F2F7FE] font-normal text-[16px] leading-[1.6];
 }
 
-.wwdr_heading{
-  @apply text-[#EDEDED] font-bold text-[32px] leading-[1.32];
+.wwdr_heading {
+  @apply text-[#EDEDED] font-semibold lg:font-bold text-[24px] lg:text-[32px] leading-[1.32];
 }
 
-.primary_button{
-  @apply text-[#F2F7FE] mt-8 inline-flex items-center gap-2 rounded-full bg-[#00D1FF] px-6 py-3 font-medium hover:bg-cyan-400 transition;
+.primary_button {
+  @apply text-[#F2F7FE] mt-8 inline-flex items-center gap-2 rounded-[46px]
+    bg-[linear-gradient(180deg,_#00D1FF_18.78%,_#51A2FF_74.66%)]
+    px-6 py-3 font-medium transition;
+}
+
+.primary_button:hover {
+  @apply bg-[linear-gradient(180deg,_#51A2FF_18.78%,_#00D1FF_74.66%)];
 }
