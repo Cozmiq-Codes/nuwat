@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { NAVBAR_LINK } from "@/constant/Navbar";
@@ -6,6 +9,20 @@ const logo = "/layout/navbar/logo.svg";
 const globe = "/layout/navbar/globe.svg";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [isMenuOpen]);
+
   return (
     <nav className="navbar">
       <div className={"main-container"}>
@@ -19,25 +36,54 @@ const Navbar = () => {
               className={"logo"}
             />
           </div>
-          <div className={"navbar-links-wrapper"}>
+
+          <div className={`navbar-links-wrapper ${isMenuOpen ? "open" : ""}`}>
             <ul>
               {NAVBAR_LINK.map((link, index) => (
-                <Link href={link.url} key={index}>
+                <Link
+                  href={link.url}
+                  key={index}
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   <li>
                     <div className={"link-wrapper"}>{link.name}</div>
                   </li>
                 </Link>
               ))}
             </ul>
+            <div className={"flex flex-col gap-4 lg:hidden mt-4"}>
+              <button
+                className={
+                  "local-btn py-[10px] px-6 flex items-center gap-2 justify-center"
+                }
+              >
+                <Image src={globe} alt={"Globe Icon"} width={24} height={24} />{" "}
+                English
+              </button>
+              <button className={"secondary-btn"}>Register</button>
+            </div>
           </div>
-          <div className={"nav-buttons-wrapper"}>
+
+          <div className="flex items-center gap-4">
+            <div className={"hidden lg:flex items-center gap-2"}>
+              <button
+                className={"local-btn py-[10px] px-6 flex items-center gap-2"}
+              >
+                <Image src={globe} alt={"Globe Icon"} width={24} height={24} />{" "}
+                English
+              </button>
+              <button className={"secondary-btn"}>Register</button>
+            </div>
+
             <button
-              className={"local-btn py-[10px] px-6 flex items-center gap-2"}
+              className={`hamburger-btn ${isMenuOpen ? "open" : ""}`}
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
             >
-              <Image src={globe} alt={"Glove Icon"} width={24} height={24} />{" "}
-              English
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
             </button>
-            <button className={"secondary-btn"}>Register</button>
           </div>
         </div>
       </div>
