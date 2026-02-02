@@ -70,7 +70,7 @@ body.menu-open {
 }
 
 .navbar {
-  @apply text-white bg-[url("/layout/navbar/nav-bg.png")] bg-cover bg-center bg-no-repeat py-6;
+  @apply text-white bg-[url("/layout/navbar/nav-bg.png")] bg-cover bg-center bg-no-repeat py-6 fixed top-0 left-0 w-full z-50;
 }
 
 .navbar-wrapper {
@@ -208,6 +208,18 @@ body.menu-open {
   transform: translateY(-9px) rotate(-45deg);
 }
 
+/* Hero Section */
+.heading-span {
+    background: linear-gradient(226deg, #00D1FF 18.78%, #51A2FF 74.66%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px;
+    text-transform: capitalize;
+}
 
 /* What we do */
 .what_we_do {
