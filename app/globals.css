@@ -9,9 +9,15 @@
   --color-background: var(--background);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --image-primary-btn: linear-gradient(180deg, #00D1FF 18.78%, #51A2FF 74.66%);
-  --image-primary-btn-hover: linear-gradient(180deg, #51A2FF 18.78%, #00D1FF 74.66%);
-  --shadow-secondary-btn: inset 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 0 rgba(255, 255, 255, 0.06), 0 12px 30px rgba(0, 0, 0, 0.45);
+  --image-primary-btn: linear-gradient(180deg, #00d1ff 18.78%, #51a2ff 74.66%);
+  --image-primary-btn-hover: linear-gradient(
+    180deg,
+    #51a2ff 18.78%,
+    #00d1ff 74.66%
+  );
+  --shadow-secondary-btn:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06), 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -99,9 +105,11 @@ body.menu-open {
   inset: -1px;
   border-radius: 42px;
   padding: 1px;
-  background: linear-gradient(to right,
-      rgba(81, 162, 255, 0.24),
-      rgba(0, 209, 255, 0.24));
+  background: linear-gradient(
+    to right,
+    rgba(81, 162, 255, 0.24),
+    rgba(0, 209, 255, 0.24)
+  );
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -203,15 +211,10 @@ body.menu-open {
 
 /* Hero Section */
 .heading-span {
-    background: linear-gradient(226deg, #00D1FF 18.78%, #51A2FF 74.66%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 56px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 65px;
-    text-transform: capitalize;
+  background: linear-gradient(226deg, #00d1ff 18.78%, #51a2ff 74.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* What we do */
@@ -244,8 +247,8 @@ body.menu-open {
 }
 
 .primary_button {
-  @apply text-[#F2F7FE] inline-flex items-center gap-2 rounded-[46px] px-6 py-3 font-medium transition;
-  background: linear-gradient(180deg, #00D1FF 18.78%, #51A2FF 74.66%);
+  @apply text-[#F2F7FE] text-center justify-center items-center gap-2 rounded-[46px] px-6 py-3 font-medium transition;
+  background: linear-gradient(180deg, #00d1ff 18.78%, #51a2ff 74.66%);
 }
 
 .primary_button:hover {
@@ -268,6 +271,33 @@ body.menu-open {
   @apply flex flex-col gap-[18px];
 }
 
-.cta_bottom_content {
-  @apply flex flex-col sm:flex-row items-center justify-center gap-4;
+/* Carousel Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.mask-gradient {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
