@@ -12,8 +12,8 @@ const CTA = () => {
                 Ready to Operate at a Higher Level?
               </h2>
               <p className={"paragraph_md"}>
-                Show us one workflow. If it qualifies, we&apos;ll outline a two-week
-                pilot. Access is limited.
+                Show us one workflow. If it qualifies, we&apos;ll outline a
+                two-week pilot. Access is limited.
               </p>
             </div>
             <div className="cta_bottom_content">
