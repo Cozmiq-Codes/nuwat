@@ -4,6 +4,7 @@ import WhatWeDo from "@/components/home/what-we-do/WhatWeDo";
 import CTA from "@/components/home/cta/CTA";
 import Image from "next/image";
 import EmpoweringSection from "@/components/home/Empowering/EmpoweringSection";
+import Capabilities from "@/components/home/capabilities/Capabilities";
 const HeroImage = "/hero/hero-big.png";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       </div>
         <EmpoweringSection />
       <WhatWeDo />
+        <Capabilities />
       <CTA />
     </>
   );
