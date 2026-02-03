@@ -65,6 +65,10 @@ body.menu-open {
   transform: translateY(0);
 }
 
+.section-heading {
+    @apply text-[#F2F7FE] text-center text-5xl font-bold leading-[60px] capitalize;
+}
+
 /* Navbar */
 .logo {
   @apply w-[117px] h-8;
