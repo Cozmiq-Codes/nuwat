@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-const BgGrad = "/capabilities/bg-grad.png";
 const SectionImage = "/capabilities/section-image.png";
 
 const Capabilities = () => {
