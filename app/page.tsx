@@ -3,7 +3,7 @@ import Hero from "@/components/home/hero/Hero";
 import WhatWeDo from "@/components/home/what-we-do/WhatWeDo";
 import CTA from "@/components/home/cta/CTA";
 import Image from "next/image";
-import EmpoweringSection from "@/components/home/Empowering/EmpoweringSection";
+import EmpoweringSection from "@/components/home/empowering/EmpoweringSection";
 import Capabilities from "@/components/home/capabilities/Capabilities";
 import StatsSection from "@/components/home/stats/StatsSection";
 const HeroImage = "/hero/hero-big.png";
