@@ -5,7 +5,7 @@ import CTA from "@/components/home/cta/CTA";
 import Image from "next/image";
 import Capabilities from "@/components/home/capabilities/Capabilities";
 import StatsSection from "@/components/home/stats/StatsSection";
-import EmpoweringSection from "@/components/home/empowering/EmpoweringSection";
+// import EmpoweringSection from "@/components/home/empowering/EmpoweringSection";
 const HeroImage = "/hero/hero-big.png";
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
           className={"w-full h-[380px] rounded-2xl"}
         />
       </div>
-      <EmpoweringSection />
+      {/*<EmpoweringSection />*/}
       <WhatWeDo />
       <Capabilities />
       <StatsSection />
