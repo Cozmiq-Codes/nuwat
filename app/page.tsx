@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import StatsSection from "@/components/home/stats/StatsSection";
 import DominanceSection from "@/components/home/dominance/Dominance";
-import EmpoweringSection from "../components/home/empowering/EmpoweringSection";
+import VisionDominance from "@/components/home/vision-dominance/VisionDominance";
 const HeroImage = "/hero/hero-big.png";
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
           className={"w-full h-[380px] rounded-2xl"}
         />
       </div>
-      <EmpoweringSection />
+      <VisionDominance />
       <WhatWeDo />
       <DominanceSection />
       <StatsSection />
