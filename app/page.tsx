@@ -27,7 +27,7 @@ const Home = () => {
       <WhatWeDo />
       <DominanceSection />
       <StatsSection />
-        <ClientReviews />
+      <ClientReviews />
       <CTA />
     </>
   );

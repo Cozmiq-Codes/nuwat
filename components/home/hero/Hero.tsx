@@ -28,10 +28,8 @@ const Hero = () => {
                 tracking-[-0.02em]
               "
             >
-                WE DON’T BUILD BUSINESSES. <br/>
-              <span className="heading-span">
-                WE ARCHITECT DOMINANCE.
-              </span>
+              WE DON’T BUILD BUSINESSES. <br />
+              <span className="heading-span">WE ARCHITECT DOMINANCE.</span>
             </h1>
 
             <p
@@ -42,21 +40,26 @@ const Hero = () => {
                 max-w-[1030px]
               "
             >
-                Most companies are built to survive; we build them to be unassailable. We don’t trade in "best practices" or generic growth hacks. We provide the surgical strategy and industrial-grade execution required to own your market and dictate the terms of your industry. If you aren't ready to lead, you aren't ready for us.
+              Most companies are built to survive; we build them to be
+              unassailable. We don’t trade in "best practices" or generic growth
+              hacks. We provide the surgical strategy and industrial-grade
+              execution required to own your market and dictate the terms of
+              your industry. If you aren't ready to lead, you aren't ready for
+              us.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center">
             <button className="primary_button flex text-center w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
               Apply Now
-                <span>
-                  <Image
-                      src="/layout/what-we-do/right_icon.svg"
-                      alt="Right Icon"
-                      width={24}
-                      height={24}
-                  />
-                </span>
+              <span>
+                <Image
+                  src="/layout/what-we-do/right_icon.svg"
+                  alt="Right Icon"
+                  width={24}
+                  height={24}
+                />
+              </span>
             </button>
             <button className="secondary-btn w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
               Explore our Approach
