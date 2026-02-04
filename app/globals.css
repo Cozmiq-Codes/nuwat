@@ -75,7 +75,38 @@ body.menu-open {
 }
 
 .navbar {
-  @apply text-white bg-[url("/layout/navbar/nav-bg.png")] bg-cover bg-center bg-no-repeat py-6 fixed top-0 left-0 w-full z-50;
+  @apply text-white py-6 fixed top-0 left-0 w-full z-50 transition-all duration-300;
+  position: fixed; /* Ensuring positioning context */
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../public/layout/navbar/nav-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: -1;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.navbar.scrolled::after {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.navbar.scrolled {
+  @apply py-6;
 }
 
 .navbar-wrapper {
