@@ -23,14 +23,14 @@ const Hero = () => {
                 text-[#F2F7FE] font-semibold capitalize
                 text-5xl lg:text-[56px]
                 leading-[1.1]
-                lg:leading-[60px]
-                max-w-[90%] md:max-w-2xl lg:max-w-[80%]
+                lg:leading-[65px]
+                max-w-[90%] md:max-w-2xl lg:max-w-[890px]
                 tracking-[-0.02em]
               "
             >
-              Creating business transformations{" "}
+                WE DON’T BUILD BUSINESSES. <br/>
               <span className="heading-span">
-                most companies never survive.
+                WE ARCHITECT DOMINANCE.
               </span>
             </h1>
 
@@ -39,17 +39,24 @@ const Hero = () => {
                 text-[#E7E7E7CC]
                 text-[clamp(1rem,1.35vw,1.125rem)]
                 leading-[1.65]
-                max-w-[min(38rem,92vw)]
+                max-w-[1030px]
               "
             >
-              We build customer and brand experiences through a proven framework
-              for businesses that refuse to stay ordinary.
+                Most companies are built to survive; we build them to be unassailable. We don’t trade in "best practices" or generic growth hacks. We provide the surgical strategy and industrial-grade execution required to own your market and dictate the terms of your industry. If you aren't ready to lead, you aren't ready for us.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center">
-            <button className="primary_button text-center w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
+            <button className="primary_button flex text-center w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
               Apply Now
+                <span>
+                  <Image
+                      src="/layout/what-we-do/right_icon.svg"
+                      alt="Right Icon"
+                      width={24}
+                      height={24}
+                  />
+                </span>
             </button>
             <button className="secondary-btn w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
               Explore our Approach
@@ -59,7 +66,7 @@ const Hero = () => {
 
         {/* Hero Bottom */}
         <div className="mt-10 sm:mt-12 lg:mt-14 flex flex-col items-center justify-center">
-          <p className="text-[#E7E7E7] text-center font-medium capitalize text-[clamp(1rem,1.25vw,1.125rem)] max-w-[350px]">
+          <p className="text-[#E7E7E7] text-center font-medium capitalize text-[clamp(1rem,1.25vw,1.125rem)] max-w-[350px] lg:max-w-none">
             Chosen by industry leaders who set the standard instead of chasing
             it
           </p>
