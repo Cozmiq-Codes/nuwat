@@ -7,6 +7,7 @@ import Image from "next/image";
 import StatsSection from "@/components/home/stats/StatsSection";
 import DominanceSection from "@/components/home/dominance/Dominance";
 import VisionDominance from "@/components/home/vision-dominance/VisionDominance";
+import ClientReviews from "@/components/home/reviews/ClientReviews";
 const HeroImage = "/hero/hero-big.png";
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
       <WhatWeDo />
       <DominanceSection />
       <StatsSection />
+        <ClientReviews />
       <CTA />
     </>
   );
