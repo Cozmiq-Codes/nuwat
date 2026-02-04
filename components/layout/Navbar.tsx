@@ -38,7 +38,7 @@ const Navbar = () => {
           </div>
 
           <div className={`navbar-links-wrapper ${isMenuOpen ? "open" : ""}`}>
-            <ul>
+            <ul className={"lg:ml-[100px]"}>
               {NAVBAR_LINK.map((link, index) => (
                 <Link
                   href={link.url}
