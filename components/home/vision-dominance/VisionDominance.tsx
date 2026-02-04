@@ -22,10 +22,8 @@ const VisionDominance = () => {
                 "section-heading max-w-full text-3xl md:text-4xl lg:text-5xl"
               }
             >
-                ENGINEERED BY VISION. <br/>
-              <span className={"heading-span"}>
-                DEFINED BY DOMINANCE.
-              </span>
+              ENGINEERED BY VISION. <br />
+              <span className={"heading-span"}>DEFINED BY DOMINANCE.</span>
             </h2>
 
             <div className={"flex flex-col lg:flex-row gap-12 lg:gap-12"}>
@@ -56,14 +54,17 @@ const VisionDominance = () => {
                             "text-[#F2F7FE] text-2xl lg:text-[28px] font-bold leading-[32px]"
                           }
                         >
-                            MANDATING EXCELLENCE
+                          MANDATING EXCELLENCE
                         </h3>
                         <p
                           className={
                             "max-w-[465px] text-[#E7E7E7] text-[16px] font-normal leading-[28px] tracking-[0.07px]"
                           }
                         >
-                            "We partner with leadership teams to identify the exact levers that move the needle. Through disciplined strategy and surgical execution, we eliminate noise and command market direction".
+                          &quot;We partner with leadership teams to identify the
+                          exact levers that move the needle. Through disciplined
+                          strategy and surgical execution, we eliminate noise
+                          and command market direction&quot;.
                         </p>
                       </div>
                     </div>
@@ -90,7 +91,7 @@ const VisionDominance = () => {
                             "text-[#F2F7FE] text-2xl lg:text-[28px] font-bold leading-[32px]"
                           }
                         >
-                            ARCHITECTING UNASSAILABLE GROWTH
+                          ARCHITECTING UNASSAILABLE GROWTH
                         </h3>
                         <p
                           className={
@@ -127,7 +128,7 @@ const VisionDominance = () => {
                             "text-[#F2F7FE] text-2xl lg:text-[28px] font-bold leading-[32px]"
                           }
                         >
-                            INDUSTRIAL RECONSTRUCTION
+                          INDUSTRIAL RECONSTRUCTION
                         </h3>
                         <p
                           className={
@@ -161,9 +162,15 @@ const VisionDominance = () => {
         </div>
       </div>
 
-        <div className={"hidden lg:block absolute bottom-0 left-0"}>
-            <Image src={BgGrad} alt={"BgGrad"} width={1350} height={450} className={"w-[1050px] h-[1050px]"}/>
-        </div>
+      <div className={"hidden lg:block absolute bottom-0 left-0"}>
+        <Image
+          src={BgGrad}
+          alt={"BgGrad"}
+          width={1350}
+          height={450}
+          className={"w-[1050px] h-[1050px]"}
+        />
+      </div>
     </section>
   );
 };

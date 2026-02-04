@@ -40,12 +40,11 @@ const Hero = () => {
                 max-w-[1030px]
               "
             >
-              Most companies are built to survive; we build them to be
-              unassailable. We don’t trade in "best practices" or generic growth
-              hacks. We provide the surgical strategy and industrial-grade
-              execution required to own your market and dictate the terms of
-              your industry. If you aren't ready to lead, you aren't ready for
-              us.
+              unassailable. We don&apos;t trade in &quot;best practices&quot; or
+              generic growth hacks. We provide the surgical strategy and
+              industrial-grade execution required to own your market and dictate
+              the terms of your industry. If you aren&apos;t ready to lead, you
+              aren&apos;t ready for us.
             </p>
           </div>
 
