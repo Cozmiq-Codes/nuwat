@@ -270,7 +270,7 @@ button {
 }
 
 .what_we_do_right {
-  @apply flex flex-col gap-6 w-[100%] lg:w-[62%];
+  @apply flex flex-col justify-between gap-6 w-[100%] lg:w-[62%];
 }
 
 .what_we_do_img img {
@@ -282,7 +282,7 @@ button {
 }
 
 .wwdr_heading {
-  @apply text-[#EDEDED] font-semibold lg:font-bold text-[24px] lg:text-[32px] leading-[1.32];
+  @apply text-[#EDEDED] font-semibold text-[24px] lg:text-[30px] leading-[1.32];
 }
 
 .primary_button {
