@@ -3,8 +3,9 @@ import Hero from "@/components/home/hero/Hero";
 import WhatWeDo from "@/components/home/what-we-do/WhatWeDo";
 import CTA from "@/components/home/cta/CTA";
 import Image from "next/image";
-import Capabilities from "@/components/home/capabilities/Capabilities";
+
 import StatsSection from "@/components/home/stats/StatsSection";
+import DominanceSection from "@/components/home/dominance/Dominance";
 // import EmpoweringSection from "@/components/home/empowering/EmpoweringSection";
 const HeroImage = "/hero/hero-big.png";
 
@@ -23,7 +24,7 @@ const Home = () => {
       </div>
       {/*<EmpoweringSection />*/}
       <WhatWeDo />
-      <Capabilities />
+      <DominanceSection />
       <StatsSection />
       <CTA />
     </>
