@@ -12,7 +12,7 @@ const SectionTag = ({
 }) => {
   return (
     <div
-      className={`inline-flex bg-[#FFFFFF0A] rounded-[35px] border border-[#FFFFFF3D] justify-center items-center ${icon ? "py-1.5 px-5" : "py-2.5 px-4"}`}
+      className={`inline-flex bg-[#FFFFFF0A] rounded-[35px] border border-[#FFFFFF3D] justify-center items-center ${icon ? "py-1.5 px-5" : "py-1.5 px-7"}`}
     >
       <div className={"flex gap-2"}>
         {icon && (
