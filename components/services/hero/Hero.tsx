@@ -25,7 +25,9 @@ const Hero = () => {
               "
               >
                 Strategic clarity for{" "}
-                <span className={"heading-span"}>organizations ready to move.</span>
+                <span className={"heading-span"}>
+                  organizations ready to move.
+                </span>
               </h1>
               <p
                 className="
@@ -36,7 +38,8 @@ const Hero = () => {
                 text-center
               "
               >
-                  We partner with leaders who understand that transformation isn't about following trends  lasts replace with dominates
+                We partner with leaders who understand that transformation isn't
+                about following trends lasts replace with dominates
               </p>
             </div>
           </div>
