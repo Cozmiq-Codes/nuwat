@@ -195,9 +195,7 @@ const Negotiate = () => {
                 alt={"negotiate image"}
                 width={1000}
                 height={670}
-                className={
-                  "w-full max-h-[850px]"
-                }
+                className={"w-full max-h-[850px]"}
               />
             </div>
           </div>

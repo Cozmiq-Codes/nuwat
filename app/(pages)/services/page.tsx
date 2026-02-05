@@ -3,6 +3,7 @@ import Hero from "@/components/services/hero/Hero";
 import Role from "@/components/services/role/Role";
 import ServiceDomains from "@/components/services/service-domains/ServiceDomains";
 import Negotiate from "@/components/services/negotiate/Negotiate";
+import CTA from "@/components/global/cta/CTA";
 
 const Page = () => {
   return (
@@ -11,6 +12,7 @@ const Page = () => {
       <Role />
       <ServiceDomains />
       <Negotiate />
+      <CTA />
     </>
   );
 };
