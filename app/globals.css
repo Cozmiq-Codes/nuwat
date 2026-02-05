@@ -336,6 +336,10 @@ button {
 
 /* About History */
 
-.history-node{
-    background: linear-gradient(226deg, rgba(0, 209, 255, 0.19) 18.78%, rgba(81, 162, 255, 0.19) 74.66%);
+.history-node {
+  background: linear-gradient(
+    226deg,
+    rgba(0, 209, 255, 0.19) 18.78%,
+    rgba(81, 162, 255, 0.19) 74.66%
+  );
 }
