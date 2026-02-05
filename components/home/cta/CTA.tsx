@@ -16,8 +16,8 @@ const CTA = () => {
                 two-week pilot. Access is limited.
               </p>
             </div>
-            <div className="cta_bottom_content">
-              <button className="primary_button">
+            <div className="cta_bottom_content flex gap-4">
+              <button className="primary_button flex">
                 Apply Now
                 <span>
                   <Image

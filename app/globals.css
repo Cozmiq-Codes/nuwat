@@ -7,8 +7,8 @@
 
 @theme inline {
   --color-background: var(--background);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-satoshi);
+  --font-mono: var(--font-satoshi);
   --image-primary-btn: linear-gradient(180deg, #00d1ff 18.78%, #51a2ff 74.66%);
   --image-primary-btn-hover: linear-gradient(
     180deg,
@@ -30,7 +30,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
@@ -55,6 +55,10 @@ body.menu-open {
   }
 }
 
+button {
+  cursor: pointer;
+}
+
 .secondary-btn:hover {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -75,7 +79,38 @@ body.menu-open {
 }
 
 .navbar {
-  @apply text-white bg-[url("/layout/navbar/nav-bg.png")] bg-cover bg-center bg-no-repeat py-6 fixed top-0 left-0 w-full z-50;
+  @apply text-white py-6 fixed top-0 left-0 w-full z-50 transition-all duration-300;
+  position: fixed; /* Ensuring positioning context */
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../public/layout/navbar/nav-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: -1;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.navbar.scrolled::after {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.navbar.scrolled {
+  @apply py-6;
 }
 
 .navbar-wrapper {
@@ -235,7 +270,7 @@ body.menu-open {
 }
 
 .what_we_do_right {
-  @apply flex flex-col gap-6 w-[100%] lg:w-[62%];
+  @apply flex flex-col justify-between gap-6 w-[100%] lg:w-[62%];
 }
 
 .what_we_do_img img {
@@ -247,7 +282,7 @@ body.menu-open {
 }
 
 .wwdr_heading {
-  @apply text-[#EDEDED] font-semibold lg:font-bold text-[24px] lg:text-[32px] leading-[1.32];
+  @apply text-[#EDEDED] font-semibold text-[24px] lg:text-[30px] leading-[1.32];
 }
 
 .primary_button {

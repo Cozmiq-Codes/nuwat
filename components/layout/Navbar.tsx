@@ -10,10 +10,20 @@ const globe = "/layout/navbar/globe.svg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -24,7 +34,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className={"main-container"}>
         <div className={"navbar-wrapper"}>
           <div>
@@ -38,7 +48,7 @@ const Navbar = () => {
           </div>
 
           <div className={`navbar-links-wrapper ${isMenuOpen ? "open" : ""}`}>
-            <ul>
+            <ul className={"lg:ml-[100px]"}>
               {NAVBAR_LINK.map((link, index) => (
                 <Link
                   href={link.url}

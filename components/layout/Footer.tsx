@@ -7,7 +7,9 @@ const FooterBgGrad = "/footer/bg-grad.png";
 
 const Footer = () => {
   return (
-    <footer className={`pt-20 pb-10 border-t border-[#1e293b] rounded-[16px] lg:h-[720px] bg-[url('/footer/footer-bg-img.png')] bg-cover bg-center relative`}>
+    <footer
+      className={`pt-20 pb-10 border-t border-[#1e293b] rounded-[16px] lg:h-[720px] bg-[url('/footer/footer-bg-img.png')] bg-cover bg-center relative`}
+    >
       <div className="main-container h-full flex flex-col justify-between">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-20">
           {/* Image Card */}
@@ -225,8 +227,20 @@ const Footer = () => {
       </div>
 
       <div>
-          <Image src={FooterBgGrad} alt={"Bg Grad"} className={"absolute bottom-0 right-[25%]"} width={845} height={410}/>
-          <Image src={FooterBgGrad} alt={"Bg Grad"} className={"absolute bottom-0 right-[1%]"} width={845} height={410}/>
+        <Image
+          src={FooterBgGrad}
+          alt={"Bg Grad"}
+          className={"absolute bottom-0 right-[25%]"}
+          width={845}
+          height={410}
+        />
+        <Image
+          src={FooterBgGrad}
+          alt={"Bg Grad"}
+          className={"absolute bottom-0 right-[1%]"}
+          width={845}
+          height={410}
+        />
       </div>
     </footer>
   );
