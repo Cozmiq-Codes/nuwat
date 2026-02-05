@@ -14,7 +14,7 @@ const Hero = () => {
         {/* Hero Top */}
         <div className="mt-20 flex-1 flex flex-col items-center justify-center text-center gap-6 sm:gap-8">
           <div className="flex justify-center w-full">
-            <SectionTag title="Data-Driven Decisions" />
+            <SectionTag title="Data-Driven Decisions" icon={true} />
           </div>
 
           <div className="flex flex-col items-center gap-5 sm:gap-6 w-full">

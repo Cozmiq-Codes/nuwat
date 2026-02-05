@@ -38,7 +38,7 @@ const StatsSection = () => {
                   "heading-span text-[48px] lg:text-[64px] font-medium leading-[1.2] lg:leading-[72px] tracking-[-1.677px]"
                 }
               >
-               10,000+
+                10,000+
               </h3>
               <p
                 className={

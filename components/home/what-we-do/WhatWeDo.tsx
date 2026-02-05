@@ -19,7 +19,14 @@ const WhatWeDo = () => {
           </div>
           <div className={"what_we_do_right"}>
             <h3 className="wwdr_heading">
-                <span className={"heading-span"}>NUWAT is a sovereign operating partner</span> built for companies that refuse to stay ordinary, outpace their market, <span className={"heading-span"}>and dictate the standard of their industry.</span>
+              <span className={"heading-span"}>
+                NUWAT is a sovereign operating partner
+              </span>{" "}
+              built for companies that refuse to stay ordinary, outpace their
+              market,{" "}
+              <span className={"heading-span"}>
+                and dictate the standard of their industry.
+              </span>
             </h3>
             <div className={"what_we_do_btn"}>
               <button className="primary_button flex">
