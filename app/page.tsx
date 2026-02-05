@@ -1,13 +1,14 @@
 import React from "react";
 import Hero from "@/components/home/hero/Hero";
 import WhatWeDo from "@/components/home/what-we-do/WhatWeDo";
-import CTA from "@/components/home/cta/CTA";
+import CTA from "@/components/global/cta/CTA";
 import Image from "next/image";
 
-import StatsSection from "@/components/home/stats/StatsSection";
+import StatsSection from "@/components/global/stats/StatsSection";
 import DominanceSection from "@/components/home/dominance/Dominance";
 import VisionDominance from "@/components/home/vision-dominance/VisionDominance";
 import ClientReviews from "@/components/home/reviews/ClientReviews";
+import { HomeStats } from "@/constant/Stats";
 const HeroImage = "/hero/hero-big.png";
 
 const Home = () => {
@@ -26,7 +27,14 @@ const Home = () => {
       <VisionDominance />
       <WhatWeDo />
       <DominanceSection />
-      <StatsSection />
+      <StatsSection
+        heading={"Built for"}
+        gradientHeading={"Companies That Expect More"}
+        description={
+          "We build businesses that perform better, last longer, and raise the bar for everyone operating in their category."
+        }
+        stats={HomeStats}
+      />
       <ClientReviews />
       <CTA />
     </>

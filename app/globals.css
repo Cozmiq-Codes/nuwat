@@ -332,11 +332,23 @@ button {
     black 90%,
     transparent
   );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
+}
+
+/* About History */
+
+.history-node {
+  background: linear-gradient(
+    226deg,
+    rgba(0, 209, 255, 0.19) 18.78%,
+    rgba(81, 162, 255, 0.19) 74.66%
   );
+}
+
+/* About Nuwat Code */
+.code-card-bg {
+  background: linear-gradient(
+    148deg,
+    rgba(0, 209, 255, 0.12) 10.99%,
+    rgba(21, 130, 255, 0.12) 60.34%
+  ) !important;
 }
