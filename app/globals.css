@@ -343,3 +343,9 @@ button {
     rgba(81, 162, 255, 0.19) 74.66%
   );
 }
+
+
+/* About Nuwat Code */
+.code-card-bg {
+    background: linear-gradient(148deg, rgba(0, 209, 255, 0.12) 10.99%, rgba(21, 130, 255, 0.12) 60.34%) !important;
+}
