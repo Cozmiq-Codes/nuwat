@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const TagIcon = "/global/tag.png";
 
-const SectionTag = ({ title = "Section Tag Title" }: { title: string }) => {
+const SectionTag = ({ title = "Section Tag Title", icon = true }: { title: string, icon: boolean }) => {
   return (
     <div
       className={
@@ -11,14 +11,18 @@ const SectionTag = ({ title = "Section Tag Title" }: { title: string }) => {
       }
     >
       <div className={"flex gap-2"}>
-        <Image
-          src={TagIcon}
-          alt="Section Title Image"
-          width={100}
-          height={100}
-          className={"w-6 h-6"}
-        />
-        <h4>{title}</h4>
+          {
+              icon && (
+                  <Image
+                      src={TagIcon}
+                      alt="Section Title Image"
+                      width={100}
+                      height={100}
+                      className={"w-6 h-6"}
+                  />
+              )
+          }
+        <h4 className={"capitalize"}>{title}</h4>
       </div>
     </div>
   );

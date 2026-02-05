@@ -10,7 +10,7 @@ export const NAVBAR_LINK: NavLinks[] = [
   },
   {
     name: "About Us",
-    url: "/",
+    url: "/about",
   },
   {
     name: "Services",
