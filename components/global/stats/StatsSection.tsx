@@ -1,8 +1,8 @@
 import React from "react";
-import {HomeStats, StatsSectionProps} from "@/constant/Stats";
+import {StatsSectionProps} from "@/constant/Stats";
 
 
-const StatsSection = ({heading, gradientHeading, description}: StatsSectionProps) => {
+const StatsSection = ({heading, gradientHeading, description, stats}: StatsSectionProps) => {
   return (
     <section>
       <div className={"main-container"}>
@@ -18,7 +18,7 @@ const StatsSection = ({heading, gradientHeading, description}: StatsSectionProps
           >
             <h2 className={"section-heading text-3xl md:text-4xl lg:text-5xl"}>
                 {heading || "Heading"}
-              <span className={"heading-span"}> {(gradientHeading && gradientHeading) || "Heading"}</span>
+              <span className={"heading-span"}> {gradientHeading && gradientHeading}</span>
             </h2>
               {
                   description && <p>{description || "Description"}</p>
@@ -30,7 +30,7 @@ const StatsSection = ({heading, gradientHeading, description}: StatsSectionProps
             }
           >
               {
-                  HomeStats.map((stat, index) => (
+                  stats.map((stat, index) => (
                       <div className={"flex flex-col items-center gap-2"} key={index}>
                           <h3
                               className={

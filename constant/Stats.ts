@@ -7,6 +7,7 @@ export interface StatsSectionProps {
     heading: string;
     gradientHeading?: string;
     description?: string;
+    stats: Stats[];
 }
 
 export const HomeStats: Stats[] = [
@@ -22,4 +23,19 @@ export const HomeStats: Stats[] = [
         title: '1 in 5',
         description: 'companies accepted'
     },
+]
+
+export const AboutStats: Stats[] = [
+    {
+        title: '$1B+',
+        description: 'TURNOVER SCALE'
+    },
+    {
+        title: '9-FIGURE',
+        description: 'EXECUTION'
+    },
+    {
+        title: 'GLOBAL',
+        description: 'AUTHORITY'
+    }
 ]

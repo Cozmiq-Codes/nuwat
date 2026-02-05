@@ -8,6 +8,7 @@ import StatsSection from "@/components/global/stats/StatsSection";
 import DominanceSection from "@/components/home/dominance/Dominance";
 import VisionDominance from "@/components/home/vision-dominance/VisionDominance";
 import ClientReviews from "@/components/home/reviews/ClientReviews";
+import {HomeStats} from "@/constant/Stats";
 const HeroImage = "/hero/hero-big.png";
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
       <VisionDominance />
       <WhatWeDo />
       <DominanceSection />
-      <StatsSection heading={"Built for"} gradientHeading={"Companies That Expect More"} description={"We build businesses that perform better, last longer, and raise the bar for everyone operating in their category."}/>
+      <StatsSection heading={"Built for"} gradientHeading={"Companies That Expect More"} description={"We build businesses that perform better, last longer, and raise the bar for everyone operating in their category."} stats={HomeStats}/>
       <ClientReviews />
       <CTA />
     </>
