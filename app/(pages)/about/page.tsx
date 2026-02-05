@@ -15,7 +15,7 @@ const AboutPage = () => {
       <HistorySection />
       <StatsSection heading={"THE SCALE OF COMMAND"} stats={AboutStats} />
       <Vision />
-        <NuwatCode />
+      <NuwatCode />
     </>
   );
 };
