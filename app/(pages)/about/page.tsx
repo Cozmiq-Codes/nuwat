@@ -6,6 +6,7 @@ import StatsSection from "@/components/global/stats/StatsSection";
 import { AboutStats } from "@/constant/Stats";
 import Vision from "@/components/about/vision/Vision";
 import NuwatCode from "@/components/about/nuwat-code/NuwatCode";
+import CTA from "@/components/global/cta/CTA";
 
 const AboutPage = () => {
   return (
@@ -16,6 +17,7 @@ const AboutPage = () => {
       <StatsSection heading={"THE SCALE OF COMMAND"} stats={AboutStats} />
       <Vision />
       <NuwatCode />
+      <CTA />
     </>
   );
 };
