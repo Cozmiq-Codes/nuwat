@@ -1,11 +1,12 @@
 import React from "react";
-import SectionTag from "@/components/global/SectionTag";
-import AboutHero from "@/components/about/Hero";
+import AboutHero from "@/components/about/hero/Hero";
+import Leadership from "@/components/about/leadership/Leadership";
 
 const AboutPage = () => {
   return (
     <>
         <AboutHero />
+        <Leadership />
     </>
   );
 };
