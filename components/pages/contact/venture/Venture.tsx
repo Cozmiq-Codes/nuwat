@@ -32,9 +32,7 @@ const Venture = () => {
 
             <div className={"max-w-[750px]"}>
               <p
-                className={
-                  "text-[#E7E7E7] text-[32px] font-bold leading-10.5"
-                }
+                className={"text-[#E7E7E7] text-[32px] font-bold leading-10.5"}
               >
                 <span className={"heading-span"}>
                   NUWAT operates with a limited number of partners
