@@ -17,6 +17,12 @@ export type ServiceCard = {
   image?: string;
 };
 
+export type EngageCriterion = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
 export const Services: ServiceCard[] = [
   {
     id: "strategic-mandate",
@@ -62,5 +68,32 @@ export const Services: ServiceCard[] = [
       { label: "Holistic Dominance" },
     ],
     image: "/services/service-domains/identity-market-presence.png",
+  },
+];
+
+export const ServicesStakes: EngageCriterion[] = [
+  {
+    title: "Critical Mandates",
+    description:
+      "When Decisions Are So Complex They Cross Multiple Teams And Carry The Weight Of The Company's Future.",
+    icon: "/services/high-engage/cm.svg",
+  },
+  {
+    title: "Peak Complexity",
+    description:
+      'Your Team Is Elite, But The Environment Has Become So Volatile That Only A Veteran "Sovereign Operator" Can See The Path Through.',
+    icon: "/services/high-engage/pc.svg",
+  },
+  {
+    title: "Structural Lag",
+    description:
+      "Your Growth Is Outstripping Your Foundation, And You Need To Re-Engineer The Organization Before It Fractures Under Its Own Weight.",
+    icon: "/services/high-engage/sl.svg",
+  },
+  {
+    title: "Absolute Involvement",
+    description:
+      'You Don\'t Want A "Slide Deck" Or A "Presentation." You Need A High-Level Intervention And The Deep Involvement Of A Man Who Has Already Won.',
+    icon: "/services/high-engage/ai.svg",
   },
 ];
