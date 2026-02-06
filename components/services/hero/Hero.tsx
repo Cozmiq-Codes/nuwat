@@ -38,7 +38,7 @@ const Hero = () => {
                 text-center
               "
               >
-                We partner with leaders who understand that transformation isn't
+                We partner with leaders who understand that transformation isn&apos;t
                 about following trends lasts replace with dominates
               </p>
             </div>
