@@ -22,6 +22,6 @@ export const NAVBAR_LINK: NavLinks[] = [
   },
   {
     name: "Contact Us",
-    url: "/",
+    url: "/contact",
   },
 ];
