@@ -8,7 +8,7 @@ const Page = () => {
     <>
       <Hero />
       <Faq />
-        <CTA />
+      <CTA />
     </>
   );
 };
