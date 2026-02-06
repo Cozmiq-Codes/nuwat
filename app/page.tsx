@@ -1,13 +1,13 @@
 import React from "react";
-import Hero from "@/components/home/hero/Hero";
-import WhatWeDo from "@/components/home/what-we-do/WhatWeDo";
+import Hero from "@/components/pages/home/hero/Hero";
+import WhatWeDo from "@/components/pages/home/what-we-do/WhatWeDo";
 import CTA from "@/components/global/cta/CTA";
 import Image from "next/image";
 
 import StatsSection from "@/components/global/stats/StatsSection";
-import DominanceSection from "@/components/home/dominance/Dominance";
-import VisionDominance from "@/components/home/vision-dominance/VisionDominance";
-import ClientReviews from "@/components/home/reviews/ClientReviews";
+import DominanceSection from "@/components/pages/home/dominance/Dominance";
+import VisionDominance from "@/components/pages/home/vision-dominance/VisionDominance";
+import ClientReviews from "@/components/pages/home/reviews/ClientReviews";
 import { HomeStats } from "@/constant/Stats";
 const HeroImage = "/hero/hero-big.png";
 
