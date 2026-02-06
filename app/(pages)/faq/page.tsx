@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 import Hero from "@/components/pages/faq/Hero";
+import Faq from "@/components/pages/faq/Faq";
 
 const Page = () => {
-    return (
-        <Hero />
-    )
-}
-export default Page
+  return (
+    <>
+      <Hero />
+      <Faq />
+    </>
+  );
+};
+export default Page;
