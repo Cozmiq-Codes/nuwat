@@ -33,7 +33,8 @@ const ContactHero = () => {
                 text-center
               "
               >
-                  We align with sovereign leaders who understand that true success is built on structural dominance, not short-term optics
+                We align with sovereign leaders who understand that true success
+                is built on structural dominance, not short-term optics
               </p>
             </div>
           </div>
