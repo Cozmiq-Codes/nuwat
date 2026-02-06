@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from "next/image";
-import {ServicesStakes} from "@/constant/Services";
 import {REACH_CONTENT} from "@/constant/contact/Reach";
 
 const ReachImage = '/contact/reach.png';
