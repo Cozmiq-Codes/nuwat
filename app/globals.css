@@ -75,11 +75,11 @@ button {
 
 /* Navbar */
 .logo {
-  @apply w-[117px] h-8;
+  @apply w-29.25 h-8;
 }
 
 .navbar {
-  @apply text-white py-6 fixed top-0 left-0 w-full z-50 transition-all duration-300;
+  @apply text-white py-6 fixed top-0 left-0 w-full z-99999 transition-all duration-300;
   position: fixed; /* Ensuring positioning context */
 }
 

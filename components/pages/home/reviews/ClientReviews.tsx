@@ -23,7 +23,7 @@ const ClientReviews = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-20 bg-[#020617] overflow-hidden">
+    <section className="py-20 overflow-hidden">
       <div className="main-container">
         <div className="flex flex-col gap-12 lg:gap-16 items-center">
           <h2 className="section-heading text-center text-white">
