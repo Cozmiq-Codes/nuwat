@@ -1,5 +1,4 @@
 import React from "react";
-import SectionTag from "@/components/global/SectionTag";
 
 const ContactHero = () => {
   return (
