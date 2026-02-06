@@ -33,11 +33,11 @@ const Faq = () => {
 
               <p className={"text-lg font-normal leading-7 max-w-182.5"}>
                 NUWAT is reserved for founders and sovereign leaders who have
-                outgrown conventional &quote;consulting&quote;. We engage with those ready
-                to be challenged, held to a ruthless standard of accountability,
-                and pushed beyond the safety of comfortable solutions. If you
-                are seeking superficial validation or surface-level &quote;fixes,&quote;
-                NUWAT is not the fit.
+                outgrown conventional &quote;consulting&quote;. We engage with
+                those ready to be challenged, held to a ruthless standard of
+                accountability, and pushed beyond the safety of comfortable
+                solutions. If you are seeking superficial validation or
+                surface-level &quote;fixes,&quote; NUWAT is not the fit.
               </p>
             </div>
 
