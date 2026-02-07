@@ -7,7 +7,7 @@ const StarSVG = "/contact/star.svg";
 
 const Reach = () => {
   return (
-    <section className="py-10 sm:py-14 lg:py-20">
+    <section className="py-10 sm:py-14 lg:py-20 bg-[url('/contact/bg-grad-two.png')] bg-cover bg-center bg-no-repeat">
       <div className="main-container">
         <div className="section-wrapper">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
