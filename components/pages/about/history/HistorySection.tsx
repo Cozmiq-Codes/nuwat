@@ -33,7 +33,6 @@ export default function HistorySection() {
 
               return (
                 <li key={item.marker} className="relative">
-                  {/* Vertical line connecting to next item - Hidden for last item */}
                   {!isLast && (
                     <motion.div
                       className="absolute left-6 top-0 w-1 bg-[#FFFFFF33] -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 -z-10"
@@ -46,7 +45,6 @@ export default function HistorySection() {
                         transformOrigin: "top",
                       }}
                     >
-                      {/* Desktop height adjustment */}
                       <div
                         className="hidden md:block w-full bg-[#FFFFFF33]"
                         style={{ height: "calc(100% + 3.5rem)" }}
