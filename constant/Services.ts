@@ -31,7 +31,7 @@ export const Services: ServiceCard[] = [
     description:
       'NUWAT Provides Elite-Level Strategic Intervention. We Align Internal Structures To A Sovereign Vision, Ensuring Companies Operate With Surgical Precision. Our Perspective Is Not "Practical"—It Is Definitive. We Ensure Leaders Move With Total Market Clarity.',
     buttons: [{ label: "Hardwire Results" }, { label: "Value Extraction" }],
-    image: "/services/service-domains/strategic-mandate.png",
+    image: "/services/service-domains/strategic-mandate.webp",
   },
   {
     id: "operational-reconstruction",
@@ -43,7 +43,7 @@ export const Services: ServiceCard[] = [
       { label: "Deep Sector Dominance" },
       { label: "Calculated Expansion" },
     ],
-    image: "/services/service-domains/operational-reconstruction.png",
+    image: "/services/service-domains/operational-reconstruction.webp",
   },
   {
     id: "scale-architecture",
@@ -55,7 +55,7 @@ export const Services: ServiceCard[] = [
       { label: "Vast Industrial Expertise" },
       { label: "Force-Multiplier Development" },
     ],
-    image: "/services/service-domains/scale-architecture.png",
+    image: "/services/service-domains/scale-architecture.webp",
   },
   {
     id: "identity-market-presence",
@@ -67,7 +67,7 @@ export const Services: ServiceCard[] = [
       { label: "Authoritative Identity" },
       { label: "Holistic Dominance" },
     ],
-    image: "/services/service-domains/identity-market-presence.png",
+    image: "/services/service-domains/identity-market-presence.webp",
   },
 ];
 

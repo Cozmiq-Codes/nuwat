@@ -10,7 +10,7 @@ const WhatWeDo = () => {
             <h2 className={"wwdl_title"}>WHAT WE DO</h2>
             <div className="what_we_do_img">
               <Image
-                src="/layout/what-we-do/building.png"
+                src="/layout/what-we-do/building.webp"
                 alt="Building"
                 width={550}
                 height={350}

@@ -2,7 +2,7 @@ import React from "react";
 import { StatsSectionProps } from "@/constant/Stats";
 import Image from "next/image";
 
-const BgGrad = '/hero/bg-grad-two.png';
+const BgGrad = '/hero/bg-grad-two.webp';
 
 const StatsSection = ({
   heading,

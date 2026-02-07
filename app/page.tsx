@@ -9,7 +9,7 @@ import DominanceSection from "@/components/pages/home/dominance/Dominance";
 import VisionDominance from "@/components/pages/home/vision-dominance/VisionDominance";
 import ClientReviews from "@/components/pages/home/reviews/ClientReviews";
 import { HomeStats } from "@/constant/Stats";
-const HeroImage = "/hero/hero-big.png";
+const HeroImage = "/hero/hero-big.webp";
 
 const Home = () => {
   return (

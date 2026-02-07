@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { ServicesStakes } from "@/constant/Services";
 
-const SectionImage = "/services/high-engage/section-img.png";
+const SectionImage = "/services/high-engage/section-img.webp";
 
 const HighEngage = () => {
   return (

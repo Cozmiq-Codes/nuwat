@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const NegotiateImage = "/services/negotiate/negotiate.png";
+const NegotiateImage = "/services/negotiate/negotiate.webp";
 const CancelIcon = "/services/negotiate/cancel-circle.svg";
 const UpArrowIcon = "/services/negotiate/arrow-up.svg";
 const DownArrowIcon = "/services/negotiate/arrow-down.svg";

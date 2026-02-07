@@ -1,15 +1,15 @@
 import { StaticImageData } from "next/image";
 
-import Aecon from "@/public/hero/agency-logos/aecon.png";
-import AirLiquid from "@/public/hero/agency-logos/air-liquid.png";
-import Buttcon from "@/public/hero/agency-logos/buttcon.png";
-import Electric from "@/public/hero/agency-logos/electric.png";
-import Flour from "@/public/hero/agency-logos/flour.png";
-import Jacobs from "@/public/hero/agency-logos/jacobs.png";
-import Jempak from "@/public/hero/agency-logos/jempak.png";
-import Marafiq from "@/public/hero/agency-logos/marafiq.png";
-import Maxim from "@/public/hero/agency-logos/maxim.png";
-import Sadara from "@/public/hero/agency-logos/sadara.png";
+import Aecon from "@/public/hero/agency-logos/aecon.webp";
+import AirLiquid from "@/public/hero/agency-logos/air-liquid.webp";
+import Buttcon from "@/public/hero/agency-logos/buttcon.webp";
+import Electric from "@/public/hero/agency-logos/electric.webp";
+import Flour from "@/public/hero/agency-logos/flour.webp";
+import Jacobs from "@/public/hero/agency-logos/jacobs.webp";
+import Jempak from "@/public/hero/agency-logos/jempak.webp";
+import Marafiq from "@/public/hero/agency-logos/marafiq.webp";
+import Maxim from "@/public/hero/agency-logos/maxim.webp";
+import Sadara from "@/public/hero/agency-logos/sadara.webp";
 
 export type AgencyLogo = {
   id: string;
