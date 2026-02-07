@@ -1,14 +1,18 @@
 import React from "react";
 import Image from "next/image";
 
-const NegotiateImage = "/services/negotiate/negotiate.png";
+const NegotiateImage = "/services/negotiate/negotiate.webp";
 const CancelIcon = "/services/negotiate/cancel-circle.svg";
 const UpArrowIcon = "/services/negotiate/arrow-up.svg";
 const DownArrowIcon = "/services/negotiate/arrow-down.svg";
 
 const Negotiate = () => {
   return (
-    <section>
+    <section
+      className={
+        "bg-[url('/services/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
+      }
+    >
       <div className={"main-container"}>
         <div className={"section-wrapper"}>
           <div
@@ -23,7 +27,7 @@ const Negotiate = () => {
             >
               <h2
                 className={
-                  "text-white text-[32px] sm:text-[40px] lg:text-[48px]! font-bold leading-tight lg:leading-[60px] max-w-[480px]"
+                  "text-white text-[32px] sm:text-[40px] lg:text-[48px]! font-bold leading-tight lg:leading-15 max-w-120"
                 }
               >
                 What We Don&apos;t Do The Non-Negotiables
@@ -53,7 +57,7 @@ const Negotiate = () => {
                     </h3>
                     <p
                       className={
-                        "text-white/80 text-sm sm:text-base font-normal leading-relaxed sm:leading-7 max-w-[590px]"
+                        "text-white/80 text-sm sm:text-base font-normal leading-relaxed sm:leading-7 max-w-147.5"
                       }
                     >
                       We are not a marketing firm; we are an industrial engine.
@@ -195,7 +199,7 @@ const Negotiate = () => {
                 alt={"negotiate image"}
                 width={1000}
                 height={670}
-                className={"w-full max-h-[850px]"}
+                className={"w-full max-h-212.5"}
               />
             </div>
           </div>

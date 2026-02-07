@@ -4,10 +4,10 @@ const ContactHero = () => {
   return (
     <section
       className={
-        "mt-32 mb-5 bg-[#FFFFFF03] rounded-2xl border border-white mx-5"
+        "pt-32 pb-5 bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
       }
     >
-      <div className={"main-container"}>
+      <div className={"bg-[#FFFFFF03] rounded-2xl mx-5 my-5 backdrop-blur-2xl"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center gap-5 w-full"}>
             <div className={"flex flex-col items-center gap-5"}>

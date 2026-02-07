@@ -3,7 +3,11 @@ import SectionTag from "@/components/global/SectionTag";
 
 const Hero = () => {
   return (
-    <section className={"mt-32"}>
+    <section
+      className={
+        "pt-32 pb-5 bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
+      }
+    >
       <div className={"main-container"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col gap-4 items-center w-full"}>

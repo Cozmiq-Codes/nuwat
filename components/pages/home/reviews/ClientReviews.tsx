@@ -23,7 +23,7 @@ const ClientReviews = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-20 bg-[#020617] overflow-hidden">
+    <section className="py-20 overflow-hidden">
       <div className="main-container">
         <div className="flex flex-col gap-12 lg:gap-16 items-center">
           <h2 className="section-heading text-center text-white">
@@ -55,7 +55,7 @@ const ClientReviews = () => {
             </button>
 
             {/* Review Card */}
-            <div className="relative w-full h-[400px] lg:h-[450px] rounded-[24px] overflow-hidden p-8 lg:p-12 flex flex-col justify-center items-center text-center bg-[url('/client-reviews/review-bg.png')] bg-cover bg-center bg-no-repeat transition-all duration-300">
+            <div className="relative w-full h-[400px] lg:h-[450px] rounded-[24px] overflow-hidden p-8 lg:p-12 flex flex-col justify-center items-center text-center bg-[url('/client-reviews/review-bg.webp')] bg-cover bg-center bg-no-repeat transition-all duration-300">
               {/* Quote Icon */}
               <Image
                 src={QuoteIcon}

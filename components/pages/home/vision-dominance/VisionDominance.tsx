@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-const CityImage = "/empowering/city.png";
-const DriveImage = "/empowering/drive.png";
-const GrowthImage = "/empowering/growth.png";
-const OperationsImage = "/empowering/operations.png";
-const BgGrad = "/empowering/bg-grad.png";
+const CityImage = "/empowering/city.webp";
+const DriveImage = "/empowering/drive.webp";
+const GrowthImage = "/empowering/growth.webp";
+const OperationsImage = "/empowering/operations.webp";
+const BgGrad = "/empowering/bg-grad.webp";
 
 const VisionDominance = () => {
   return (

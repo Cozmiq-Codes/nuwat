@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { AboutVision } from "@/constant/About";
 
-const BgGradImage = "/about/vision/bg-grad-one.png";
-const BgGradImageTwo = "/about/vision/bg-grad-two.png";
+const BgGradImage = "/about/vision/bg-grad-one.webp";
+const BgGradImageTwo = "/about/vision/bg-grad-two.webp";
 
 const Vision = () => {
   return (

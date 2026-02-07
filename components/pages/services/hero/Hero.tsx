@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <section
       className={
-        "mt-32 mb-5 bg-[#FFFFFF03] rounded-2xl border border-white mx-5"
+        "pt-32 pb-5 bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
       }
     >
-      <div className={"main-container"}>
+      <div className={"bg-[#FFFFFF03] rounded-2xl mx-5 my-5 backdrop-blur-2xl"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center gap-5 w-full"}>
             <SectionTag title={"services"} icon={false} />
@@ -19,8 +19,8 @@ const Hero = () => {
                 text-5xl lg:text-[56px]
                 text-center
                 leading-[1.1]
-                lg:leading-[65px]
-                max-w-[90%] md:max-w-2xl lg:max-w-[800px]
+                lg:leading-16.25
+                max-w-[90%] md:max-w-2xl lg:max-w-200
                 tracking-[-0.02em]
               "
               >
@@ -34,7 +34,7 @@ const Hero = () => {
                 text-[#E7E7E7CC]
                 text-[clamp(1rem,1.35vw,1.125rem)]
                 leading-[1.65]
-                max-w-[665px]
+                max-w-166.25
                 text-center
               "
               >

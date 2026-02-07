@@ -3,14 +3,11 @@ import Image from "next/image";
 import SectionTag from "@/components/global/SectionTag";
 import { AgencyLogos } from "@/constant/AgencyLogos";
 
-const TopGradient = "/hero/hero-gradient-top.svg";
-const BottomGradient = "/hero/hero-gradient-bottom.svg";
-
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat">
       {/* Main content wrapper */}
-      <div className="main-container min-h-[100svh] flex flex-col justify-between py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="main-container min-h-svh flex flex-col justify-between py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
         {/* Hero Top */}
         <div className="mt-20 flex-1 flex flex-col items-center justify-center text-center gap-6 sm:gap-8">
           <div className="flex justify-center w-full">
@@ -23,8 +20,8 @@ const Hero = () => {
                 text-[#F2F7FE] font-semibold capitalize
                 text-5xl lg:text-[56px]
                 leading-[1.1]
-                lg:leading-[65px]
-                max-w-[90%] md:max-w-2xl lg:max-w-[890px]
+                lg:leading-16.25
+                max-w-[90%] md:max-w-2xl lg:max-w-222.5
                 tracking-[-0.02em]
               "
             >
@@ -37,7 +34,7 @@ const Hero = () => {
                 text-[#E7E7E7CC]
                 text-[clamp(1rem,1.35vw,1.125rem)]
                 leading-[1.65]
-                max-w-[1030px]
+                max-w-257.5
               "
             >
               unassailable. We don&apos;t trade in &quot;best practices&quot; or
@@ -68,7 +65,7 @@ const Hero = () => {
 
         {/* Hero Bottom */}
         <div className="mt-10 sm:mt-12 lg:mt-14 flex flex-col items-center justify-center">
-          <p className="text-[#E7E7E7] text-center font-medium capitalize text-[clamp(1rem,1.25vw,1.125rem)] max-w-[350px] lg:max-w-none">
+          <p className="text-[#E7E7E7] text-center font-medium capitalize text-[clamp(1rem,1.25vw,1.125rem)] max-w-87.5 lg:max-w-none">
             Chosen by industry leaders who set the standard instead of chasing
             it
           </p>
@@ -100,28 +97,6 @@ const Hero = () => {
             Chosen by over 10,000 global companies building at serious scale
           </p>
         </div>
-      </div>
-
-      {/* Optional gradients (responsive + no overflow scroll) */}
-      <div className="pointer-events-none absolute top-[-22%] left-[-26%] -z-10 w-[min(1650px,140vw)] aspect-[1650/785] opacity-90">
-        <Image
-          src={TopGradient}
-          alt="Hero Top Gradient"
-          fill
-          sizes="100vw"
-          className="object-contain"
-          priority
-        />
-      </div>
-
-      <div className="pointer-events-none absolute bottom-[-55%] right-[-26%] -z-10 w-[min(1650px,140vw)] aspect-[1650/785] opacity-90">
-        <Image
-          src={BottomGradient}
-          alt="Hero Bottom Gradient"
-          fill
-          sizes="100vw"
-          className="object-contain"
-        />
       </div>
     </section>
   );

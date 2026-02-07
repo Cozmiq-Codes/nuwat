@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const TagIcon = "/global/tag.png";
+const TagIcon = "/global/tag.webp";
 
 const SectionTag = ({
   title = "Section Tag Title",

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const LeadershipImage = "/about/leadership.png";
+const LeadershipImage = "/about/leadership.webp";
 
 const Leadership = () => {
   return (

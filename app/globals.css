@@ -75,11 +75,11 @@ button {
 
 /* Navbar */
 .logo {
-  @apply w-[117px] h-8;
+  @apply w-29.25 h-8;
 }
 
 .navbar {
-  @apply text-white py-6 fixed top-0 left-0 w-full z-50 transition-all duration-300;
+  @apply text-white py-6 fixed top-0 left-0 w-full z-99999 transition-all duration-300;
   position: fixed; /* Ensuring positioning context */
 }
 
@@ -87,7 +87,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../public/layout/navbar/nav-bg.png");
+  background-image: url("../public/layout/navbar/nav-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -303,7 +303,7 @@ button {
 }
 
 .cta_content_wrap {
-  @apply flex flex-col items-center text-center gap-6 rounded-[24px] bg-[url('/layout/cta/cta-bg.png')] bg-cover bg-center bg-no-repeat px-[32px] md:px-[0px] py-[40px] sm:py-[80px] lg:py-[120px] px-4 md:px-8 lg:px-0 mt-[40px] lg:mt-[60px] mb-[60px] lg:mb-[120px] overflow-hidden border border-[#ffffff1a];
+  @apply flex flex-col items-center text-center gap-6 rounded-[24px] bg-[url('/layout/cta/cta-bg.webp')] bg-cover bg-center bg-no-repeat px-[32px] md:px-[0px] py-[40px] sm:py-[80px] lg:py-[120px] px-4 md:px-8 lg:px-0 mt-[40px] lg:mt-[60px] mb-[60px] lg:mb-[120px] overflow-hidden border border-[#ffffff1a];
 }
 
 .cta_top_content {

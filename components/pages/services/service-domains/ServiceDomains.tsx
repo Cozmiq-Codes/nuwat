@@ -4,7 +4,11 @@ import { Services } from "@/constant/Services";
 
 const ServiceDomains = () => {
   return (
-    <section>
+    <section
+      className={
+        "bg-[url('/about/section-bg-two.webp')] bg-cover bg-center bg-no-repeat"
+      }
+    >
       <div className={"main-container"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col gap-12 w-full"}>
@@ -21,7 +25,7 @@ const ServiceDomains = () => {
                   className={"bg-[#FFFFFF14] py-6 px-8 rounded-3xl"}
                 >
                   <div className={"flex flex-col lg:flex-row gap-8 lg:gap-12"}>
-                    <div className={"w-full lg:max-w-[220px]"}>
+                    <div className={"w-full lg:max-w-55"}>
                       <h4
                         className={"heading-span text-lg font-medium leading-6"}
                       >
@@ -30,7 +34,7 @@ const ServiceDomains = () => {
                     </div>
                     <div
                       className={
-                        "relative w-full lg:w-[350px] h-[250px] md:h-[350px] lg:h-[300px]"
+                        "relative w-full lg:w-87.5 h-62.5 md:h-87.5 lg:h-75"
                       }
                     >
                       <Image
@@ -42,7 +46,7 @@ const ServiceDomains = () => {
                     </div>
                     <div
                       className={
-                        "max-w-full lg:max-w-[600px] flex flex-col justify-end gap-5"
+                        "max-w-full lg:max-w-150 flex flex-col justify-end gap-5"
                       }
                     >
                       <h3
@@ -54,7 +58,7 @@ const ServiceDomains = () => {
                       </h3>
                       <p
                         className={
-                          "text-white text-[16px] font-normal leading-[26px]"
+                          "text-white text-[16px] font-normal leading-6.5"
                         }
                       >
                         {service.description}

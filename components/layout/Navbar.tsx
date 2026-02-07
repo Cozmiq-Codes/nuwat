@@ -48,7 +48,7 @@ const Navbar = () => {
           </div>
 
           <div className={`navbar-links-wrapper ${isMenuOpen ? "open" : ""}`}>
-            <ul className={"lg:ml-[100px]"}>
+            <ul className={"lg:ml-25"}>
               {NAVBAR_LINK.map((link, index) => (
                 <Link
                   href={link.url}
@@ -64,7 +64,7 @@ const Navbar = () => {
             <div className={"flex flex-col gap-4 lg:hidden mt-4"}>
               <button
                 className={
-                  "local-btn py-[10px] px-6 flex items-center gap-2 justify-center"
+                  "local-btn py-2.5 px-6 flex items-center gap-2 justify-center"
                 }
               >
                 <Image src={globe} alt={"Globe Icon"} width={24} height={24} />{" "}
@@ -77,7 +77,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <div className={"hidden lg:flex items-center gap-2"}>
               <button
-                className={"local-btn py-[10px] px-6 flex items-center gap-2"}
+                className={"local-btn py-2.5 px-6 flex items-center gap-2"}
               >
                 <Image src={globe} alt={"Globe Icon"} width={24} height={24} />{" "}
                 English
