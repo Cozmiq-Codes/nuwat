@@ -5,7 +5,7 @@ import { HistoryItem, ITEMS } from "@/constant/HistoryItem";
 
 export default function HistorySection() {
   return (
-    <section id="history" className="relative bg-[url('/about/section-bg-two.png')] bg-cover bg-center bg-no-repeat">
+    <section id="history" className="relative bg-[url('/about/section-bg-two.webp')] bg-cover bg-center bg-no-repeat">
       <div className="relative main-container px-4">
         <div className="flex flex-col items-center gap-3">
           <h2
