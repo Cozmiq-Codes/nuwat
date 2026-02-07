@@ -6,7 +6,7 @@ const UpActiveArrow = "/faq/up-active-arrow.svg";
 
 const Faq = () => {
   return (
-    <section>
+    <section className={"mt-5"}>
       <div className={"max-w-225 mx-auto"}>
         <div className={"mb-8"}>
           <div className={"flex flex-col gap-8 w-full"}>
