@@ -4,7 +4,11 @@ import { Services } from "@/constant/Services";
 
 const ServiceDomains = () => {
   return (
-    <section className={"bg-[url('/about/section-bg-two.png')] bg-cover bg-center bg-no-repeat"}>
+    <section
+      className={
+        "bg-[url('/about/section-bg-two.webp')] bg-cover bg-center bg-no-repeat"
+      }
+    >
       <div className={"main-container"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col gap-12 w-full"}>

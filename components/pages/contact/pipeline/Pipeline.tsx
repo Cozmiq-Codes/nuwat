@@ -7,7 +7,11 @@ const md = "/contact/md.svg";
 
 const Pipeline = () => {
   return (
-    <section className={"bg-[url('/contact/pipeline.png')] bg-cover bg-center bg-no-repeat"}>
+    <section
+      className={
+        "bg-[url('/contact/pipeline.webp')] bg-cover bg-center bg-no-repeat"
+      }
+    >
       <div className={"main-container"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center gap-12 w-full"}>

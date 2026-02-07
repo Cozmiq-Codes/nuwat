@@ -8,7 +8,11 @@ const DownArrowIcon = "/services/negotiate/arrow-down.svg";
 
 const Negotiate = () => {
   return (
-    <section className={"bg-[url('/services/bg-grad.png')] bg-cover bg-center bg-no-repeat)]"}>
+    <section
+      className={
+        "bg-[url('/services/bg-grad.webp')] bg-cover bg-center bg-no-repeat)]"
+      }
+    >
       <div className={"main-container"}>
         <div className={"section-wrapper"}>
           <div

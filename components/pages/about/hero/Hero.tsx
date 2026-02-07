@@ -5,7 +5,7 @@ const AboutHero = () => {
   return (
     <section
       className={
-        "pt-32 pb-5 bg-[url('/global/bg-grad.png')] bg-cover bg-center bg-no-repeat"
+        "pt-32 pb-5 bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
       }
     >
       <div className={"bg-[#FFFFFF03] rounded-2xl mx-5 my-5 backdrop-blur-2xl"}>
