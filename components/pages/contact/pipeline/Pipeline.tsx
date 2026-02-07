@@ -50,11 +50,11 @@ const Pipeline = () => {
                     Critical Review
                   </h3>
                   <p>
-                    We don't "evaluate" submissions; we audit them for
-                    alignment. We identify if your venture possesses the scale
-                    and the leadership appetite required for a NUWAT
-                    intervention. If there isn't a clear path to dominance, we
-                    won't initiate.
+                    We don&apos;t &quot;evaluate&quot; submissions; we audit
+                    them for alignment. We identify if your venture possesses
+                    the scale and the leadership appetite required for a NUWAT
+                    intervention. If there isn&apos;t a clear path to dominance,
+                    we won&apos;t initiate.
                   </p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const Pipeline = () => {
                     If there is potential alignment, we initiate a high-level
                     briefing. This is a focused conversation to dissect the
                     context, the bottlenecks, and the expectations on both
-                    sides. We don't do "chats"—we do briefings.
+                    sides. We don&apos;t do &quot;chats&quot;—we do briefings.
                   </p>
                 </div>
               </div>
@@ -106,7 +106,7 @@ const Pipeline = () => {
                     We move forward only when the path to a definitive outcome
                     is clear. This ensures that every partnership we enter is
                     engineered for success from day one. You either get a
-                    mandate for victory or a clear "no."
+                    mandate for victory or a clear &quot;no.&quot;
                   </p>
                 </div>
               </div>

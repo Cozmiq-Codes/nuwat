@@ -2,7 +2,7 @@ import React from "react";
 import { StatsSectionProps } from "@/constant/Stats";
 import Image from "next/image";
 
-const BgGrad = '/hero/bg-grad-two.webp';
+const BgGrad = "/hero/bg-grad-two.webp";
 
 const StatsSection = ({
   heading,
@@ -59,7 +59,13 @@ const StatsSection = ({
         </div>
       </div>
 
-        <Image src={BgGrad} alt={"bg grad"} className={"w-587.5 h-225 absolute -bottom-full right-0 z-10"} width={1000} height={1000}/>
+      <Image
+        src={BgGrad}
+        alt={"bg grad"}
+        className={"w-587.5 h-225 absolute -bottom-full right-0 z-10"}
+        width={1000}
+        height={1000}
+      />
     </section>
   );
 };

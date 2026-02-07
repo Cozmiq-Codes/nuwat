@@ -43,8 +43,8 @@ const Venture = () => {
                 <span className={"heading-span"}>
                   who we work with and how we engage.
                 </span>
-                We don’t take "clients"; we select partners ready to own their
-                market.
+                We don&apos;t take &quot;clients&quot;; we select partners ready
+                to own their market.
               </p>
             </div>
           </div>
