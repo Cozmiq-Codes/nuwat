@@ -3,12 +3,9 @@ import Image from "next/image";
 import SectionTag from "@/components/global/SectionTag";
 import { AgencyLogos } from "@/constant/AgencyLogos";
 
-const TopGradient = "/hero/hero-gradient-top.svg";
-const BottomGradient = "/hero/hero-gradient-bottom.svg";
-
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[url('/global/bg-grad.png')] bg-cover bg-center bg-no-repeat">
+    <section className="relative overflow-hidden bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat">
       {/* Main content wrapper */}
       <div className="main-container min-h-svh flex flex-col justify-between py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
         {/* Hero Top */}

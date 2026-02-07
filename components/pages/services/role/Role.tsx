@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const role = "/services/role/role.png";
+const role = "/services/role/role.webp";
 
 const Role = () => {
   return (

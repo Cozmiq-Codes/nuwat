@@ -14,7 +14,7 @@ const DominanceSection = () => {
             <div
               className="w-full min-h-[1000px] lg:min-h-[800px] bg-center bg-contain bg-no-repeat flex flex-col justify-center lg:justify-between gap-12 lg:gap-0"
               style={{
-                backgroundImage: "url('/dominance/section-image.png')",
+                backgroundImage: "url('/dominance/section-image.webp')",
               }}
             >
               {/* Parent Card Wrapper */}
