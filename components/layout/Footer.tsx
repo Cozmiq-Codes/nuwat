@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const FooterImage = "/footer/footer-image.png";
-const FooterBgGrad = "/footer/bg-grad.png";
+const FooterImage = "/footer/footer-image.webp";
+const FooterBgGrad = "/footer/bg-grad.webp";
 
 const Footer = () => {
   return (
     <footer
-      className={`pt-20 pb-10 border-t border-[#1e293b] rounded-[16px] lg:h-[720px] bg-[url('/footer/footer-bg-img.png')] bg-cover bg-center relative`}
+      className={`pt-20 pb-10 border-t border-[#1e293b] rounded-[16px] lg:h-[720px] bg-[url('/footer/footer-bg-img.webp')] bg-cover bg-center relative`}
     >
       <div className="main-container h-full flex flex-col justify-between">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-20">
