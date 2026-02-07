@@ -5,7 +5,7 @@ import { HistoryItem, ITEMS } from "@/constant/HistoryItem";
 
 export default function HistorySection() {
   return (
-    <section id="history" className="relative">
+    <section id="history" className="relative bg-[url('/about/section-bg-two.png')] bg-cover bg-center bg-no-repeat">
       <div className="relative main-container px-4">
         <div className="flex flex-col items-center gap-3">
           <h2
@@ -14,8 +14,8 @@ export default function HistorySection() {
                 text-5xl lg:text-[56px]
                 text-center
                 leading-[1.1]
-                lg:leading-[65px]
-                max-w-[90%] md:max-w-2xl lg:max-w-[560px]
+                lg:leading-16.25
+                max-w-[90%] md:max-w-2xl lg:max-w-140
                 tracking-[-0.02em]
               "
           >
@@ -36,20 +36,20 @@ export default function HistorySection() {
                   {/* Vertical line connecting to next item - Hidden for last item */}
                   {!isLast && (
                     <motion.div
-                      className="absolute left-6 top-0 w-[4px] bg-[#FFFFFF33] -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 -z-10"
+                      className="absolute left-6 top-0 w-1 bg-[#FFFFFF33] -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 -z-10"
                       initial={{ scaleY: 0 }}
                       whileInView={{ scaleY: 1 }}
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ duration: 0.8, ease: "circOut" }}
                       style={{
-                        height: "calc(100% + 2.5rem)", // space-y-10 = 2.5rem
+                        height: "calc(100% + 2.5rem)",
                         transformOrigin: "top",
                       }}
                     >
                       {/* Desktop height adjustment */}
                       <div
                         className="hidden md:block w-full bg-[#FFFFFF33]"
-                        style={{ height: "calc(100% + 3.5rem)" }} // space-y-14 = 3.5rem
+                        style={{ height: "calc(100% + 3.5rem)" }}
                       />
                     </motion.div>
                   )}
@@ -57,7 +57,7 @@ export default function HistorySection() {
                   {/* Node */}
                   <div className="absolute left-6 top-0 z-10 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2">
                     <div
-                      className="flex h-[88px] w-[88px] items-center justify-center rounded-full text-[18px] font-bold leading-[20px] tracking-[0.7px] text-white"
+                      className="flex h-22 w-22 items-center justify-center rounded-full text-[18px] font-bold leading-5 tracking-[0.7px] text-white"
                       style={{
                         background:
                           "linear-gradient(226deg, rgba(0, 209, 255, 0.19) 18.78%, rgba(81, 162, 255, 0.19) 74.66%), #070707",
@@ -123,7 +123,7 @@ function Card({
   return (
     <div
       className={[
-        "w-full max-w-[600px] rounded-2xl bg-[#FFFFFF14] p-8",
+        "w-full max-w-150 rounded-2xl bg-[#FFFFFF14] p-8",
         "flex flex-col gap-6",
         "shadow-[0_20px_60px_rgba(0,0,0,0.65)] ring-1 ring-white/5",
         "transition-transform duration-200 will-change-transform",
@@ -131,7 +131,7 @@ function Card({
         align === "center" ? "text-right" : "text-left",
       ].join(" ")}
     >
-      <h3 className="text-sm font-semibold tracking-tight text-[#F2F7FE] md:text-[28px] leading-[32px]">
+      <h3 className="text-sm font-semibold tracking-tight text-[#F2F7FE] md:text-[28px] leading-8">
         {item.title}
       </h3>
       <p className="text-[#E7E7E7] text-[16px] leading-7">{item.body}</p>
