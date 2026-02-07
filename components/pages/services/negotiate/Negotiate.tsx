@@ -10,7 +10,7 @@ const Negotiate = () => {
   return (
     <section
       className={
-        "bg-[url('/services/bg-grad.webp')] bg-cover bg-center bg-no-repeat)]"
+        "bg-[url('/services/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
       }
     >
       <div className={"main-container"}>
