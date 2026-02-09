@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const BgGradImage = "/about/vision/bg-grad-one.webp";
-const BgGradImageTwo = "/about/vision/bg-grad-two.webp";
+const BgGradImage = "/about/section-bg.webp;"
 
 interface VisionProps {
   title: string;
@@ -15,9 +14,13 @@ interface VisionProps {
 }
 
 const Vision = ({ title, items }: VisionProps) => {
+
+  console.log(items);
+
+
   return (
-    <section className={"relative"}>
-      <div className={"main-container relative z-[50]"}>
+    <section className={"relative bg-[url('/about/section-bg.webp')] bg-cover bg-center bg-no-repeat"}>
+      <div className={"main-container relative z-50"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center w-full gap-12"}>
             <div className={"flex justify-center"}>
@@ -42,10 +45,10 @@ const Vision = ({ title, items }: VisionProps) => {
                     alt={"our-vision"}
                     width={50}
                     height={50}
-                    className={"w-[48px] h-[48px]"}
+                    className={"w-12 h-12"}
                   />
 
-                  <div className={"flex flex-col gap-[14px]"}>
+                  <div className={"flex flex-col gap-3.5"}>
                     <h3 className={"text-[24px] font-bold leading-12"}>
                       {vision.title}
                     </h3>
@@ -62,24 +65,24 @@ const Vision = ({ title, items }: VisionProps) => {
         </div>
       </div>
 
-      <div className={"hidden lg:block absolute -top-[150px] right-0 z-[20]"}>
+      <div className={"hidden lg:block absolute -top-37.5 right-0 z-20"}>
         <Image
           src={BgGradImage}
           alt={"bgGradImage"}
           width={1000}
           height={1000}
-          className={"w-[850px] h-full"}
+          className={"w-212.5 h-full"}
         />
       </div>
-      <div className={"hidden lg:block absolute top-[150px] left-0 z-[20]"}>
-        <Image
-          src={BgGradImageTwo}
-          alt={"bgGradImage"}
-          width={1000}
-          height={1000}
-          className={"w-[600px] h-full"}
-        />
-      </div>
+      {/*<div className={"hidden lg:block absolute top-[150px] left-0 z-[20]"}>*/}
+      {/*  <Image*/}
+      {/*    src={BgGradImageTwo}*/}
+      {/*    alt={"bgGradImage"}*/}
+      {/*    width={1000}*/}
+      {/*    height={1000}*/}
+      {/*    className={"w-[600px] h-full"}*/}
+      {/*  />*/}
+      {/*</div>*/}
     </section>
   );
 };
