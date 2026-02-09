@@ -5,7 +5,36 @@ import Link from "next/link";
 const FooterImage = "/footer/footer-image.webp";
 const FooterBgGrad = "/footer/bg-grad.webp";
 
-const Footer = () => {
+interface FooterProps {
+  content: {
+    columns: {
+      company: string;
+      support: string;
+      careers: string;
+      contact: string;
+    };
+    links: {
+      home: string;
+      company: string;
+      services: string;
+      faq: string;
+      contact: string;
+      termsConditions: string;
+      termsService: string;
+      returnPolicy: string;
+      privacyPolicy: string;
+      accessibility: string;
+      professionals: string;
+      providers: string;
+    };
+    contactInfo: {
+      address: string;
+    };
+    copyright: string;
+  };
+}
+
+const Footer = ({ content }: FooterProps) => {
   return (
     <footer
       className={`pt-20 pb-10 border-t border-[#1e293b] rounded-[16px] lg:h-[720px] bg-[url('/footer/footer-bg-img.webp')] bg-cover bg-center relative`}
@@ -29,14 +58,16 @@ const Footer = () => {
           <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-8">
             {/* Company */}
             <div className="flex flex-col gap-6">
-              <h3 className="text-white text-lg font-bold">Company</h3>
+              <h3 className="text-white text-lg font-bold">
+                {content.columns.company}
+              </h3>
               <ul className="flex flex-col gap-4">
                 <li>
                   <Link
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Home
+                    {content.links.home}
                   </Link>
                 </li>
                 <li>
@@ -44,7 +75,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Company
+                    {content.links.company}
                   </Link>
                 </li>
                 <li>
@@ -52,7 +83,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Services
+                    {content.links.services}
                   </Link>
                 </li>
                 <li>
@@ -60,7 +91,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    FAQ
+                    {content.links.faq}
                   </Link>
                 </li>
                 <li>
@@ -68,7 +99,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Contact
+                    {content.links.contact}
                   </Link>
                 </li>
               </ul>
@@ -76,14 +107,16 @@ const Footer = () => {
 
             {/* Support */}
             <div className="flex flex-col gap-6">
-              <h3 className="text-white text-lg font-bold">Support</h3>
+              <h3 className="text-white text-lg font-bold">
+                {content.columns.support}
+              </h3>
               <ul className="flex flex-col gap-4">
                 <li>
                   <Link
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Terms of Conditions
+                    {content.links.termsConditions}
                   </Link>
                 </li>
                 <li>
@@ -91,7 +124,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Terms of Service
+                    {content.links.termsService}
                   </Link>
                 </li>
                 <li>
@@ -99,7 +132,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Return Policy
+                    {content.links.returnPolicy}
                   </Link>
                 </li>
                 <li>
@@ -107,7 +140,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Privacy Policy
+                    {content.links.privacyPolicy}
                   </Link>
                 </li>
                 <li>
@@ -115,7 +148,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Accessibility
+                    {content.links.accessibility}
                   </Link>
                 </li>
               </ul>
@@ -123,14 +156,16 @@ const Footer = () => {
 
             {/* Careers */}
             <div className="flex flex-col gap-6">
-              <h3 className="text-white text-lg font-bold">Careers</h3>
+              <h3 className="text-white text-lg font-bold">
+                {content.columns.careers}
+              </h3>
               <ul className="flex flex-col gap-4">
                 <li>
                   <Link
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Professionals
+                    {content.links.professionals}
                   </Link>
                 </li>
                 <li>
@@ -138,7 +173,7 @@ const Footer = () => {
                     href="#"
                     className="text-[#94A3B8] hover:text-white transition-colors text-sm"
                   >
-                    Providers
+                    {content.links.providers}
                   </Link>
                 </li>
               </ul>
@@ -146,7 +181,9 @@ const Footer = () => {
 
             {/* Contact Us */}
             <div className="flex flex-col gap-6">
-              <h3 className="text-white text-lg font-bold">Contact Us</h3>
+              <h3 className="text-white text-lg font-bold">
+                {content.columns.contact}
+              </h3>
               <ul className="flex flex-col gap-4">
                 <li className="flex gap-3 items-start">
                   <div className="w-5 h-5 mt-0.5 text-[#00D1FF] shrink-0">
@@ -168,13 +205,12 @@ const Footer = () => {
                       />
                     </svg>
                   </div>
-                  <span className="text-[#94A3B8] text-sm leading-relaxed">
-                    Alwane Business Center,
-                    <br />
-                    ABC Mall, Road 4026, Building
-                    <br />
-                    1301, Block 340, Juffair
-                  </span>
+                  <span
+                    className="text-[#94A3B8] text-sm leading-relaxed"
+                    dangerouslySetInnerHTML={{
+                      __html: content.contactInfo.address,
+                    }}
+                  />
                 </li>
                 <li className="flex gap-3 items-center">
                   <div className="w-5 h-5 text-[#00D1FF] shrink-0">
@@ -219,10 +255,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="pt-8 border-t border-[#1e293b] text-center">
-          <p className="text-[#64748B] text-xs">
-            © 2025 Nuwat Ventures W.L.L. All rights reserved. Nuwat and its
-            affiliated brands are trademarks of Nuwat Ventures W.L.L.
-          </p>
+          <p className="text-[#64748B] text-xs">{content.copyright}</p>
         </div>
       </div>
 

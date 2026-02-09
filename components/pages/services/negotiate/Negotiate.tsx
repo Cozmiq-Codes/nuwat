@@ -6,7 +6,16 @@ const CancelIcon = "/services/negotiate/cancel-circle.svg";
 const UpArrowIcon = "/services/negotiate/arrow-up.svg";
 const DownArrowIcon = "/services/negotiate/arrow-down.svg";
 
-const Negotiate = () => {
+interface NegotiateProps {
+  title: string;
+  items: Array<{
+    id: string;
+    title: string;
+    description?: string;
+  }>;
+}
+
+const Negotiate = ({ title, items }: NegotiateProps) => {
   return (
     <section
       className={
@@ -30,167 +39,90 @@ const Negotiate = () => {
                   "text-white text-[32px] sm:text-[40px] lg:text-[48px]! font-bold leading-tight lg:leading-15 max-w-120"
                 }
               >
-                What We Don&apos;t Do The Non-Negotiables
+                {title}
               </h2>
 
               <div className={"flex flex-col gap-4 sm:gap-5"}>
-                {/* Open FAQ */}
-                <div
-                  className={
-                    "bg-[linear-gradient(226deg,rgba(0,209,255,0.08)_18.78%,rgba(81,162,255,0.08)_74.66%)] p-4 sm:p-5 rounded-xl flex items-start sm:items-center justify-between gap-3"
-                  }
-                >
-                  <Image
-                    src={CancelIcon}
-                    alt={"Cancel Icon"}
-                    width={24}
-                    height={24}
-                    className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1 sm:mt-0"}
-                  />
-                  <div className={"flex flex-col gap-2 sm:gap-3 flex-1"}>
-                    <h3
-                      className={
-                        "text-white text-lg sm:text-[20px] font-bold leading-snug sm:leading-7"
-                      }
-                    >
-                      We don&apos;t run vanity campaigns.
-                    </h3>
-                    <p
-                      className={
-                        "text-white/80 text-sm sm:text-base font-normal leading-relaxed sm:leading-7 max-w-147.5"
-                      }
-                    >
-                      We are not a marketing firm; we are an industrial engine.
-                      If it doesn&apos;t move the bottom line or secure the
-                      foundation, we don&apos;t touch it.
-                    </p>
+                {items.map((item, index) => (
+                  <div key={item.id}>
+                    {index === 0 ? (
+                      /* Open FAQ */
+                      <div
+                        className={
+                          "bg-[linear-gradient(226deg,rgba(0,209,255,0.08)_18.78%,rgba(81,162,255,0.08)_74.66%)] p-4 sm:p-5 rounded-xl flex items-start sm:items-center justify-between gap-3"
+                        }
+                      >
+                        <Image
+                          src={CancelIcon}
+                          alt={"Cancel Icon"}
+                          width={24}
+                          height={24}
+                          className={
+                            "w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1 sm:mt-0"
+                          }
+                        />
+                        <div className={"flex flex-col gap-2 sm:gap-3 flex-1"}>
+                          <h3
+                            className={
+                              "text-white text-lg sm:text-[20px] font-bold leading-snug sm:leading-7"
+                            }
+                          >
+                            {item.title}
+                          </h3>
+                          {item.description && (
+                            <p
+                              className={
+                                "text-white/80 text-sm sm:text-base font-normal leading-relaxed sm:leading-7 max-w-147.5"
+                              }
+                            >
+                              {item.description}
+                            </p>
+                          )}
+                        </div>
+                        <Image
+                          src={UpArrowIcon}
+                          alt={"Up arrow icon"}
+                          width={24}
+                          height={24}
+                          className={
+                            "w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1 sm:mt-0"
+                          }
+                        />
+                      </div>
+                    ) : (
+                      /*  Closed FAQS   */
+                      <div
+                        className={
+                          "bg-[#1C1C1C52] p-4 sm:p-5 rounded-xl flex items-center justify-between gap-3 relative"
+                        }
+                      >
+                        <div className={"flex items-center gap-3"}>
+                          <Image
+                            src={CancelIcon}
+                            alt={"Cancel Icon"}
+                            width={24}
+                            height={24}
+                            className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
+                          />
+                          <h3
+                            className={
+                              "text-white text-lg sm:text-[20px] font-bold leading-snug sm:leading-7"
+                            }
+                          >
+                            {item.title}
+                          </h3>
+                        </div>
+                        <Image
+                          src={DownArrowIcon}
+                          alt={"Down arrow icon"}
+                          width={24}
+                          height={24}
+                          className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
+                        />
+                      </div>
+                    )}
                   </div>
-                  <Image
-                    src={UpArrowIcon}
-                    alt={"Up arrow icon"}
-                    width={24}
-                    height={24}
-                    className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1 sm:mt-0"}
-                  />
-                </div>
-
-                {/*  Closed FAQS   */}
-                <div
-                  className={
-                    "bg-[#1C1C1C52] p-4 sm:p-5 rounded-xl flex items-center justify-between gap-3 relative"
-                  }
-                >
-                  <div className={"flex items-center gap-3"}>
-                    <Image
-                      src={CancelIcon}
-                      alt={"Cancel Icon"}
-                      width={24}
-                      height={24}
-                      className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
-                    />
-                    <h3
-                      className={
-                        "text-white text-lg sm:text-[20px] font-bold leading-snug sm:leading-7"
-                      }
-                    >
-                      NUWAT Does Not Give Superficial
-                    </h3>
-                  </div>
-                  <Image
-                    src={DownArrowIcon}
-                    alt={"Down arrow icon"}
-                    width={24}
-                    height={24}
-                    className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
-                  />
-                </div>
-                <div
-                  className={
-                    "bg-[#1C1C1C52] p-4 sm:p-5 rounded-xl flex items-center justify-between gap-3 relative"
-                  }
-                >
-                  <div className={"flex items-center gap-3"}>
-                    <Image
-                      src={CancelIcon}
-                      alt={"Cancel Icon"}
-                      width={24}
-                      height={24}
-                      className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
-                    />
-                    <h3
-                      className={
-                        "text-white text-lg sm:text-[20px] font-bold leading-snug sm:leading-7"
-                      }
-                    >
-                      We Do Not Offer Cookie-Cutter Solutions
-                    </h3>
-                  </div>
-                  <Image
-                    src={DownArrowIcon}
-                    alt={"Down arrow icon"}
-                    width={24}
-                    height={24}
-                    className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
-                  />
-                </div>
-                <div
-                  className={
-                    "bg-[#1C1C1C52] p-4 sm:p-5 rounded-xl flex items-center justify-between gap-3 relative"
-                  }
-                >
-                  <div className={"flex items-center gap-3"}>
-                    <Image
-                      src={CancelIcon}
-                      alt={"Cancel Icon"}
-                      width={24}
-                      height={24}
-                      className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
-                    />
-                    <h3
-                      className={
-                        "text-white text-lg sm:text-[20px] font-bold leading-snug sm:leading-7"
-                      }
-                    >
-                      We Don&apos;t Promise Targets Based On A Spreadsheet.
-                    </h3>
-                  </div>
-                  <Image
-                    src={DownArrowIcon}
-                    alt={"Down arrow icon"}
-                    width={24}
-                    height={24}
-                    className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
-                  />
-                </div>
-                <div
-                  className={
-                    "bg-[#1C1C1C52] p-4 sm:p-5 rounded-xl flex items-center justify-between gap-3 relative"
-                  }
-                >
-                  <div className={"flex items-center gap-3"}>
-                    <Image
-                      src={CancelIcon}
-                      alt={"Cancel Icon"}
-                      width={24}
-                      height={24}
-                      className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
-                    />
-                    <h3
-                      className={
-                        "text-white text-lg sm:text-[20px] font-bold leading-snug sm:leading-7"
-                      }
-                    >
-                      We Work Upstream.
-                    </h3>
-                  </div>
-                  <Image
-                    src={DownArrowIcon}
-                    alt={"Down arrow icon"}
-                    width={24}
-                    height={24}
-                    className={"w-5 h-5 sm:w-6 sm:h-6 shrink-0"}
-                  />
-                </div>
+                ))}
               </div>
             </div>
             <div className={"w-full lg:w-auto flex justify-center lg:block"}>

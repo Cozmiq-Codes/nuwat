@@ -1,7 +1,15 @@
 import React from "react";
 import SectionTag from "@/components/global/SectionTag";
 
-const AboutHero = () => {
+interface AboutHeroProps {
+  content: {
+    tag: string;
+    title: string;
+    description: string;
+  };
+}
+
+const AboutHero = ({ content }: AboutHeroProps) => {
   return (
     <section
       className={
@@ -11,7 +19,7 @@ const AboutHero = () => {
       <div className={"bg-[#FFFFFF03] rounded-2xl mx-5 my-5 backdrop-blur-2xl"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center gap-5 w-full"}>
-            <SectionTag title={"company"} icon={false} />
+            <SectionTag title={content.tag} icon={false} />
             <div className={"flex flex-col items-center gap-5"}>
               <h1
                 className="
@@ -23,10 +31,8 @@ const AboutHero = () => {
                 max-w-[90%] md:max-w-2xl lg:max-w-140
                 tracking-[-0.02em]
               "
-              >
-                Architecting Empires{" "}
-                <span className={"heading-span"}>That Define Markets</span>
-              </h1>
+                dangerouslySetInnerHTML={{ __html: content.title }}
+              />
               <p
                 className="
                 text-[#E7E7E7CC]
@@ -36,10 +42,7 @@ const AboutHero = () => {
                 text-center
               "
               >
-                NUWAT is the private vehicle of a sovereign operator whose
-                career is defined by moving the capital that moves nations. We
-                don’t just execute at scale; we engineer the industrial and
-                economic infrastructure that others rely on to exist.
+                {content.description}
               </p>
             </div>
           </div>

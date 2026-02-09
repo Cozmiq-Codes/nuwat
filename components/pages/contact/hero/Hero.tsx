@@ -1,6 +1,13 @@
 import React from "react";
 
-const ContactHero = () => {
+interface ContactHeroProps {
+  content: {
+    title: string;
+    description: string;
+  };
+}
+
+const ContactHero = ({ content }: ContactHeroProps) => {
   return (
     <section
       className={
@@ -22,7 +29,7 @@ const ContactHero = () => {
                 tracking-[-0.02em]
               "
               >
-                Contact Us
+                {content.title}
               </h1>
               <p
                 className="
@@ -33,8 +40,7 @@ const ContactHero = () => {
                 text-center
               "
               >
-                We align with sovereign leaders who understand that true success
-                is built on structural dominance, not short-term optics
+                {content.description}
               </p>
             </div>
           </div>

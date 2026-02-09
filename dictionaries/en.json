@@ -148,6 +148,7 @@
   },
   "about": {
     "hero": {
+      "tag": "Company",
       "title": "Architecting Empires <span class=\"heading-span\">That Define Markets</span>",
       "description": "NUWAT is the private vehicle of a sovereign operator whose career is defined by moving the capital that moves nations. We don’t just execute at scale; we engineer the industrial and economic infrastructure that others rely on to exist."
     },
@@ -248,6 +249,7 @@
   },
   "services": {
     "hero": {
+      "tag": "Services",
       "title": "Strategic clarity for <span class=\"heading-span\">organizations ready to move.</span>",
       "description": "We partner with leaders who understand that transformation isn't about following trends lasts replace with dominates"
     },
@@ -400,6 +402,7 @@
   },
   "faq": {
     "hero": {
+      "tag": "FAQ",
       "title": "Frequently Asked Questions",
       "description": "We align with trailblazers who view transformation as a mandate—not a fleeting moment."
     },

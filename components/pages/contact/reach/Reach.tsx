@@ -1,11 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import { REACH_CONTENT } from "@/constant/contact/Reach";
 
 const ReachImage = "/contact/reach.webp";
 const StarSVG = "/contact/star.svg";
 
-const Reach = () => {
+interface ReachProps {
+  title: string;
+  description: string;
+  items: Array<{
+    title: string;
+    description: string;
+  }>;
+}
+
+const Reach = ({ title, description, items }: ReachProps) => {
   return (
     <section className="py-10 sm:py-14 lg:py-20 bg-[url('/contact/bg-grad-two.webp')] bg-cover bg-center bg-no-repeat">
       <div className="main-container">
@@ -14,14 +22,10 @@ const Reach = () => {
             {/* Left column */}
             <div className="flex flex-col gap-8 lg:gap-10 lg:justify-between">
               <div className="max-w-155 flex flex-col gap-3 sm:gap-4">
-                <h2 className="section-heading text-left!">
-                  When It Makes Sense To Engage Criteria for High-Stakes
-                  Partnership
-                </h2>
+                <h2 className="section-heading text-left!">{title}</h2>
 
                 <p className="text-[14px] sm:text-[16px] font-normal leading-6 sm:leading-7 max-w-120 text-white/80">
-                  Nuwat is for when leadership has a serious decision
-                  environment, and you need to act.
+                  {description}
                 </p>
               </div>
 
@@ -40,7 +44,7 @@ const Reach = () => {
 
             {/* Right column */}
             <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6">
-              {REACH_CONTENT.map((service, index) => (
+              {items.map((service, index) => (
                 <div
                   key={service?.title ?? index}
                   className="bg-white/6 p-4 sm:p-5 lg:p-6 rounded-2xl"

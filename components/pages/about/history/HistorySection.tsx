@@ -1,9 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HistoryItem, ITEMS } from "@/constant/HistoryItem";
+import { HistoryItem } from "@/constant/HistoryItem";
 
-export default function HistorySection() {
+interface HistorySectionProps {
+  heading: string;
+  subtitle: string;
+  items: Array<{
+    title: string;
+    body: string;
+    marker: string;
+    side: "left" | "right";
+  }>;
+}
+
+export default function HistorySection({
+  heading,
+  subtitle,
+  items,
+}: HistorySectionProps) {
   return (
     <section
       id="history"
@@ -22,17 +37,17 @@ export default function HistorySection() {
                 tracking-[-0.02em]
               "
           >
-            Our History
+            {heading}
           </h2>
-          <p className="text-[16px] leading-7 text-white">Established 2009</p>
+          <p className="text-[16px] leading-7 text-white">{subtitle}</p>
         </div>
 
         {/* Timeline */}
         <div className="relative my-14">
           <ul className="space-y-10 md:space-y-14">
-            {ITEMS.map((item, index) => {
+            {items.map((item, index) => {
               const isLeft = item.side === "left";
-              const isLast = index === ITEMS.length - 1;
+              const isLast = index === items.length - 1;
 
               return (
                 <li key={item.marker} className="relative">

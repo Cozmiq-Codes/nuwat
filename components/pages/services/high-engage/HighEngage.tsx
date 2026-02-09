@@ -1,10 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import { ServicesStakes } from "@/constant/Services";
 
 const SectionImage = "/services/high-engage/section-img.webp";
 
-const HighEngage = () => {
+interface HighEngageProps {
+  title: string;
+  description: string;
+  items: Array<{
+    title: string;
+    description: string;
+    icon: string;
+  }>;
+}
+
+const HighEngage = ({ title, description, items }: HighEngageProps) => {
   return (
     <section className="py-10 sm:py-14 lg:py-20">
       <div className="main-container">
@@ -13,14 +22,10 @@ const HighEngage = () => {
             {/* Left column */}
             <div className="flex flex-col gap-8 lg:gap-10 lg:justify-between">
               <div className="max-w-[620px] flex flex-col gap-3 sm:gap-4">
-                <h2 className="section-heading !text-left">
-                  When It Makes Sense To Engage Criteria for High-Stakes
-                  Partnership
-                </h2>
+                <h2 className="section-heading !text-left">{title}</h2>
 
                 <p className="text-[14px] sm:text-[16px] font-normal leading-6 sm:leading-7 max-w-[480px] text-white/80">
-                  Nuwat is for when leadership has a serious decision
-                  environment, and you need to act.
+                  {description}
                 </p>
               </div>
 
@@ -39,7 +44,7 @@ const HighEngage = () => {
 
             {/* Right column */}
             <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6">
-              {ServicesStakes.map((service, index) => (
+              {items.map((service, index) => (
                 <div
                   key={service?.title ?? index}
                   className="bg-white/[0.06] p-4 sm:p-5 lg:p-6 rounded-2xl"
