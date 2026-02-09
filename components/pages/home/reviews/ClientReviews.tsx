@@ -1,33 +1,46 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { testimonials } from "@/constant/Testimonials";
 
 const QuoteIcon = "/client-reviews/quote.svg";
 
-const ClientReviews = () => {
+interface Testimonial {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}
+
+interface ClientReviewsProps {
+  content: {
+    title: string;
+    items: Testimonial[];
+  };
+}
+
+const ClientReviews = ({ content }: ClientReviewsProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1,
+      prevIndex === content.items.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1,
+      prevIndex === 0 ? content.items.length - 1 : prevIndex - 1,
     );
   };
 
-  const currentTestimonial = testimonials[currentIndex];
+  const currentTestimonial = content.items[currentIndex];
 
   return (
     <section className="py-20 overflow-hidden">
       <div className="main-container">
         <div className="flex flex-col gap-12 lg:gap-16 items-center">
           <h2 className="section-heading text-center text-white">
-            Client Reviews
+            {content.title}
           </h2>
 
           <div className="w-full flex justify-center items-center gap-4 lg:gap-12">

@@ -17,7 +17,7 @@ const AboutPage = () => {
       <StatsSection heading={"THE SCALE OF COMMAND"} stats={AboutStats} />
       <Vision />
       <NuwatCode />
-      <CTA />
+      {/*<CTA content={dict.home.cta} common={dict.common} />*/}
     </>
   );
 };

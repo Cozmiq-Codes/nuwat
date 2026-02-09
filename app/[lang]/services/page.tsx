@@ -14,7 +14,7 @@ const Page = () => {
       <ServiceDomains />
       <Negotiate />
       <HighEngage />
-      <CTA />
+      {/*<CTA content={dict.home.cta} common={dict.common} />*/}
     </>
   );
 };

@@ -46,7 +46,7 @@ body.menu-open {
 
 @layer components {
   .secondary-btn {
-    @apply relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-[10px] text-[16px] font-medium text-white/95 bg-white/10 backdrop-blur-xl border border-white/20 shadow-secondary-btn transition hover:bg-white/12 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30;
+    @apply relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-2.5 text-[16px] font-medium text-white/95 bg-white/10 backdrop-blur-xl border border-white/20 shadow-secondary-btn transition hover:bg-white/12 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30;
   }
 
   .secondary-btn::before {

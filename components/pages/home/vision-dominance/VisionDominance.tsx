@@ -7,7 +7,18 @@ const GrowthImage = "/empowering/growth.webp";
 const OperationsImage = "/empowering/operations.webp";
 const BgGrad = "/empowering/bg-grad.webp";
 
-const VisionDominance = () => {
+interface VisionDominanceProps {
+  content: {
+    title: string;
+    items: {
+      "01": { title: string; description: string };
+      "02": { title: string; description: string };
+      "03": { title: string; description: string };
+    };
+  };
+}
+
+const VisionDominance = ({ content }: VisionDominanceProps) => {
   return (
     <section className={"relative"}>
       <div className={"main-container"}>
@@ -21,10 +32,8 @@ const VisionDominance = () => {
               className={
                 "section-heading max-w-full text-3xl md:text-4xl lg:text-5xl"
               }
-            >
-              ENGINEERED BY VISION. <br />
-              <span className={"heading-span"}>DEFINED BY DOMINANCE.</span>
-            </h2>
+              dangerouslySetInnerHTML={{ __html: content.title }}
+            />
 
             <div className={"flex flex-col lg:flex-row gap-12 lg:gap-12"}>
               <div>
@@ -54,17 +63,14 @@ const VisionDominance = () => {
                             "text-[#F2F7FE] text-2xl lg:text-[28px] font-bold leading-[32px]"
                           }
                         >
-                          MANDATING EXCELLENCE
+                          {content.items["01"].title}
                         </h3>
                         <p
                           className={
                             "max-w-[465px] text-[#E7E7E7] text-[16px] font-normal leading-[28px] tracking-[0.07px]"
                           }
                         >
-                          &quot;We partner with leadership teams to identify the
-                          exact levers that move the needle. Through disciplined
-                          strategy and surgical execution, we eliminate noise
-                          and command market direction&quot;.
+                          {content.items["01"].description}
                         </p>
                       </div>
                     </div>
@@ -91,17 +97,14 @@ const VisionDominance = () => {
                             "text-[#F2F7FE] text-2xl lg:text-[28px] font-bold leading-[32px]"
                           }
                         >
-                          ARCHITECTING UNASSAILABLE GROWTH
+                          {content.items["02"].title}
                         </h3>
                         <p
                           className={
                             "max-w-[465px] text-[#E7E7E7] text-[16px] font-normal leading-[28px] tracking-[0.07px]"
                           }
                         >
-                          Growth is not tactics stacked on tactics. We design
-                          systems that support sustainable expansion, aligned
-                          teams, and long-term value creation. Everything we
-                          touch is built to hold under pressure.
+                          {content.items["02"].description}
                         </p>
                       </div>
                     </div>
@@ -128,18 +131,14 @@ const VisionDominance = () => {
                             "text-[#F2F7FE] text-2xl lg:text-[28px] font-bold leading-[32px]"
                           }
                         >
-                          INDUSTRIAL RECONSTRUCTION
+                          {content.items["03"].title}
                         </h3>
                         <p
                           className={
                             "max-w-[465px] text-[#E7E7E7] text-[16px] font-normal leading-[28px] tracking-[0.07px]"
                           }
                         >
-                          We don&apos;t optimize around broken structures. We
-                          challenge assumptions, redesign processes, and help
-                          organizations operate at a higher standard across
-                          brand, customer experience, and internal decision
-                          making.
+                          {content.items["03"].description}
                         </p>
                       </div>
                     </div>

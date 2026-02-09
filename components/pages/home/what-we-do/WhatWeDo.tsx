@@ -1,13 +1,21 @@
 import React from "react";
 import Image from "next/image";
 
-const WhatWeDo = () => {
+interface WhatWeDoProps {
+  content: {
+    title: string;
+    heading: string;
+  };
+  aboutNuwat: string;
+}
+
+const WhatWeDo = ({ content, aboutNuwat }: WhatWeDoProps) => {
   return (
     <section className={"what_we_do"}>
       <div className={"main-container"}>
         <div className={"section-wrapper"}>
           <div className={"what_we_do_left"}>
-            <h2 className={"wwdl_title"}>WHAT WE DO</h2>
+            <h2 className={"wwdl_title"}>{content.title}</h2>
             <div className="what_we_do_img">
               <Image
                 src="/layout/what-we-do/building.webp"
@@ -18,16 +26,10 @@ const WhatWeDo = () => {
             </div>
           </div>
           <div className={"what_we_do_right"}>
-            <h3 className="wwdr_heading">
-              <span className={"heading-span"}>
-                NUWAT is a sovereign operating partner
-              </span>{" "}
-              built for companies that refuse to stay ordinary, outpace their
-              market,{" "}
-              <span className={"heading-span"}>
-                and dictate the standard of their industry.
-              </span>
-            </h3>
+            <h3
+              className="wwdr_heading"
+              dangerouslySetInnerHTML={{ __html: content.heading }}
+            />
             <div className={"what_we_do_btn"}>
               <button className="primary_button flex">
                 <span>
@@ -38,7 +40,7 @@ const WhatWeDo = () => {
                     height={24}
                   />
                 </span>
-                About Nuwat
+                {aboutNuwat}
               </button>
             </div>
           </div>

@@ -1,15 +1,26 @@
-import React from "react";
+interface DominanceProps {
+  content: {
+    title: string;
+    cards: {
+      brand: { title: string; description: string };
+      scale: { title: string; description: string };
+      digital: { title: string; description: string };
+      systemic: { title: string; description: string };
+    };
+  };
+}
 
-const DominanceSection = () => {
+const DominanceSection = ({ content }: DominanceProps) => {
   return (
     <section className={"min-h-screen overflow-hidden py-[120px]"}>
       <div className={"main-container"}>
         <div>
           <div className="flex flex-col justify-center gap-12 lg:gap-16 items-center">
             {/* Heading */}
-            <h2 className="section-heading text-center uppercase!">
-              The Mechanics <span className="heading-span">of Dominance</span>
-            </h2>
+            <h2
+              className="section-heading text-center uppercase!"
+              dangerouslySetInnerHTML={{ __html: content.title }}
+            />
 
             <div
               className="w-full min-h-[1000px] lg:min-h-[800px] bg-center bg-contain bg-no-repeat flex flex-col justify-center lg:justify-between gap-12 lg:gap-0"
@@ -21,23 +32,18 @@ const DominanceSection = () => {
               <div className="w-full flex flex-col items-center lg:flex-row justify-between gap-6">
                 <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF]">
                   <h3 className="text-[#F2F7FE] text-lg lg:text-[26px] font-bold leading-[37px] uppercase">
-                    SOVEREIGN BRAND ARCHITECTURE.
+                    {content.cards.brand.title}
                   </h3>
                   <p className="text-[#E7E7E7] text-[14px] lg:text-[16px] leading-[25px] font-normal">
-                    We design to move markets, not impress judges. Our work
-                    delivers unmatched clarity, authority, and presence in brand
-                    identity, visual systems, and packaging.
+                    {content.cards.brand.description}
                   </p>
                 </div>
                 <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF]">
                   <h3 className="text-[#F2F7FE] text-lg lg:text-[26px] font-bold leading-[37px] uppercase">
-                    UNASSAILABLE SCALE ENGINES.
+                    {content.cards.scale.title}
                   </h3>
                   <p className="text-[#E7E7E7] text-[14px] lg:text-[16px] leading-[25px] font-normal">
-                    Growth isn&apos;t noise, hacks, or short-term wins. We build
-                    disciplined marketing and growth systems that reach the
-                    right audience, convert with intent, and scale without
-                    collapsing under pressure.
+                    {content.cards.scale.description}
                   </p>
                 </div>
               </div>
@@ -46,23 +52,18 @@ const DominanceSection = () => {
               <div className="w-full flex flex-col items-center lg:flex-row justify-between gap-6">
                 <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF]">
                   <h3 className="text-[#F2F7FE] text-lg lg:text-[26px] font-bold leading-[37px] uppercase">
-                    DIGITAL FRONTIERS, FORTIFIED.
+                    {content.cards.digital.title}
                   </h3>
                   <p className="text-[#E7E7E7] text-[14px] lg:text-[16px] leading-[25px] font-normal">
-                    Brand strategy isn&apos;t a presentation deck. It&apos;s a
-                    decision-making weapon. We define positioning, narrative,
-                    and direction so your brand shows up consistently,
-                    confidently,
+                    {content.cards.digital.description}
                   </p>
                 </div>
                 <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF]">
                   <h3 className="text-[#F2F7FE] text-lg lg:text-[26px] font-bold leading-[37px] uppercase">
-                    SYSTEMIC RECONSTRUCTION.
+                    {content.cards.systemic.title}
                   </h3>
                   <p className="text-[#E7E7E7] text-[14px] lg:text-[16px] leading-[25px] font-normal">
-                    We don&apos;t ship websites that look good for six months.
-                    We build digital platforms designed to hold up as your
-                    business grows, evolves, and outpaces competitors.
+                    {content.cards.systemic.description}
                   </p>
                 </div>
               </div>

@@ -1,0 +1,413 @@
+{
+  "common": {
+    "buttons": {
+      "applyNow": "Apply Now",
+      "learnMore": "Learn More",
+      "register": "Register",
+      "english": "English",
+      "exploreApproach": "Explore our Approach",
+      "aboutNuwat": "About Nuwat",
+      "submitRequest": "Submit Request"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "faq": "FAQ",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "columns": {
+      "company": "Company",
+      "support": "Support",
+      "careers": "Careers",
+      "contact": "Contact Us"
+    },
+    "links": {
+      "home": "Home",
+      "company": "Company",
+      "services": "Services",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "termsConditions": "Terms of Conditions",
+      "termsService": "Terms of Service",
+      "returnPolicy": "Return Policy",
+      "privacyPolicy": "Privacy Policy",
+      "accessibility": "Accessibility",
+      "professionals": "Professionals",
+      "providers": "Providers"
+    },
+    "contactInfo": {
+      "address": "Alwane Business Center,<br />ABC Mall, Road 4026, Building<br />1301, Block 340, Juffair"
+    },
+    "copyright": "© 2025 Nuwat Ventures W.L.L. All rights reserved. Nuwat and its affiliated brands are trademarks of Nuwat Ventures W.L.L."
+  },
+  "home": {
+    "hero": {
+      "tag": "Data-Driven Decisions",
+      "title": "WE DON’T BUILD BUSINESSES. <br /><span class=\"heading-span\">WE ARCHITECT DOMINANCE.</span>",
+      "description": "unassailable. We don't trade in \"best practices\" or generic growth hacks. We provide the surgical strategy and industrial-grade execution required to own your market and dictate the terms of your industry. If you aren't ready to lead, you aren't ready for us.",
+      "socialProof": "Chosen by industry leaders who set the standard instead of chasing it",
+      "statsTag": "Chosen by over 10,000 global companies building at serious scale"
+    },
+    "visionDominance": {
+      "title": "ENGINEERED BY VISION. <br /><span class=\"heading-span\">DEFINED BY DOMINANCE.</span>",
+      "items": {
+        "01": {
+          "title": "MANDATING EXCELLENCE",
+          "description": "\"We partner with leadership teams to identify the exact levers that move the needle. Through disciplined strategy and surgical execution, we eliminate noise and command market direction\"."
+        },
+        "02": {
+          "title": "ARCHITECTING UNASSAILABLE GROWTH",
+          "description": "Growth is not tactics stacked on tactics. We design systems that support sustainable expansion, aligned teams, and long-term value creation. Everything we touch is built to hold under pressure."
+        },
+        "03": {
+          "title": "INDUSTRIAL RECONSTRUCTION",
+          "description": "We don't optimize around broken structures. We challenge assumptions, redesign processes, and help organizations operate at a higher standard across brand, customer experience, and internal decision making."
+        }
+      }
+    },
+    "whatWeDo": {
+      "title": "WHAT WE DO",
+      "heading": "<span class=\"heading-span\">NUWAT is a sovereign operating partner</span> built for companies that refuse to stay ordinary, outpace their market, <span class=\"heading-span\">and dictate the standard of their industry.</span>"
+    },
+    "dominance": {
+      "title": "The Mechanics <span class=\"heading-span\">of Dominance</span>",
+      "cards": {
+        "brand": {
+          "title": "SOVEREIGN BRAND ARCHITECTURE.",
+          "description": "We design to move markets, not impress judges. Our work delivers unmatched clarity, authority, and presence in brand identity, visual systems, and packaging."
+        },
+        "scale": {
+          "title": "UNASSAILABLE SCALE ENGINES.",
+          "description": "Growth isn't noise, hacks, or short-term wins. We build disciplined marketing and growth systems that reach the right audience, convert with intent, and scale without collapsing under pressure."
+        },
+        "digital": {
+          "title": "DIGITAL FRONTIERS, FORTIFIED.",
+          "description": "Brand strategy isn't a presentation deck. It's a decision-making weapon. We define positioning, narrative, and direction so your brand shows up consistently, confidently,"
+        },
+        "systemic": {
+          "title": "SYSTEMIC RECONSTRUCTION.",
+          "description": "We don't ship websites that look good for six months. We build digital platforms designed to hold up as your business grows, evolves, and outpaces competitors."
+        }
+      }
+    },
+    "stats": {
+      "heading": "Built for",
+      "headingGradient": "Companies That Expect More",
+      "description": "We build businesses that perform better, last longer, and raise the bar for everyone operating in their category.",
+      "items": {
+        "clients": {
+          "title": "10,000+",
+          "description": "satisfied clients"
+        },
+        "referral": {
+          "title": "92%",
+          "description": "client referral"
+        },
+        "acceptance": {
+          "title": "1 in 5",
+          "description": "companies accepted"
+        }
+      }
+    },
+    "reviews": {
+      "title": "Client Reviews",
+      "items": [
+        {
+          "quote": "Nuwat doesn't waste time selling ideas. They come in, challenge assumptions, and force decisions. It's uncomfortable at first, then everything starts working.",
+          "author": "Senior Project Executive",
+          "role": "Senior Project Executive",
+          "company": "EllisDon"
+        },
+        {
+          "quote": "The level of strategic clarity Nuwat brings is unmatched. They don't just clear the fog; they build a roadmap that makes execution inevitable.",
+          "author": "Director of Operations",
+          "role": "Director of Operations",
+          "company": "TechFlow Solutions"
+        },
+        {
+          "quote": "We were stuck in a cycle of endless planning. Nuwat broke the loop, realigned our leadership, and got us simplified, scalable, and moving fast.",
+          "author": "Chief Marketing Officer",
+          "role": "Chief Marketing Officer",
+          "company": "Apex Innovations"
+        },
+        {
+          "quote": "They aren't just consultants; they are architects of momentum. Our brand presence went from fragmented to fortified in record time.",
+          "author": "Head of Brand Strategy",
+          "role": "Head of Brand Strategy",
+          "company": "Global Ventures"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Operate at a Higher Level?",
+      "description": "Show us one workflow. If it qualifies, we'll outline a two-week pilot. Access is limited."
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Architecting Empires <span class=\"heading-span\">That Define Markets</span>",
+      "description": "NUWAT is the private vehicle of a sovereign operator whose career is defined by moving the capital that moves nations. We don’t just execute at scale; we engineer the industrial and economic infrastructure that others rely on to exist."
+    },
+    "leadership": {
+      "title": "Leadership",
+      "subtitle": "The Visionary Mind Behind NUWAT Ventures",
+      "description": "<span class=\"heading-span\">Koshy Samuel</span> is a sovereign force in the world of high-stakes enterprise. He does not just manage businesses; he engineers empires. Having built, scaled, and ultimately exited one of the most formidable industrial conglomerates in the region’s history, his career serves as a masterclass in market dominance. He has spent decades operating at a level of complexity that few can comprehend and fewer can survive, delivering mission-critical infrastructure for global superpowers. His reputation is built on the cold, hard reality of total execution—a legacy forged in steel, power, and the kind of strategic foresight that only a true mogul possesses.",
+      "quote": "NUWAT is the final evolution of this mastery. Koshy does not consult for the sake of conversation; he intervenes to ensure victory. He brings the weight of a man who has navigated the most pressurized boardrooms on the planet and walked away with everything. When you engage NUWAT, you are not hiring a firm—you are aligning with a genius of industry who has already proven, beyond all shadow of a doubt, that he is the standard by which all others are measured."
+    },
+    "history": {
+      "title": "Our History",
+      "subtitle": "Established 2009",
+      "items": {
+        "2009": {
+          "title": "The Foundation of Authority",
+          "body": "NUWAT was forged in Canada within environments where surgical discipline and absolute accountability were the only path to survival. Operating deep within investigative and regulatory frameworks, we didn’t just learn the rules—we learned how to master the systems that govern them. This era established the standard of precision that defines every move we make today."
+        },
+        "2015": {
+          "title": "Dominance Under Pressure",
+          "body": "Expanding operations across the United States battled-tested our approach in the world’s most high-stakes and hyper-competitive arena. While others sought stability, we thrived in volatility—proving that consistent, undeniable performance is the result of superior architecture, not luck. We entered the most regulated markets on earth and set the pace."
+        },
+        "2020": {
+          "title": "Engineering the Superior Model",
+          "body": "We pivoted from execution to pure architectural advantage—developing a model centered on total market clarity and long-term structural dominance. By treating strategy, operations, and brand as a single interconnected weapon, we redesigned the very mechanics of how a business performs. We stopped playing the game and started building it."
+        },
+        "2025": {
+          "title": "Sovereign Expansion to Bahrain",
+          "body": "Our formal expansion into Bahrain is a calculated move into the core of the GCC. We are here to enable enterprises that operate at a regional and international scale—businesses that demand the kind of seriousness and resilience that only a veteran mogul can provide. We bring the weight of global experience to the doorstep of the Middle East."
+        },
+        "today": {
+          "title": "Supporting High-Standard Operators",
+          "body": "Today, we work exclusively with elite leadership teams to rebuild their foundations and sharpen their decision-making at the highest levels. We don’t just “improve” businesses—we redesign how they think and grow under extreme pressure. At NUWAT, we engage deeply to ensure that those at the top stay at the top."
+        }
+      }
+    },
+    "stats": {
+      "title": "THE SCALE OF COMMAND",
+      "items": {
+        "turnover": { "title": "$1B+", "description": "TURNOVER SCALE" },
+        "execution": { "title": "9-FIGURE", "description": "EXECUTION" },
+        "authority": { "title": "GLOBAL", "description": "AUTHORITY" }
+      }
+    },
+    "vision": {
+      "title": "Driven By Vision. <br /><span class=\"heading-span\">Defined By Dominance.</span>",
+      "items": {
+        "vision": {
+          "title": "Our Vision",
+          "body": "Our Vision NUWAT does not just \"elevate\" standards; we dictate them. We partner exclusively with elite leadership teams facing extreme complexity to engineer precise, durable architectures built for total market advantage. If the stakes aren’t high, we aren’t in the room."
+        },
+        "differentiation": {
+          "title": "What Sets Us Apart",
+          "body": "NUWAT is defined not by services, but by depth of engagement. We work closely with leadership teams to challenge assumptions, strengthen execution, and drive outcomes that hold—until decisions stick and performance improves."
+        },
+        "mission": {
+          "title": "Mission Statement",
+          "body": "NUWAT ensures performance where failure is not an option. We bring clarity and disciplined execution to the world’s most pressurized environments, turning high-level strategy into a permanent state of durable performance. We are the partner for those who intend to lead their industry, not just participate in it."
+        },
+        "growth": {
+          "title": "Our Growth",
+          "body": "Our expansion has been calculated and deliberate, moving from the rigid markets of North America into the sovereign economic core of Bahrain and the GCC. We maintain a portfolio of limited, high-impact engagements where trust is earned through results that others simply cannot replicate."
+        },
+        "markets": {
+          "title": "Markets We Serve",
+          "body": "NUWAT aligns with organizations that operate at a global scale within high-pressure industrial and energy sectors. We serve leadership teams who are no longer interested in incremental growth, but are committed to building the strongest, most resilient operations in their region."
+        }
+      }
+    },
+    "code": {
+      "title": "The NUWAT Code",
+      "items": {
+        "clarity": {
+          "title": "Clarity Over Noise",
+          "description": "We prioritize ruthless intellectual honesty. We strip away superficial narratives and unnecessary complexity to reveal the core mechanics of a problem. At this level, the only thing that matters is a clear assessment of the truth."
+        },
+        "accountability": {
+          "title": "Uncompromising Accountability",
+          "description": "We do not hide behind \"consulting\" reports. We hold ourselves and our partners to a sovereign standard of responsibility. We stand behind every architecture we build because, in our world, your word is the only currency that never devalues."
+        },
+        "precision": {
+          "title": "Precision in Execution",
+          "description": "The world is full of \"strong ideas\" that fail at the first sign of pressure. We focus relentlessly on surgical implementation. Our work is engineered to hold under extreme market conditions where there is zero margin for error."
+        },
+        "long_term": {
+          "title": "The Multi-Decade Lens",
+          "description": "We don’t play for quarterly wins or short-term optics that fade. We value decisions that compound over generations. Every move we make is designed to build a legacy of durable, permanent impact."
+        },
+        "alignment": {
+          "title": "Strategic Alignment",
+          "description": "We do not take \"clients\"—we select partners. We engage only where there is mutual respect and a shared obsession with excellence. If the commitment to the mission isn’t absolute, we don’t enter the room."
+        },
+        "excellence": {
+          "title": "The Baseline of Excellence",
+          "description": "Excellence is not a goal; it is the entry requirement. We expect total rigor and professional mastery in everything we touch. At NUWAT, we don’t strive for the standard—we define it."
+        }
+      }
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Strategic clarity for <span class=\"heading-span\">organizations ready to move.</span>",
+      "description": "We partner with leaders who understand that transformation isn't about following trends lasts replace with dominates"
+    },
+    "role": {
+      "title": "our role",
+      "description1": "<span class=\"heading-span\">NUWAT operates where clarity</span> is the only currency—we intervene at the highest levels of leadership, whether a venture is wholly <span class=\"heading-span\">ours or under the mandate of another.</span>",
+      "description2": "We don't offer \"solutions\" for the masses. We serve elite entities built for permanence: organizations facing pivotal crossroads, high-stakes ventures that refuse to compromise, and sovereign leaders who demand the rigor required to own their market. We are the architect for those who play the long game."
+    },
+    "domains": {
+      "title": "Service Domains <br /> The Mechanics of Dominance",
+      "items": {
+        "strategicMandate": {
+          "kicker": "Surgical Audits For Sovereign Operations.",
+          "title": "Strategic Mandate",
+          "description": "NUWAT Provides Elite-Level Strategic Intervention. We Align Internal Structures To A Sovereign Vision, Ensuring Companies Operate With Surgical Precision. Our Perspective Is Not \"Practical\"—It Is Definitive. We Ensure Leaders Move With Total Market Clarity.",
+          "buttons": {
+            "hardwire": "Hardwire Results",
+            "value": "Value Extraction"
+          }
+        },
+        "operational": {
+          "kicker": "Reengineering The Mechanics Of Dominance.",
+          "title": "Operational Reconstruction",
+          "description": "We Don’t Just \"Streamline\" Workflows; We Redesign How A Business Actually Performs At Its Core. From End-To-End System Overhauls To Ruthless Process Engineering, We Build The Engine That Drives The Strategy. We Don’t Just Structure The Business; We Weaponize It.",
+          "buttons": {
+            "sector": "Deep Sector Dominance",
+            "expansion": "Calculated Expansion"
+          }
+        },
+        "scale": {
+          "kicker": "Architecting Assets For Unassailable Scale.",
+          "title": "Scale Architecture",
+          "description": "Market Analysis And Positioning For Those Who Refuse To Chase Empty Metrics. We Architect The Foundation For Permanent, Multi-Generational Growth. We Don’t Move At The \"Right Pace\"—We Move At The Pace Of Market Capture.",
+          "buttons": {
+            "industrial": "Vast Industrial Expertise",
+            "force": "Force-Multiplier Development"
+          }
+        },
+        "identity": {
+          "kicker": "Engineering The Aura Of Industrial Authority.",
+          "title": "Identity & Market Presence",
+          "description": "We Craft The Visual And Strategic Identity Of Giants. From Distinctive Market Presence To Touchpoints That Demand Respect. We Engineer The Perception Of Authority. This Isn’t About \"Relationships\"; It’s About Defining How The World Perceives Your Power.",
+          "buttons": {
+            "authoritative": "Authoritative Identity",
+            "holistic": "Holistic Dominance"
+          }
+        }
+      }
+    },
+    "negotiate": {
+      "title": "What We Don't Do The Non-Negotiables",
+      "items": {
+        "vanity": {
+          "title": "We don't run vanity campaigns.",
+          "description": "We are not a marketing firm; we are an industrial engine. If it doesn't move the bottom line or secure the foundation, we don't touch it."
+        },
+        "superficial": { "title": "NUWAT Does Not Give Superficial" },
+        "cookieCutter": { "title": "We Do Not Offer Cookie-Cutter Solutions" },
+        "spreadsheet": {
+          "title": "We Don't Promise Targets Based On A Spreadsheet."
+        },
+        "upstream": { "title": "We Work Upstream." }
+      }
+    },
+    "highEngage": {
+      "title": "When It Makes Sense To Engage Criteria for High-Stakes Partnership",
+      "description": "Nuwat is for when leadership has a serious decision environment, and you need to act.",
+      "items": {
+        "critical": {
+          "title": "Critical Mandates",
+          "description": "When Decisions Are So Complex They Cross Multiple Teams And Carry The Weight Of The Company's Future."
+        },
+        "complexity": {
+          "title": "Peak Complexity",
+          "description": "Your Team Is Elite, But The Environment Has Become So Volatile That Only A Veteran \"Sovereign Operator\" Can See The Path Through."
+        },
+        "lag": {
+          "title": "Structural Lag",
+          "description": "Your Growth Is Outstripping Your Foundation, And You Need To Re-Engineer The Organization Before It Fractures Under Its Own Weight."
+        },
+        "involvement": {
+          "title": "Absolute Involvement",
+          "description": "You Don't Want A \"Slide Deck\" Or A \"Presentation.\" You Need A High-Level Intervention And The Deep Involvement Of A Man Who Has Already Won."
+        }
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "description": "We align with sovereign leaders who understand that true success is built on structural dominance, not short-term optics"
+    },
+    "venture": {
+      "title": "Not Every Venture Is A Fit.",
+      "description": "If you are seeking surface-level advice, quick fixes, or templated solutions, this is not the right place. NUWAT exists for sovereign leaders who require a surgical level of intervention.",
+      "highlight": "<span class=\"heading-span\">NUWAT operates with a limited number of partners</span> at any given time. Our mandates require direct access, total commitment, and a ruthless willingness to be challenged. We are deliberate about <span class=\"heading-span\">who we work with and how we engage.</span> We don't take \"clients\"; we select partners ready to own their market."
+    },
+    "reach": {
+      "title": "When It Makes Sense To Engage Criteria for High-Stakes Partnership",
+      "description": "Nuwat is for when leadership has a serious decision environment, and you need to act.",
+      "items": {
+        "structural": {
+          "title": "Structural Integrity is Fractured",
+          "description": "Your business has outgrown its current structure and requires a total re-engineering to sustain its scale."
+        },
+        "friction": {
+          "title": "Friction is Stalling Momentum",
+          "description": "Growth is no longer seamless, and complexity has created bottlenecks that only a sovereign operator can dismantle."
+        },
+        "alignment": {
+          "title": "Leadership Requires Absolute Alignment",
+          "description": "There is a need for surgical clarity and a singular, unassailable direction at the highest level."
+        },
+        "mission": {
+          "title": "The Mission is Absolute",
+          "description": "You are prepared to invest the time, focus, and accountability required to secure a multi-decade legacy."
+        }
+      }
+    },
+    "pipeline": {
+      "title": "The Intake Pipeline",
+      "subtitle": "Submissions are audited for strategic alignment. We do not engage unless a definitive path to market dominance is identified.",
+      "items": {
+        "review": {
+          "title": "Critical Review",
+          "description": "We don't \"evaluate\" submissions; we audit them for alignment. We identify if your venture possesses the scale and the leadership appetite required for a NUWAT intervention. If there isn't a clear path to dominance, we won't initiate."
+        },
+        "briefing": {
+          "title": "Strategic Briefing",
+          "description": "If there is potential alignment, we initiate a high-level briefing. This is a focused conversation to dissect the context, the bottlenecks, and the expectations on both sides. We don't do \"chats\"—we do briefings."
+        },
+        "mandate": {
+          "title": "Mandate Decision",
+          "description": "We move forward only when the path to a definitive outcome is clear. This ensures that every partnership we enter is engineered for success from day one. You either get a mandate for victory or a clear \"no.\""
+        }
+      }
+    },
+    "form": {
+      "title": "Request <br /> Consideration",
+      "subtitle": "Short Form Only. This Is A Formal Request For The Architect's Time.",
+      "initiate": "Initiate Strategic Inquiry.",
+      "inputs": {
+        "fullName": "Full Name & Title",
+        "entityName": "Entity Name",
+        "role": "Role",
+        "region": "Region",
+        "message": "Message : Define the Mandate (What is the high-stakes problem you need solved?)"
+      }
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "description": "We align with trailblazers who view transformation as a mandate—not a fleeting moment."
+    },
+    "items": {
+      "whoIsNuwatFor": {
+        "question": "Who is Nuwat actually for?",
+        "answer": "NUWAT is reserved for founders and sovereign leaders who have outgrown conventional &quote;consulting&quote;. We engage with those ready to be challenged, held to a ruthless standard of accountability, and pushed beyond the safety of comfortable solutions. If you are seeking superficial validation or surface-level &quote;fixes,&quote; NUWAT is not the fit."
+      }
+    }
+  }
+}
