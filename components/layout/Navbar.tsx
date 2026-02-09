@@ -3,12 +3,27 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { NAVBAR_LINK } from "@/constant/Navbar";
+import LanguageSwitcher from "@/components/global/LanguageSwitcher";
 
 const logo = "/layout/navbar/logo.svg";
-const globe = "/layout/navbar/globe.svg";
 
-const Navbar = () => {
+interface NavbarProps {
+  nav: {
+    home: string;
+    about: string;
+    services: string;
+    faq: string;
+    contact: string;
+  };
+  common: {
+    buttons: {
+      register: string;
+    };
+  };
+  lang: string;
+}
+
+const Navbar = ({ nav, common, lang }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -33,23 +48,33 @@ const Navbar = () => {
     }
   }, [isMenuOpen]);
 
+  const navLinks = [
+    { name: nav.home, url: `/${lang}` },
+    { name: nav.about, url: `/${lang}/about` },
+    { name: nav.services, url: `/${lang}/services` },
+    { name: nav.faq, url: `/${lang}/faq` },
+    { name: nav.contact, url: `/${lang}/contact` },
+  ];
+
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className={"main-container"}>
         <div className={"navbar-wrapper"}>
           <div>
-            <Image
-              src={logo}
-              alt={"Nuwat Logo"}
-              width={117}
-              height={32}
-              className={"logo"}
-            />
+            <Link href={`/${lang}`}>
+              <Image
+                src={logo}
+                alt={"Nuwat Logo"}
+                width={117}
+                height={32}
+                className={"logo"}
+              />
+            </Link>
           </div>
 
           <div className={`navbar-links-wrapper ${isMenuOpen ? "open" : ""}`}>
             <ul className={"lg:ml-25"}>
-              {NAVBAR_LINK.map((link, index) => (
+              {navLinks.map((link, index) => (
                 <Link
                   href={link.url}
                   key={index}
@@ -62,27 +87,15 @@ const Navbar = () => {
               ))}
             </ul>
             <div className={"flex flex-col gap-4 lg:hidden mt-4"}>
-              <button
-                className={
-                  "local-btn py-2.5 px-6 flex items-center gap-2 justify-center"
-                }
-              >
-                <Image src={globe} alt={"Globe Icon"} width={24} height={24} />{" "}
-                English
-              </button>
-              <button className={"secondary-btn"}>Register</button>
+              <LanguageSwitcher />
+              <button className={"secondary-btn"}>{common.buttons.register}</button>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
             <div className={"hidden lg:flex items-center gap-2"}>
-              <button
-                className={"local-btn py-2.5 px-6 flex items-center gap-2"}
-              >
-                <Image src={globe} alt={"Globe Icon"} width={24} height={24} />{" "}
-                English
-              </button>
-              <button className={"secondary-btn"}>Register</button>
+              <LanguageSwitcher />
+              <button className={"secondary-btn"}>{common.buttons.register}</button>
             </div>
 
             <button
