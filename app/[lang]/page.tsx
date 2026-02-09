@@ -21,11 +21,16 @@ const Home = async ({ params }: PageProps) => {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
-  console.log(dict);
+  // Map stats dictionary to array format expected by StatsSection
+  const homeStats = [
+    dict.home.stats.items.clients,
+    dict.home.stats.items.referral,
+    dict.home.stats.items.acceptance,
+  ];
 
   return (
     <>
-      <Hero />
+      <Hero content={dict.home.hero} common={dict.common} />
       <div className={"px-5 my-5"}>
         <Image
           src={HeroImage}
@@ -35,19 +40,20 @@ const Home = async ({ params }: PageProps) => {
           className={"w-full h-95 rounded-2xl"}
         />
       </div>
-      <VisionDominance />
-      <WhatWeDo />
-      <DominanceSection />
-      <StatsSection
-        heading={"Built for"}
-        gradientHeading={"Companies That Expect More"}
-        description={
-          "We build businesses that perform better, last longer, and raise the bar for everyone operating in their category."
-        }
-        stats={HomeStats}
+      <VisionDominance content={dict.home.visionDominance} />
+      <WhatWeDo
+        content={dict.home.whatWeDo}
+        aboutNuwat={dict.common.buttons.aboutNuwat}
       />
-      <ClientReviews />
-      <CTA />
+      <DominanceSection content={dict.home.dominance} />
+      <StatsSection
+        heading={dict.home.stats.heading}
+        gradientHeading={dict.home.stats.headingGradient}
+        description={dict.home.stats.description}
+        stats={homeStats}
+      />
+      <ClientReviews content={dict.home.reviews} />
+      <CTA content={dict.home.cta} common={dict.common} />
     </>
   );
 };

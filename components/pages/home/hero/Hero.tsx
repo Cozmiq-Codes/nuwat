@@ -3,7 +3,23 @@ import Image from "next/image";
 import SectionTag from "@/components/global/SectionTag";
 import { AgencyLogos } from "@/constant/AgencyLogos";
 
-const Hero = () => {
+interface HeroProps {
+  content: {
+    tag: string;
+    title: string;
+    description: string;
+    socialProof: string;
+    statsTag: string;
+  };
+  common: {
+    buttons: {
+      applyNow: string;
+      exploreApproach: string;
+    };
+  };
+}
+
+const Hero = ({ content, common }: HeroProps) => {
   return (
     <section className="relative overflow-hidden bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat">
       {/* Main content wrapper */}
@@ -11,7 +27,7 @@ const Hero = () => {
         {/* Hero Top */}
         <div className="mt-20 flex-1 flex flex-col items-center justify-center text-center gap-6 sm:gap-8">
           <div className="flex justify-center w-full">
-            <SectionTag title="Data-Driven Decisions" icon={true} />
+            <SectionTag title={content.tag} icon={true} />
           </div>
 
           <div className="flex flex-col items-center gap-5 sm:gap-6 w-full">
@@ -24,10 +40,8 @@ const Hero = () => {
                 max-w-[90%] md:max-w-2xl lg:max-w-222.5
                 tracking-[-0.02em]
               "
-            >
-              WE DON’T BUILD BUSINESSES. <br />
-              <span className="heading-span">WE ARCHITECT DOMINANCE.</span>
-            </h1>
+              dangerouslySetInnerHTML={{ __html: content.title }}
+            />
 
             <p
               className="
@@ -37,17 +51,13 @@ const Hero = () => {
                 max-w-257.5
               "
             >
-              unassailable. We don&apos;t trade in &quot;best practices&quot; or
-              generic growth hacks. We provide the surgical strategy and
-              industrial-grade execution required to own your market and dictate
-              the terms of your industry. If you aren&apos;t ready to lead, you
-              aren&apos;t ready for us.
+              {content.description}
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center">
             <button className="primary_button flex text-center w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
-              Apply Now
+              {common.buttons.applyNow}
               <span>
                 <Image
                   src="/layout/what-we-do/right_icon.svg"
@@ -58,7 +68,7 @@ const Hero = () => {
               </span>
             </button>
             <button className="secondary-btn w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
-              Explore our Approach
+              {common.buttons.exploreApproach}
             </button>
           </div>
         </div>
@@ -66,8 +76,7 @@ const Hero = () => {
         {/* Hero Bottom */}
         <div className="mt-10 sm:mt-12 lg:mt-14 flex flex-col items-center justify-center">
           <p className="text-[#E7E7E7] text-center font-medium capitalize text-[clamp(1rem,1.25vw,1.125rem)] max-w-87.5 lg:max-w-none">
-            Chosen by industry leaders who set the standard instead of chasing
-            it
+            {content.socialProof}
           </p>
 
           {/* Responsive logos grid */}
@@ -94,7 +103,7 @@ const Hero = () => {
           </div>
 
           <p className="text-center mt-8 sm:mt-10 text-[#E7E7E7CC] text-[clamp(0.95rem,1.15vw,1.05rem)]">
-            Chosen by over 10,000 global companies building at serious scale
+            {content.statsTag}
           </p>
         </div>
       </div>
