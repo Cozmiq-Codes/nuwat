@@ -8,7 +8,7 @@ const Page = () => {
     <>
       <Hero />
       <Faq />
-      <CTA />
+      {/*<CTA content={dict.home.cta} common={dict.common} />*/}
     </>
   );
 };

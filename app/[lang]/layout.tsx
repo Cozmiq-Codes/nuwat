@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }
 
 export default async function RootLayout({
@@ -21,7 +21,7 @@ export default async function RootLayout({
   params,
 }: RootLayoutProps) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = await getDictionary(lang as Locale);
 
   return (
     <html lang={lang}>

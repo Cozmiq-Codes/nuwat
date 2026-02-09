@@ -8,20 +8,18 @@ import StatsSection from "@/components/global/stats/StatsSection";
 import DominanceSection from "@/components/pages/home/dominance/Dominance";
 import VisionDominance from "@/components/pages/home/vision-dominance/VisionDominance";
 import ClientReviews from "@/components/pages/home/reviews/ClientReviews";
-import { HomeStats } from "@/constant/Stats";
 import { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 const HeroImage = "/hero/hero-big.webp";
 
 interface PageProps {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }
 
 const Home = async ({ params }: PageProps) => {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = await getDictionary(lang as Locale);
 
-  // Map stats dictionary to array format expected by StatsSection
   const homeStats = [
     dict.home.stats.items.clients,
     dict.home.stats.items.referral,
