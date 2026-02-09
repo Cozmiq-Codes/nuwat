@@ -1,26 +1,35 @@
 import React from "react";
 import Image from "next/image";
-import { AboutVision } from "@/constant/About";
 
 const BgGradImage = "/about/vision/bg-grad-one.webp";
 const BgGradImageTwo = "/about/vision/bg-grad-two.webp";
 
-const Vision = () => {
+interface VisionProps {
+  title: string;
+  items: Array<{
+    id: number;
+    title: string;
+    body: string;
+    image: string;
+  }>;
+}
+
+const Vision = ({ title, items }: VisionProps) => {
   return (
     <section className={"relative"}>
       <div className={"main-container relative z-[50]"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center w-full gap-12"}>
             <div className={"flex justify-center"}>
-              <h2 className={"section-heading"}>
-                Driven By Vision. <br />
-                <span className={"heading-span"}>Defined By Dominance.</span>
-              </h2>
+              <h2
+                className={"section-heading"}
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
             </div>
             <div
               className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6"}
             >
-              {AboutVision.map((vision, index) => (
+              {items.map((vision, index) => (
                 <div
                   className={[
                     "bg-[#07070790] rounded-[18px] p-8 flex flex-col gap-12 col-span-1",

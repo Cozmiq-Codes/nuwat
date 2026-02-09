@@ -1,8 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { AboutPrinciples } from "@/constant/About";
 
-const NuwatCode = () => {
+interface NuwatCodeProps {
+  title: string;
+  items: Array<{
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+  }>;
+}
+
+const NuwatCode = ({ title, items }: NuwatCodeProps) => {
   return (
     <section
       className={
@@ -13,13 +22,13 @@ const NuwatCode = () => {
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center w-full gap-12"}>
             <div>
-              <h2 className={"section-heading"}>The NUWAT Code</h2>
+              <h2 className={"section-heading"}>{title}</h2>
             </div>
 
             <div
               className={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"}
             >
-              {AboutPrinciples.map((principle) => (
+              {items.map((principle) => (
                 <div
                   className={"code-card-bg flex flex-col gap-8 rounded-2xl p-6"}
                   key={principle.id}

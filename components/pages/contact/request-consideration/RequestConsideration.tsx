@@ -13,7 +13,30 @@ type FormInput = {
   message: string;
 };
 
-const RequestConsideration = () => {
+interface RequestConsiderationProps {
+  content: {
+    title: string;
+    subtitle: string;
+    initiate: string;
+    inputs: {
+      fullName: string;
+      entityName: string;
+      role: string;
+      region: string;
+      message: string;
+    };
+  };
+  common: {
+    buttons: {
+      submitRequest: string;
+    };
+  };
+}
+
+const RequestConsideration = ({
+  content,
+  common,
+}: RequestConsiderationProps) => {
   const {
     register,
     handleSubmit,
@@ -33,12 +56,12 @@ const RequestConsideration = () => {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
           {/* Left Content */}
           <div className="w-full lg:w-1/3 flex flex-col gap-6">
-            <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Request <br /> Consideration
-            </h2>
+            <h2
+              className="text-5xl lg:text-6xl font-bold leading-tight"
+              dangerouslySetInnerHTML={{ __html: content.title }}
+            />
             <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-xs">
-              Short Form Only. This Is A Formal Request For The Architect&apos;s
-              Time.
+              {content.subtitle}
             </p>
           </div>
 
@@ -57,7 +80,7 @@ const RequestConsideration = () => {
               <div className="flex items-center gap-3 mb-10">
                 <div className="w-[3px] h-6 bg-[#00D1FF]"></div>
                 <p className="text-xl font-medium tracking-tight">
-                  Initiate Strategic Inquiry.
+                  {content.initiate}
                 </p>
               </div>
 
@@ -69,7 +92,7 @@ const RequestConsideration = () => {
                   <input
                     {...register("fullNameTitle", { required: true })}
                     type="text"
-                    placeholder="Full Name & Title"
+                    placeholder={content.inputs.fullName}
                     className={`w-full bg-white/[0.04] border ${errors.fullNameTitle ? "border-red-500" : "border-white/10"} rounded-xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#00D1FF]/50 transition-colors`}
                   />
                 </div>
@@ -78,7 +101,7 @@ const RequestConsideration = () => {
                   <input
                     {...register("entityName", { required: true })}
                     type="text"
-                    placeholder="Entity Name"
+                    placeholder={content.inputs.entityName}
                     className={`w-full bg-white/[0.04] border ${errors.entityName ? "border-red-500" : "border-white/10"} rounded-xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#00D1FF]/50 transition-colors`}
                   />
                 </div>
@@ -87,7 +110,7 @@ const RequestConsideration = () => {
                   <input
                     {...register("role", { required: true })}
                     type="text"
-                    placeholder="Role"
+                    placeholder={content.inputs.role}
                     className={`w-full bg-white/[0.04] border ${errors.role ? "border-red-500" : "border-white/10"} rounded-xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#00D1FF]/50 transition-colors`}
                   />
                 </div>
@@ -96,7 +119,7 @@ const RequestConsideration = () => {
                   <input
                     {...register("region", { required: true })}
                     type="text"
-                    placeholder="Region"
+                    placeholder={content.inputs.region}
                     className={`w-full bg-white/[0.04] border ${errors.region ? "border-red-500" : "border-white/10"} rounded-xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#00D1FF]/50 transition-colors`}
                   />
                 </div>
@@ -104,7 +127,7 @@ const RequestConsideration = () => {
                 <div className="relative">
                   <textarea
                     {...register("message", { required: true })}
-                    placeholder="Message : Define the Mandate (What is the high-stakes problem you need solved?)"
+                    placeholder={content.inputs.message}
                     rows={4}
                     className={`w-full bg-white/[0.04] border ${errors.message ? "border-red-500" : "border-white/10"} rounded-xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#00D1FF]/50 transition-colors resize-none`}
                   ></textarea>
@@ -115,7 +138,7 @@ const RequestConsideration = () => {
                     type="submit"
                     className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#00D1FF] to-[#51A2FF] text-white px-8 py-4 rounded-full font-semibold overflow-hidden hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(0,209,255,0.3)]"
                   >
-                    <span>Submit Request</span>
+                    <span>{common.buttons.submitRequest}</span>
                     <MoveRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>

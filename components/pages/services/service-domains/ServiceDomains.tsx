@@ -1,8 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import { Services } from "@/constant/Services";
 
-const ServiceDomains = () => {
+interface ServiceDomainsProps {
+  title: string;
+  items: Array<{
+    id: string;
+    kicker: string;
+    title: string;
+    description: string;
+    image: string;
+    buttons: Array<{ label: string }>;
+  }>;
+}
+
+const ServiceDomains = ({ title, items }: ServiceDomainsProps) => {
   return (
     <section
       className={
@@ -13,13 +24,13 @@ const ServiceDomains = () => {
         <div className={"section-wrapper"}>
           <div className={"flex flex-col gap-12 w-full"}>
             <div>
-              <h2 className={"section-heading text-left!"}>
-                Service Domains
-                <br /> The Mechanics of Dominance
-              </h2>
+              <h2
+                className={"section-heading text-left!"}
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
             </div>
             <div className={"flex flex-col gap-6"}>
-              {Services.map((service) => (
+              {items.map((service) => (
                 <div
                   key={service.id}
                   className={"bg-[#FFFFFF14] py-6 px-8 rounded-3xl"}

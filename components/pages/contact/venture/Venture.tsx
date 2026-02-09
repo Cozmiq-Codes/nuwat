@@ -1,6 +1,14 @@
 import React from "react";
 
-const Venture = () => {
+interface VentureProps {
+  content: {
+    title: string;
+    description: string;
+    highlight: string;
+  };
+}
+
+const Venture = ({ content }: VentureProps) => {
   return (
     <section>
       <div className={"main-container"}>
@@ -16,36 +24,22 @@ const Venture = () => {
                   "text-[16px] font-medium leading-normal heading-span"
                 }
               >
-                Not Every Venture Is A Fit.
+                {content.title}
               </h3>
               <p
                 className={
                   "text-[#E7E7E7] text-[16px] font-medium leading-7 tracking-[0.07] max-w-[320px]"
                 }
               >
-                If you are seeking surface-level advice, quick fixes, or
-                templated solutions, this is not the right place. NUWAT exists
-                for sovereign leaders who require a surgical level of
-                intervention.
+                {content.description}
               </p>
             </div>
 
             <div className={"max-w-[750px]"}>
               <p
                 className={"text-[#E7E7E7] text-[32px] font-bold leading-10.5"}
-              >
-                <span className={"heading-span"}>
-                  NUWAT operates with a limited number of partners
-                </span>{" "}
-                at any given time. Our mandates require direct access, total
-                commitment, and a ruthless willingness to be challenged. We are
-                deliberate about{" "}
-                <span className={"heading-span"}>
-                  who we work with and how we engage.
-                </span>
-                We don&apos;t take &quot;clients&quot;; we select partners ready
-                to own their market.
-              </p>
+                dangerouslySetInnerHTML={{ __html: content.highlight }}
+              />
             </div>
           </div>
         </div>

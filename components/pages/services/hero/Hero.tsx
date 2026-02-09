@@ -1,7 +1,15 @@
 import React from "react";
 import SectionTag from "@/components/global/SectionTag";
 
-const Hero = () => {
+interface HeroProps {
+  content: {
+    tag: string;
+    title: string;
+    description: string;
+  };
+}
+
+const Hero = ({ content }: HeroProps) => {
   return (
     <section
       className={
@@ -11,7 +19,7 @@ const Hero = () => {
       <div className={"bg-[#FFFFFF03] rounded-2xl mx-5 my-5 backdrop-blur-2xl"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center gap-5 w-full"}>
-            <SectionTag title={"services"} icon={false} />
+            <SectionTag title={content.tag} icon={false} />
             <div className={"flex flex-col items-center gap-5"}>
               <h1
                 className="
@@ -23,12 +31,8 @@ const Hero = () => {
                 max-w-[90%] md:max-w-2xl lg:max-w-200
                 tracking-[-0.02em]
               "
-              >
-                Strategic clarity for{" "}
-                <span className={"heading-span"}>
-                  organizations ready to move.
-                </span>
-              </h1>
+                dangerouslySetInnerHTML={{ __html: content.title }}
+              />
               <p
                 className="
                 text-[#E7E7E7CC]
@@ -38,8 +42,7 @@ const Hero = () => {
                 text-center
               "
               >
-                We partner with leaders who understand that transformation
-                isn&apos;t about following trends lasts replace with dominates
+                {content.description}
               </p>
             </div>
           </div>
