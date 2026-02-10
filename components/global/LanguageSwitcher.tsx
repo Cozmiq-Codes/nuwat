@@ -98,7 +98,7 @@ const LanguageSwitcher = () => {
 
   const handleSwitch = (locale: Locale) => {
     if (locale === currentLocale) return;
-    router.push(redirectedPathName(locale));
+    router.push(redirectedPathName(locale), { scroll: false });
   };
 
   return (
