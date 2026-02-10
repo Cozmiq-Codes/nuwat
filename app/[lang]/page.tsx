@@ -1,4 +1,5 @@
 import LenisWrapper from "@/components/global/LenisWrapper";
+import FadeIn from "@/components/global/FadeIn";
 
 import Hero from "@/components/pages/home/hero/Hero";
 import WhatWeDo from "@/components/pages/home/what-we-do/WhatWeDo";
@@ -29,30 +30,46 @@ const Home = async ({ params }: PageProps) => {
 
   return (
     <LenisWrapper>
-      <Hero content={dict.home.hero} common={dict.common} />
-      <div className={"px-5 my-5"}>
-        <Image
-          src={HeroImage}
-          alt={"Hero Image"}
-          width={1000}
-          height={1000}
-          className={"w-full h-[500px] rounded-2xl"}
+      <FadeIn>
+        <Hero content={dict.home.hero} common={dict.common} />
+      </FadeIn>
+      <FadeIn className="px-5 my-5">
+        <div className="relative">
+          <Image
+            src={HeroImage}
+            alt={"Hero Image"}
+            width={1000}
+            height={1000}
+            className={"w-full h-[500px] rounded-2xl"}
+          />
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <VisionDominance content={dict.home.visionDominance} />
+      </FadeIn>
+      <FadeIn>
+        <WhatWeDo
+          content={dict.home.whatWeDo}
+          aboutNuwat={dict.common.buttons.aboutNuwat}
         />
-      </div>
-      <VisionDominance content={dict.home.visionDominance} />
-      <WhatWeDo
-        content={dict.home.whatWeDo}
-        aboutNuwat={dict.common.buttons.aboutNuwat}
-      />
-      <DominanceSection content={dict.home.dominance} />
-      <StatsSection
-        heading={dict.home.stats.heading}
-        gradientHeading={dict.home.stats.headingGradient}
-        description={dict.home.stats.description}
-        stats={homeStats}
-      />
-      <ClientReviews content={dict.home.reviews} />
-      <CTA content={dict.home.cta} common={dict.common} />
+      </FadeIn>
+      <FadeIn>
+        <DominanceSection content={dict.home.dominance} />
+      </FadeIn>
+      <FadeIn>
+        <StatsSection
+          heading={dict.home.stats.heading}
+          gradientHeading={dict.home.stats.headingGradient}
+          description={dict.home.stats.description}
+          stats={homeStats}
+        />
+      </FadeIn>
+      <FadeIn>
+        <ClientReviews content={dict.home.reviews} />
+      </FadeIn>
+      <FadeIn>
+        <CTA content={dict.home.cta} common={dict.common} />
+      </FadeIn>
     </LenisWrapper>
   );
 };
