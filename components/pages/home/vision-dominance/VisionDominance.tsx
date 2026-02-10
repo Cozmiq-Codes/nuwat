@@ -28,12 +28,14 @@ const VisionDominance = ({ content }: VisionDominanceProps) => {
               "flex flex-col justify-center items-center w-full gap-10 lg:gap-[56px]"
             }
           >
-            <h2
-              className={
-                "section-heading max-w-full text-3xl md:text-4xl lg:text-5xl"
-              }
-              dangerouslySetInnerHTML={{ __html: content.title }}
-            />
+            <div>
+              <h2
+                className={
+                  "section-heading max-w-full text-3xl md:text-4xl lg:text-5xl"
+                }
+                dangerouslySetInnerHTML={{ __html: content.title }}
+              />
+            </div>
 
             <div className={"flex flex-col lg:flex-row gap-12 lg:gap-12"}>
               <div>

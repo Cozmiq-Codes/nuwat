@@ -81,7 +81,7 @@ const ClientReviews = ({ content }: ClientReviewsProps) => {
               {/* Review Text */}
               <p
                 key={`quote-${currentIndex}`}
-                className="text-white text-lg lg:text-[32px] font-medium leading-relaxed lg:leading-[43px] max-w-[700px] mb-8 lg:mb-12 font-bold animate-fadeIn"
+                className="text-white text-lg lg:text-[32px] font-medium leading-relaxed lg:leading-[43px] max-w-[700px] mb-8 lg:mb-12 font-bold"
               >
                 &quot;{currentTestimonial.quote}&quot;
               </p>
@@ -89,7 +89,7 @@ const ClientReviews = ({ content }: ClientReviewsProps) => {
               {/* Author Info */}
               <div
                 key={`author-${currentIndex}`}
-                className="flex flex-col items-center gap-1 animate-fadeIn"
+                className="flex flex-col items-center gap-1"
               >
                 <div className="h-[1px] w-12 bg-white/40 mb-3"></div>
                 <p className="text-white text-sm lg:text-base font-medium">

@@ -21,7 +21,16 @@ interface HeroProps {
 
 const Hero = ({ content, common }: HeroProps) => {
   return (
-    <section className="relative overflow-hidden bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat">
+    <section className="relative overflow-hidden">
+      {/* Background video */}
+      <video
+        src="/global/hero-bg.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      />
       {/* Main content wrapper */}
       <div className="main-container min-h-svh flex flex-col justify-between py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
         {/* Hero Top */}
@@ -33,29 +42,29 @@ const Hero = ({ content, common }: HeroProps) => {
           <div className="flex flex-col items-center gap-5 sm:gap-6 w-full">
             <h1
               className="
-                text-[#F2F7FE] font-semibold capitalize
-                text-5xl lg:text-[56px]
-                leading-[1.1]
-                lg:leading-16.25
-                max-w-[90%] md:max-w-2xl lg:max-w-222.5
-                tracking-[-0.02em]
-              "
+                  text-[#F2F7FE] font-semibold capitalize
+                  text-5xl lg:text-[56px]
+                  leading-[1.1]
+                  lg:leading-16.25
+                  max-w-[90%] md:max-w-2xl lg:max-w-222.5
+                  tracking-[-0.02em]
+                "
               dangerouslySetInnerHTML={{ __html: content.title }}
             />
 
             <p
               className="
-                text-[#E7E7E7CC]
-                text-[clamp(1rem,1.35vw,1.125rem)]
-                leading-[1.65]
-                max-w-257.5
-              "
+                  text-[#E7E7E7CC]
+                  text-[clamp(1rem,1.35vw,1.125rem)]
+                  leading-[1.65]
+                  max-w-257.5
+                "
             >
               {content.description}
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center items-center">
             <button className="primary_button flex text-center w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
               {common.buttons.applyNow}
               <span>
