@@ -13,13 +13,18 @@ export default function FadeIn({
   children,
   className,
   delay = 0,
-}: FadeInProps) {
+  y = 40,
+}: FadeInProps & { y?: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, ease: "easeOut", delay }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{
+        duration: 1.0,
+        ease: [0.2, 0.8, 0.2, 1],
+        delay,
+      }}
       className={cn(className)}
     >
       {children}

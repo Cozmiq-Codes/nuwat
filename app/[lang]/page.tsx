@@ -5,6 +5,7 @@ import Hero from "@/components/pages/home/hero/Hero";
 import WhatWeDo from "@/components/pages/home/what-we-do/WhatWeDo";
 import CTA from "@/components/global/cta/CTA";
 import Image from "next/image";
+import Floating from "@/components/global/Floating";
 
 import StatsSection from "@/components/global/stats/StatsSection";
 import DominanceSection from "@/components/pages/home/dominance/Dominance";
@@ -34,7 +35,7 @@ const Home = async ({ params }: PageProps) => {
         <Hero content={dict.home.hero} common={dict.common} />
       </FadeIn>
       <FadeIn className="px-5 my-5">
-        <div className="relative">
+        <Floating className="relative">
           <Image
             src={HeroImage}
             alt={"Hero Image"}
@@ -42,7 +43,7 @@ const Home = async ({ params }: PageProps) => {
             height={1000}
             className={"w-full h-[500px] rounded-2xl"}
           />
-        </div>
+        </Floating>
       </FadeIn>
       <FadeIn>
         <VisionDominance content={dict.home.visionDominance} />
