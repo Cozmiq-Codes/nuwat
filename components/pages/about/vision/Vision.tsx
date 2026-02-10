@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const BgGradImage = "/about/section-bg.webp;"
+const BgGradImage = "/about/section-bg.webp;";
 
 interface VisionProps {
   title: string;
@@ -14,12 +14,12 @@ interface VisionProps {
 }
 
 const Vision = ({ title, items }: VisionProps) => {
-
-  console.log(items);
-
-
   return (
-    <section className={"relative bg-[url('/about/section-bg.webp')] bg-cover bg-center bg-no-repeat"}>
+    <section
+      className={
+        "relative bg-[url('/about/section-bg.webp')] bg-cover bg-center bg-no-repeat"
+      }
+    >
       <div className={"main-container relative z-50"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center w-full gap-12"}>

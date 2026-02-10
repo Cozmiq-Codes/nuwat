@@ -27,7 +27,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body className={`${satoshi.variable} antialiased`}>
-      <NextTopLoader />
+        <NextTopLoader />
         <Navbar nav={dict.nav} common={dict.common} lang={lang} />
         {children}
         <Footer content={dict.footer} />

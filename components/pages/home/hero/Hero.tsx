@@ -1,7 +1,8 @@
-import React from "react";
 import Image from "next/image";
 import SectionTag from "@/components/global/SectionTag";
 import { AgencyLogos } from "@/constant/AgencyLogos";
+import SecondaryBtn from "@/components/global/SecondaryBtn";
+import PrimaryButton from "@/components/global/PrimaryButton";
 
 interface HeroProps {
   content: {
@@ -65,20 +66,8 @@ const Hero = ({ content, common }: HeroProps) => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center items-center">
-            <button className="primary_button flex text-center w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
-              {common.buttons.applyNow}
-              <span>
-                <Image
-                  src="/layout/what-we-do/right_icon.svg"
-                  alt="Right Icon"
-                  width={24}
-                  height={24}
-                />
-              </span>
-            </button>
-            <button className="secondary-btn w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
-              {common.buttons.exploreApproach}
-            </button>
+            <PrimaryButton title={common.buttons.applyNow} />
+            <SecondaryBtn title={common.buttons.exploreApproach} />
           </div>
         </div>
 

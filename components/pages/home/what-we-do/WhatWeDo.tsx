@@ -1,7 +1,6 @@
-import React from "react";
 import Image from "next/image";
 
-import GradientButton from "@/components/global/GradientButton";
+import PrimaryButton from "@/components/global/PrimaryButton";
 
 interface WhatWeDoProps {
   content: {
@@ -33,17 +32,7 @@ const WhatWeDo = ({ content, aboutNuwat }: WhatWeDoProps) => {
               dangerouslySetInnerHTML={{ __html: content.heading }}
             />
             <div className={"what_we_do_btn"}>
-              <GradientButton className="flex w-max">
-                <span>
-                  <Image
-                    src="/layout/what-we-do/right_icon.svg"
-                    alt="Right Icon"
-                    width={24}
-                    height={24}
-                  />
-                </span>
-                {aboutNuwat}
-              </GradientButton>
+              <PrimaryButton title={aboutNuwat} />
             </div>
           </div>
         </div>
