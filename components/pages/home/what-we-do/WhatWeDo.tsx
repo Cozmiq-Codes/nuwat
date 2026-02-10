@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import GradientButton from "@/components/global/GradientButton";
+
 interface WhatWeDoProps {
   content: {
     title: string;
@@ -31,7 +33,7 @@ const WhatWeDo = ({ content, aboutNuwat }: WhatWeDoProps) => {
               dangerouslySetInnerHTML={{ __html: content.heading }}
             />
             <div className={"what_we_do_btn"}>
-              <button className="primary_button flex">
+              <GradientButton className="flex w-max">
                 <span>
                   <Image
                     src="/layout/what-we-do/right_icon.svg"
@@ -41,7 +43,7 @@ const WhatWeDo = ({ content, aboutNuwat }: WhatWeDoProps) => {
                   />
                 </span>
                 {aboutNuwat}
-              </button>
+              </GradientButton>
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
-import React from "react";
-import Image from "next/image";
+import GradientButton from "@/components/global/GradientButton";
 
 interface CTAProps {
   content: {
@@ -20,25 +19,25 @@ const CTA = ({ content, common }: CTAProps) => {
       <div className="main-container">
         <div>
           <div className="cta_content_wrap">
-            <div className="cta_top_content">
-              <h2 className={"heading_2"}>{content.title}</h2>
-              <p className={"paragraph_md"}>{content.description}</p>
-            </div>
-            <div className="cta_bottom_content flex gap-4">
-              <button className="primary_button flex">
-                {common.buttons.applyNow}
-                <span>
-                  <Image
-                    src="/layout/what-we-do/right_icon.svg"
-                    alt="Right Icon"
-                    width={24}
-                    height={24}
-                  />
-                </span>
-              </button>
-              <button className={"secondary-btn"}>
-                {common.buttons.learnMore}
-              </button>
+            <div className="flex flex-col items-center gap-6">
+              <h2
+                className="text-4xl md:text-5xl font-bold text-center text-white"
+                dangerouslySetInnerHTML={{ __html: content.title }}
+              />
+
+              <p className="text-gray-400 text-center max-w-2xl text-lg">
+                {content.description}
+              </p>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <GradientButton className="min-w-[200px]">
+                  {common.buttons.applyNow}
+                </GradientButton>
+
+                <GradientButton variant="secondary" className="min-w-[200px]">
+                  {common.buttons.learnMore}
+                </GradientButton>
+              </div>
             </div>
           </div>
         </div>

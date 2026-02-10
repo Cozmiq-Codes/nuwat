@@ -1,4 +1,5 @@
-import React from "react";
+import LenisWrapper from "@/components/global/LenisWrapper";
+
 import Hero from "@/components/pages/home/hero/Hero";
 import WhatWeDo from "@/components/pages/home/what-we-do/WhatWeDo";
 import CTA from "@/components/global/cta/CTA";
@@ -27,7 +28,7 @@ const Home = async ({ params }: PageProps) => {
   ];
 
   return (
-    <>
+    <LenisWrapper>
       <Hero content={dict.home.hero} common={dict.common} />
       <div className={"px-5 my-5"}>
         <Image
@@ -52,7 +53,7 @@ const Home = async ({ params }: PageProps) => {
       />
       <ClientReviews content={dict.home.reviews} />
       <CTA content={dict.home.cta} common={dict.common} />
-    </>
+    </LenisWrapper>
   );
 };
 export default Home;

@@ -30,7 +30,7 @@ const DominanceSection = ({ content }: DominanceProps) => {
             >
               {/* Parent Card Wrapper */}
               <div className="w-full flex flex-col items-center lg:flex-row justify-between gap-6">
-                <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF]">
+                <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF] w-full">
                   <h3 className="text-[#F2F7FE] text-lg lg:text-[26px] font-bold leading-[37px] uppercase">
                     {content.cards.brand.title}
                   </h3>
@@ -38,7 +38,7 @@ const DominanceSection = ({ content }: DominanceProps) => {
                     {content.cards.brand.description}
                   </p>
                 </div>
-                <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF]">
+                <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF] w-full">
                   <h3 className="text-[#F2F7FE] text-lg lg:text-[26px] font-bold leading-[37px] uppercase">
                     {content.cards.scale.title}
                   </h3>
@@ -50,7 +50,7 @@ const DominanceSection = ({ content }: DominanceProps) => {
 
               {/* Parent Card Wrapper */}
               <div className="w-full flex flex-col items-center lg:flex-row justify-between gap-6">
-                <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF]">
+                <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF] w-full">
                   <h3 className="text-[#F2F7FE] text-lg lg:text-[26px] font-bold leading-[37px] uppercase">
                     {content.cards.digital.title}
                   </h3>
@@ -58,7 +58,7 @@ const DominanceSection = ({ content }: DominanceProps) => {
                     {content.cards.digital.description}
                   </p>
                 </div>
-                <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF]">
+                <div className="p-8 max-w-[425px] bg-[#FFFFFF14] backdrop-blur-md rounded-[18px] flex flex-col gap-6 border border-[#00D1FF] w-full">
                   <h3 className="text-[#F2F7FE] text-lg lg:text-[26px] font-bold leading-[37px] uppercase">
                     {content.cards.systemic.title}
                   </h3>
