@@ -21,7 +21,16 @@ interface HeroProps {
 
 const Hero = ({ content, common }: HeroProps) => {
   return (
-    <section className="relative overflow-hidden bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat">
+    <section className="relative overflow-hidden">
+      {/* Background video */}
+      <video
+        src="/global/hero-bg.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      />
       {/* Main content wrapper */}
       <div className="main-container min-h-svh flex flex-col justify-between py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
         {/* Hero Top */}
