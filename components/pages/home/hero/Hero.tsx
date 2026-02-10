@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SectionTag from "@/components/global/SectionTag";
 import { AgencyLogos } from "@/constant/AgencyLogos";
+import SecondaryBtn from "@/components/global/SecondaryBtn";
 
 interface HeroProps {
   content: {
@@ -76,9 +77,7 @@ const Hero = ({ content, common }: HeroProps) => {
                 />
               </span>
             </button>
-            <button className="secondary-btn w-full sm:w-auto px-6 py-3 text-[clamp(0.95rem,1.1vw,1rem)]">
-              {common.buttons.exploreApproach}
-            </button>
+            <SecondaryBtn title={common.buttons.exploreApproach} />
           </div>
         </div>
 

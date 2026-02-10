@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LanguageSwitcher from "@/components/global/LanguageSwitcher";
+import SecondaryBtn from "../global/SecondaryBtn";
 
 const logo = "/layout/navbar/logo.svg";
 
@@ -103,18 +104,14 @@ const Navbar = ({ nav, common, lang }: NavbarProps) => {
             </ul>
             <div className={"flex flex-col gap-4 lg:hidden mt-4"}>
               <LanguageSwitcher />
-              <button className={"secondary-btn"}>
-                {common.buttons.register}
-              </button>
+              <SecondaryBtn title={common.buttons.register} />
             </div>
           </div>
 
           <div className="flex items-center gap-4">
             <div className={"hidden lg:flex items-center gap-2"}>
               <LanguageSwitcher />
-              <button className={"secondary-btn"}>
-                {common.buttons.register}
-              </button>
+              <SecondaryBtn title={common.buttons.register} />
             </div>
 
             <button
