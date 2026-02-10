@@ -3,7 +3,6 @@ import "../globals.css";
 import { satoshi } from "../fonts";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import PageTransition from "@/components/global/PageTransition";
 import { getDictionary } from "@/lib/dictionaries";
 import { Locale } from "@/lib/i18n";
 import NextTopLoader from "nextjs-toploader";
@@ -30,7 +29,7 @@ export default async function RootLayout({
       <body className={`${satoshi.variable} antialiased`}>
         <NextTopLoader />
         <Navbar nav={dict.nav} common={dict.common} lang={lang} />
-        <PageTransition>{children}</PageTransition>
+        {children}
         <Footer content={dict.footer} />
       </body>
     </html>

@@ -3,11 +3,7 @@
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface PageTransitionProps {
-  children: React.ReactNode;
-}
-
-const PageTransition = ({ children }: PageTransitionProps) => {
+export default function Template({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
@@ -23,6 +19,4 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       </motion.div>
     </AnimatePresence>
   );
-};
-
-export default PageTransition;
+}
