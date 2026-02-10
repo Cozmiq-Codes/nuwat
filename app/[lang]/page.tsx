@@ -36,7 +36,7 @@ const Home = async ({ params }: PageProps) => {
           alt={"Hero Image"}
           width={1000}
           height={1000}
-          className={"w-full h-95 rounded-2xl"}
+          className={"w-full h-[500px] rounded-2xl"}
         />
       </div>
       <VisionDominance content={dict.home.visionDominance} />

@@ -1,4 +1,5 @@
-import GradientButton from "@/components/global/GradientButton";
+import PrimaryButton from "../PrimaryButton";
+import SecondaryBtn from "../SecondaryBtn";
 
 interface CTAProps {
   content: {
@@ -30,13 +31,8 @@ const CTA = ({ content, common }: CTAProps) => {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <GradientButton className="min-w-[200px]">
-                  {common.buttons.applyNow}
-                </GradientButton>
-
-                <GradientButton variant="secondary" className="min-w-[200px]">
-                  {common.buttons.learnMore}
-                </GradientButton>
+                <PrimaryButton title={common.buttons.applyNow} />
+                <SecondaryBtn title={common.buttons.learnMore} />
               </div>
             </div>
           </div>
