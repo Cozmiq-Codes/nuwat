@@ -1,7 +1,5 @@
-import React from "react";
 import Image from "next/image";
 
-import GradientButton from "@/components/global/GradientButton";
 import PrimaryButton from "@/components/global/PrimaryButton";
 
 interface WhatWeDoProps {
