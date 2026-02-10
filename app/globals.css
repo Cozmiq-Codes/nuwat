@@ -288,10 +288,6 @@ button {
   background: linear-gradient(180deg, #00d1ff 18.78%, #51a2ff 74.66%);
 }
 
-.primary_button:hover {
-  transform: translateY(-1px);
-}
-
 .heading_2 {
   @apply text-[#F2F7FE] font-semibold lg:font-bold text-[28px] lg:text-[48px] leading-[1.32];
 }
