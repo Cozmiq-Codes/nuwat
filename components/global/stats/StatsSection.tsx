@@ -72,7 +72,7 @@ const StatsSection = ({
                   </h3>
                   <motion.p
                     className={
-                      "text-[14px] lg:text-[16px] font-normal leading-6 lg:leading-7 text-[#FFFFFFC2]"
+                      "text-[14px] lg:text-[16px] font-normal leading-6 lg:leading-7 text-[#FFFFFFC2] capitalize"
                     }
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : {}}

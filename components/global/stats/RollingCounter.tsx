@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { animate, useInView } from "framer-motion";
+import { animate } from "framer-motion";
 
 interface RollingCounterProps {
   from?: number;
