@@ -8,6 +8,7 @@ import { Locale } from "@/lib/i18n";
 import NextTopLoader from "nextjs-toploader";
 
 import LenisWrapper from "@/components/global/LenisWrapper";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Nuwat | Sovereign Operating Partner",

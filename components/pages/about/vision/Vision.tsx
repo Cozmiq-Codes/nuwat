@@ -64,25 +64,6 @@ const Vision = ({ title, items }: VisionProps) => {
           </div>
         </div>
       </div>
-
-      <div className={"hidden lg:block absolute -top-37.5 right-0 z-20"}>
-        <Image
-          src={BgGradImage}
-          alt={"bgGradImage"}
-          width={1000}
-          height={1000}
-          className={"w-212.5 h-full"}
-        />
-      </div>
-      {/*<div className={"hidden lg:block absolute top-[150px] left-0 z-[20]"}>*/}
-      {/*  <Image*/}
-      {/*    src={BgGradImageTwo}*/}
-      {/*    alt={"bgGradImage"}*/}
-      {/*    width={1000}*/}
-      {/*    height={1000}*/}
-      {/*    className={"w-[600px] h-full"}*/}
-      {/*  />*/}
-      {/*</div>*/}
     </section>
   );
 };
