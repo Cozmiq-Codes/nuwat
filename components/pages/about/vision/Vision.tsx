@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 
-const BgGradImage = "/about/section-bg.webp;";
+import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 interface VisionProps {
   title: string;
@@ -12,6 +12,36 @@ interface VisionProps {
     image: string;
   }>;
 }
+
+const headlineVariants: Variants = {
+  hidden: { opacity: 0, y: 50, filter: "blur(10px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const gridVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 const Vision = ({ title, items }: VisionProps) => {
   return (
@@ -24,21 +54,35 @@ const Vision = ({ title, items }: VisionProps) => {
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center w-full gap-12"}>
             <div className={"flex justify-center"}>
-              <h2
+              <motion.h2
+                variants={headlineVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
                 className={"section-heading"}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             </div>
-            <div
+            <motion.div
+              variants={gridVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
               className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6"}
             >
               {items.map((vision, index) => (
-                <div
+                <motion.div
                   className={[
-                    "bg-[#07070790] rounded-[18px] p-8 flex flex-col gap-12 col-span-1",
+                    "bg-[#07070790] rounded-[18px] p-8 flex flex-col gap-12 col-span-1 border border-transparent",
                     index < 3 ? "lg:col-span-2" : "lg:col-span-3",
                   ].join(" ")}
                   key={vision.id}
+                  variants={cardVariants}
+                  whileHover={{
+                    y: -5,
+                    borderColor: "#2F80ED",
+                    transition: { duration: 0.2 },
+                  }}
                 >
                   <Image
                     src={vision.image}
@@ -58,31 +102,12 @@ const Vision = ({ title, items }: VisionProps) => {
                       {vision.body}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-
-      <div className={"hidden lg:block absolute -top-37.5 right-0 z-20"}>
-        <Image
-          src={BgGradImage}
-          alt={"bgGradImage"}
-          width={1000}
-          height={1000}
-          className={"w-212.5 h-full"}
-        />
-      </div>
-      {/*<div className={"hidden lg:block absolute top-[150px] left-0 z-[20]"}>*/}
-      {/*  <Image*/}
-      {/*    src={BgGradImageTwo}*/}
-      {/*    alt={"bgGradImage"}*/}
-      {/*    width={1000}*/}
-      {/*    height={1000}*/}
-      {/*    className={"w-[600px] h-full"}*/}
-      {/*  />*/}
-      {/*</div>*/}
     </section>
   );
 };

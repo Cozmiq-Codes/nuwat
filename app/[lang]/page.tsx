@@ -4,7 +4,7 @@ import FadeIn from "@/components/global/FadeIn";
 import Hero from "@/components/pages/home/hero/Hero";
 import WhatWeDo from "@/components/pages/home/what-we-do/WhatWeDo";
 import CTA from "@/components/global/cta/CTA";
-import Image from "next/image";
+import ParallaxReveal from "@/components/global/ParallaxReveal";
 
 import StatsSection from "@/components/global/stats/StatsSection";
 import DominanceSection from "@/components/pages/home/dominance/Dominance";
@@ -33,17 +33,15 @@ const Home = async ({ params }: PageProps) => {
       <FadeIn>
         <Hero content={dict.home.hero} common={dict.common} />
       </FadeIn>
-      <FadeIn className="px-5 my-5">
-        <div className="relative">
-          <Image
-            src={HeroImage}
-            alt={"Hero Image"}
-            width={1000}
-            height={1000}
-            className={"w-full h-[500px] rounded-2xl"}
-          />
-        </div>
-      </FadeIn>
+
+      {/* Vertical Image Start */}
+      <ParallaxReveal
+        src={HeroImage}
+        alt="Hero Image"
+        containerClassName="my-10 mx-5"
+      />
+      {/* Vertical Image End */}
+
       <FadeIn>
         <VisionDominance content={dict.home.visionDominance} />
       </FadeIn>
@@ -62,6 +60,7 @@ const Home = async ({ params }: PageProps) => {
           gradientHeading={dict.home.stats.headingGradient}
           description={dict.home.stats.description}
           stats={homeStats}
+          isGradient={true}
         />
       </FadeIn>
       <FadeIn>

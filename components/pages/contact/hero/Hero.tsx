@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 interface ContactHeroProps {
   content: {
@@ -9,17 +12,46 @@ interface ContactHeroProps {
 
 const ContactHero = ({ content }: ContactHeroProps) => {
   return (
-    <section
-      className={
-        "pt-32 pb-5 bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
-      }
-    >
+    <section className="relative overflow-hidden pt-32 pb-5">
+      <motion.video
+        src="/global/hero-bg.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+        initial={{ opacity: 0.8 }}
+        animate={{ opacity: [0.8, 1, 0.8] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      />
       <div className={"bg-[#FFFFFF03] rounded-2xl mx-5 my-5 backdrop-blur-2xl"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center gap-5 w-full"}>
-            <div className={"flex flex-col items-center gap-5"}>
+            {/* Shimmer Effect Styles */}
+            <style>{`
+              .shimmer-text span {
+                background: linear-gradient(110deg, #2F80ED 40%, #89C7F7 50%, #2F80ED 60%);
+                background-size: 200% 100%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: shimmer 1.5s cubic-bezier(0.2, 0, 0, 1) 1.2s forwards;
+                background-position: -100% 0;
+              }
+              @keyframes shimmer {
+                0% { background-position: -100% 0; }
+                100% { background-position: 200% 0; }
+              }
+            `}</style>
+            <motion.div
+              className={"flex flex-col items-center gap-5"}
+              initial={{ opacity: 0, filter: "blur(20px)", scale: 1.15 }}
+              animate={{ opacity: 1, filter: "blur(0px)", scale: 1.0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            >
               <h1
                 className="
+                shimmer-text
                 text-[#F2F7FE] font-semibold capitalize
                 text-5xl lg:text-[56px]
                 text-center
@@ -42,7 +74,7 @@ const ContactHero = ({ content }: ContactHeroProps) => {
               >
                 {content.description}
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
