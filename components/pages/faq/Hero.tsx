@@ -11,11 +11,15 @@ interface HeroProps {
 
 const Hero = ({ content }: HeroProps) => {
   return (
-    <section
-      className={
-        "pt-32 pb-5 bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
-      }
-    >
+    <section className="relative overflow-hidden pt-32 pb-5">
+      <video
+        src="/global/hero-bg.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      />
       <div className={"main-container"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col gap-4 items-center w-full"}>

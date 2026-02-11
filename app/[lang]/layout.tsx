@@ -7,6 +7,8 @@ import { getDictionary } from "@/lib/dictionaries";
 import { Locale } from "@/lib/i18n";
 import NextTopLoader from "nextjs-toploader";
 
+import LenisWrapper from "@/components/global/LenisWrapper";
+
 export const metadata: Metadata = {
   title: "Nuwat | Sovereign Operating Partner",
   description: "We Architect Dominance.",
@@ -28,9 +30,11 @@ export default async function RootLayout({
     <html lang={lang}>
       <body className={`${satoshi.variable} antialiased`}>
         <NextTopLoader />
-        <Navbar nav={dict.nav} common={dict.common} lang={lang} />
-        {children}
-        <Footer content={dict.footer} />
+        <LenisWrapper>
+          <Navbar nav={dict.nav} common={dict.common} lang={lang} />
+          {children}
+          <Footer content={dict.footer} />
+        </LenisWrapper>
       </body>
     </html>
   );

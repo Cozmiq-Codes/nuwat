@@ -9,11 +9,15 @@ interface ContactHeroProps {
 
 const ContactHero = ({ content }: ContactHeroProps) => {
   return (
-    <section
-      className={
-        "pt-32 pb-5 bg-[url('/global/bg-grad.webp')] bg-cover bg-center bg-no-repeat"
-      }
-    >
+    <section className="relative overflow-hidden pt-32 pb-5">
+      <video
+        src="/global/hero-bg.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      />
       <div className={"bg-[#FFFFFF03] rounded-2xl mx-5 my-5 backdrop-blur-2xl"}>
         <div className={"section-wrapper"}>
           <div className={"flex flex-col items-center gap-5 w-full"}>

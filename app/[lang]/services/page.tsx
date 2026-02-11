@@ -1,5 +1,3 @@
-import React from "react";
-import Hero from "@/components/pages/services/hero/Hero";
 import Role from "@/components/pages/services/role/Role";
 import ServiceDomains from "@/components/pages/services/service-domains/ServiceDomains";
 import Negotiate from "@/components/pages/services/negotiate/Negotiate";
@@ -8,6 +6,7 @@ import HighEngage from "@/components/pages/services/high-engage/HighEngage";
 
 import { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
+import ServiceHero from "@/components/pages/services/hero/Hero";
 
 interface PageProps {
   params: Promise<{ lang: string }>;
@@ -86,7 +85,7 @@ const Page = async ({ params }: PageProps) => {
 
   return (
     <>
-      <Hero content={dict.services.hero} />
+      <ServiceHero content={dict.services.hero} />
       <Role content={dict.services.role} />
       <ServiceDomains
         title={dict.services.domains.title}
