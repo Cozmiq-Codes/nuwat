@@ -60,6 +60,7 @@ const Home = async ({ params }: PageProps) => {
           gradientHeading={dict.home.stats.headingGradient}
           description={dict.home.stats.description}
           stats={homeStats}
+          isGradient={true}
         />
       </FadeIn>
       <FadeIn>

@@ -8,6 +8,7 @@ export interface StatsSectionProps {
   gradientHeading?: string;
   description?: string;
   stats: Stats[];
+  isGradient?: boolean;
 }
 
 export const HomeStats: Stats[] = [

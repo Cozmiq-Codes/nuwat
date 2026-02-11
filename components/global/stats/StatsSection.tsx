@@ -13,9 +13,10 @@ const StatsSection = ({
   gradientHeading,
   description,
   stats,
+  isGradient = false,
 }: StatsSectionProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 }); // Trigger when 30% visible
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <section className={"relative"} ref={ref}>
@@ -91,13 +92,17 @@ const StatsSection = ({
         </div>
       </div>
 
-      <Image
-        src={BgGrad}
-        alt={"bg grad"}
-        className={"w-587.5 h-225 absolute -bottom-full right-0 z-10"}
-        width={1000}
-        height={1000}
-      />
+      {
+        isGradient && (
+              <Image
+                  src={BgGrad}
+                  alt={"bg grad"}
+                  className={"w-587.5 h-225 absolute -bottom-full right-0 z-10"}
+                  width={1000}
+                  height={1000}
+              />
+          )
+      }
     </section>
   );
 };
