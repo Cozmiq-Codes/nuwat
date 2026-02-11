@@ -92,17 +92,15 @@ const StatsSection = ({
         </div>
       </div>
 
-      {
-        isGradient && (
-              <Image
-                  src={BgGrad}
-                  alt={"bg grad"}
-                  className={"w-587.5 h-225 absolute -bottom-full right-0 z-10"}
-                  width={1000}
-                  height={1000}
-              />
-          )
-      }
+      {isGradient && (
+        <Image
+          src={BgGrad}
+          alt={"bg grad"}
+          className={"w-587.5 h-225 absolute -bottom-full right-0 z-10"}
+          width={1000}
+          height={1000}
+        />
+      )}
     </section>
   );
 };
