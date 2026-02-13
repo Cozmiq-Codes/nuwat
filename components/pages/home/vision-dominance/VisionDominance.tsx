@@ -5,10 +5,11 @@ import Image from "next/image";
 import ParallaxReveal from "@/components/global/ParallaxReveal";
 import { motion, AnimatePresence } from "framer-motion";
 
-const CityImage = "/empowering/city.webp";
-// Placeholder images for other steps if originals aren't distinct yet,
-// or map them if they are different.
-const images = [CityImage, CityImage, CityImage];
+const FirstCityImage = "/empowering/city.webp";
+const SecondCityImage = "/empowering/second-city.webp";
+const ThirdCityImage = "/empowering/third-city.webp";
+
+const images = [FirstCityImage, SecondCityImage, ThirdCityImage];
 
 const DriveImage = "/empowering/drive.webp";
 const GrowthImage = "/empowering/growth.webp";
@@ -102,9 +103,7 @@ const VisionDominance = ({ content }: VisionDominanceProps) => {
           >
             <div>
               <h2
-                className={
-                  "section-heading max-w-full text-3xl md:text-4xl lg:text-5xl"
-                }
+                className={"section-heading"}
                 dangerouslySetInnerHTML={{ __html: content.title }}
               />
             </div>
@@ -161,7 +160,7 @@ const VisionDominance = ({ content }: VisionDominanceProps) => {
               {/* BOTTOM ROW: Content (Image + Description) */}
               <div className="flex flex-col gap-6 w-full">
                 {/* Active Image */}
-                <div className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden bg-white/5">
+                <div className="w-full aspect-4/3 relative rounded-2xl overflow-hidden bg-white/5">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={activeIndex}
@@ -278,7 +277,7 @@ const VisionDominance = ({ content }: VisionDominanceProps) => {
 
               {/* Right Column: Sticky Image */}
               <div className="w-1/2 sticky top-24 self-start">
-                <div className="w-full h-[calc(100vh-120px)] relative rounded-2xl overflow-hidden">
+                <div className="w-full h-[calc(100vh-6rem)] relative rounded-2xl overflow-hidden">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={activeIndex}
@@ -292,8 +291,8 @@ const VisionDominance = ({ content }: VisionDominanceProps) => {
                         src={images[activeIndex]}
                         alt={`Vision Dominance Image ${activeIndex + 1}`}
                         containerClassName={"w-full h-full rounded-2xl"}
-                        width={1000}
-                        height={1000}
+                        width={10000}
+                        height={10000}
                       />
                     </motion.div>
                   </AnimatePresence>
