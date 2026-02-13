@@ -31,8 +31,8 @@ const CTA = ({ content, common }: CTAProps) => {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <PrimaryButton title={common.buttons.applyNow} />
-                <SecondaryBtn title={common.buttons.learnMore} />
+                <PrimaryButton title={common.buttons.applyNow} link={"https://calendly.com/nuwatventures-sales/30min"}/>
+                <SecondaryBtn title={common.buttons.learnMore} link={"/services"}/>
               </div>
             </div>
           </div>
