@@ -103,7 +103,7 @@ const Faq = ({ items }: FaqProps) => {
   };
 
   return (
-    <section className="mt-5">
+    <section className="mt-5 px-5">
       <div className="max-w-225 mx-auto">
         <div className="mb-8">
           <div className="flex flex-col gap-8 w-full">

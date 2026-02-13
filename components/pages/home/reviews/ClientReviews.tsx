@@ -82,12 +82,11 @@ const ClientReviews = ({ content }: ClientReviewsProps) => {
           >
             {content.title}
           </motion.h2>
-
-          <div className="w-full flex justify-center items-center gap-4 lg:gap-12 relative">
-            {/* Left Button */}
+          <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 relative">
+            {/* Left Button - Desktop */}
             <button
               onClick={() => paginate(-1)}
-              className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-[#334155] flex justify-center items-center text-white hover:bg-white/10 transition-colors shrink-0 cursor-pointer z-10"
+              className="hidden lg:flex w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-[#334155] justify-center items-center text-white hover:bg-white/10 transition-colors shrink-0 cursor-pointer z-10"
               aria-label="Previous review"
             >
               <svg
@@ -190,10 +189,10 @@ const ClientReviews = ({ content }: ClientReviewsProps) => {
               </AnimatePresence>
             </motion.div>
 
-            {/* Right Button */}
+            {/* Right Button - Desktop */}
             <button
               onClick={() => paginate(1)}
-              className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-[#334155] flex justify-center items-center text-white hover:bg-white/10 transition-colors shrink-0 cursor-pointer z-10"
+              className="hidden lg:flex w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-[#334155] justify-center items-center text-white hover:bg-white/10 transition-colors shrink-0 cursor-pointer z-10"
               aria-label="Next review"
             >
               <svg
@@ -212,7 +211,54 @@ const ClientReviews = ({ content }: ClientReviewsProps) => {
                 />
               </svg>
             </button>
-          </div>
+
+            {/* Mobile Navigation Buttons */}
+            <div className="flex lg:hidden gap-6 mt-4 z-10">
+              <button
+                onClick={() => paginate(-1)}
+                className="w-12 h-12 rounded-full border border-[#334155] flex justify-center items-center text-white hover:bg-white/10 transition-colors shrink-0 cursor-pointer"
+                aria-label="Previous review"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 18L9 12L15 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <button
+                onClick={() => paginate(1)}
+                className="w-12 h-12 rounded-full border border-[#334155] flex justify-center items-center text-white hover:bg-white/10 transition-colors shrink-0 cursor-pointer"
+                aria-label="Next review"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>{" "}
         </div>
       </div>
     </section>
