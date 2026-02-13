@@ -26,7 +26,7 @@ const Role = ({ content }: RoleProps) => {
     >
       <div className="section-wrapper">
         {/* Top Section: Title & Image */}
-        <div className="flex flex-col justify-between gap-6 lg:gap-12 mb-12 lg:mb-24">
+        <div className="flex flex-col justify-between gap-6">
           <h2 className="uppercase text-[14px] md:text-[16px] font-normal leading-normal tracking-wide">
             {content.title}
           </h2>
@@ -42,9 +42,9 @@ const Role = ({ content }: RoleProps) => {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <Image
-                src={role}
+                src={"/layout/what-we-do/building.webp"}
                 alt="role image"
-                className="w-70 md:w-90 h-auto object-cover"
+                className="w-70 md:w-90 h-auto object-cover rounded-2xl"
                 width={500}
                 height={500}
                 priority={false}
