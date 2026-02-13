@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ReachImage = "/contact/reach.webp";
 const StarSVG = "/contact/star.svg";
@@ -29,34 +32,81 @@ const Reach = ({ title, description, items }: ReachProps) => {
                 </p>
               </div>
 
-              <div className="w-full max-w-155">
-                <Image
-                  src={ReachImage}
-                  alt="Section Image"
-                  width={620}
-                  height={300}
-                  className="w-full h-auto rounded-2xl"
-                  sizes="(min-width: 1024px) 620px, (min-width: 640px) 80vw, 100vw"
-                  priority={false}
-                />
+              <div className="w-full max-w-155 overflow-hidden rounded-2xl">
+                <motion.div
+                  initial={{ scale: 1.0 }}
+                  whileInView={{ scale: 1.15 }}
+                  transition={{ duration: 10, ease: "linear" }}
+                  viewport={{ once: true }}
+                  style={{ transformOrigin: "bottom center" }}
+                  className="w-full h-auto"
+                >
+                  <Image
+                    src={ReachImage}
+                    alt="Section Image"
+                    width={620}
+                    height={300}
+                    className="w-full h-auto object-cover"
+                    sizes="(min-width: 1024px) 620px, (min-width: 640px) 80vw, 100vw"
+                    priority={false}
+                  />
+                </motion.div>
               </div>
             </div>
 
             {/* Right column */}
-            <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6">
+            <motion.div
+              className="flex flex-col gap-4 sm:gap-5 lg:gap-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={{
+                visible: {
+                  transition: {
+                    staggerChildren: 0.15,
+                  },
+                },
+              }}
+            >
               {items.map((service, index) => (
-                <div
+                <motion.div
                   key={service?.title ?? index}
                   className="bg-white/6 p-4 sm:p-5 lg:p-6 rounded-2xl"
+                  variants={{
+                    hidden: { x: 100, opacity: 0 },
+                    visible: {
+                      x: 0,
+                      opacity: 1,
+                      transition: {
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 20,
+                      },
+                    },
+                  }}
                 >
                   <div className="flex gap-4 sm:gap-6">
-                    <Image
-                      src={StarSVG}
-                      alt={service.title}
-                      width={20}
-                      height={20}
-                      className={"w-5 h-5"}
-                    />
+                    <motion.div
+                      className="shrink-0"
+                      variants={{
+                        hidden: { scale: 0.5 },
+                        visible: {
+                          scale: [0.5, 1.2, 1.0],
+                          transition: {
+                            duration: 0.4,
+                            times: [0, 0.6, 1],
+                          },
+                        },
+                      }}
+                    >
+                      <Image
+                        src={StarSVG}
+                        alt={service.title}
+                        width={20}
+                        height={20}
+                        className={"w-5 h-5"}
+                      />
+                    </motion.div>
 
                     <div className="flex flex-col gap-2 sm:gap-3">
                       <h3 className="text-white text-lg sm:text-xl font-medium leading-6 sm:leading-7">
@@ -67,9 +117,9 @@ const Reach = ({ title, description, items }: ReachProps) => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

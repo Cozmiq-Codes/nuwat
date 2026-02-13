@@ -35,11 +35,15 @@ const Home = async ({ params }: PageProps) => {
       </FadeIn>
 
       {/* Vertical Image Start */}
-      <ParallaxReveal
-        src={HeroImage}
-        alt="Hero Image"
-        containerClassName="my-10 mx-5"
-      />
+      <section className={"mx-5"}>
+        <ParallaxReveal
+          src={HeroImage}
+          alt="Hero Image"
+          containerClassName="my-10"
+          width={10000}
+          height={10000}
+        />
+      </section>
       {/* Vertical Image End */}
 
       <FadeIn>

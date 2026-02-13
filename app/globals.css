@@ -51,7 +51,7 @@ button {
 }
 
 .section-heading {
-  @apply text-[#F2F7FE] text-center text-5xl font-bold leading-[60px] capitalize;
+  @apply text-[#F2F7FE] text-center text-[30px] font-bold leading-[40px] capitalize;
 }
 
 /* Navbar */

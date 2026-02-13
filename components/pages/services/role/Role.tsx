@@ -17,7 +17,6 @@ interface RoleProps {
 
 const Role = ({ content }: RoleProps) => {
   const containerRef = useRef(null);
-  // Reduced threshold to 0.2 so it starts sooner, preventing "pop-in" feel
   const isInView = useInView(containerRef, { once: true, amount: 0.2 });
 
   return (
@@ -28,7 +27,7 @@ const Role = ({ content }: RoleProps) => {
       <div className="section-wrapper">
         {/* Top Section: Title & Image */}
         <div className="flex flex-col justify-between gap-6 lg:gap-12 mb-12 lg:mb-24">
-          <h2 className="uppercase text-[14px] md:text-[16px] font-normal leading-[1.5] tracking-wide">
+          <h2 className="uppercase text-[14px] md:text-[16px] font-normal leading-normal tracking-wide">
             {content.title}
           </h2>
 
@@ -40,26 +39,22 @@ const Role = ({ content }: RoleProps) => {
                   ? { clipPath: "inset(0 0% 0 0)" }
                   : { clipPath: "inset(0 100% 0 0)" }
               }
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} // Custom bezier for smoother feel
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <Image
                 src={role}
                 alt="role image"
-                className="w-[280px] md:w-[360px] h-auto object-cover"
+                className="w-70 md:w-90 h-auto object-cover"
                 width={500}
                 height={500}
-                priority={false} // Only prioritize if this is above the fold
+                priority={false}
               />
             </motion.div>
           </div>
         </div>
 
         {/* Bottom Section: Text Content */}
-        <div className="max-w-[760px] flex flex-col gap-6 lg:gap-8">
-          {/* NOTE: WordWrapper is wrapped in a generic div or span, 
-            NOT a p tag, to avoid HTML nesting warnings if WordWrapper renders divs.
-            However, since WordWrapper renders spans, p tag is fine.
-          */}
+        <div className="max-w-190 flex flex-col gap-6 lg:gap-8">
           <p className="text-[#E7E7E7] text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] lg:leading-[42px]">
             <WordWrapper content={content.description1} trigger={isInView} />
           </p>

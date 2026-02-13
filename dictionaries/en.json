@@ -306,12 +306,22 @@
           "title": "We don't run vanity campaigns.",
           "description": "We are not a marketing firm; we are an industrial engine. If it doesn't move the bottom line or secure the foundation, we don't touch it."
         },
-        "superficial": { "title": "NUWAT Does Not Give Superficial" },
-        "cookieCutter": { "title": "We Do Not Offer Cookie-Cutter Solutions" },
-        "spreadsheet": {
-          "title": "We Don't Promise Targets Based On A Spreadsheet."
+        "superficial": {
+          "title": "NUWAT Does Not Give Superficial",
+          "description": "We do not engage in cosmetic updates. If the core structure is flawed, a fresh coat of paint is a waste of capital. We rebuild from the foundation up."
         },
-        "upstream": { "title": "We Work Upstream." }
+        "cookieCutter": {
+          "title": "We Do Not Offer Cookie-Cutter Solutions",
+          "description": "Every mandate is unique because every market position is unique. We refuse to apply templates to complex problems. Your strategy is engineered specifically for your dominance."
+        },
+        "spreadsheet": {
+          "title": "We Don't Promise Targets Based On A Spreadsheet.",
+          "description": "Projections are not reality. We deal in executed outcomes, not theoretical gains. We measure success by market capture, not by cell formulas."
+        },
+        "upstream": {
+          "title": "We Work Upstream.",
+          "description": "We solve problems at the source. Treating symptoms is for the weak; we eradicate the disease by restructuring the decision-making architecture itself."
+        }
       }
     },
     "highEngage": {
@@ -407,9 +417,49 @@
       "description": "We align with trailblazers who view transformation as a mandate—not a fleeting moment."
     },
     "items": {
-      "whoIsNuwatFor": {
-        "question": "Who is Nuwat actually for?",
-        "answer": "NUWAT is reserved for founders and sovereign leaders who have outgrown conventional &quote;consulting&quote;. We engage with those ready to be challenged, held to a ruthless standard of accountability, and pushed beyond the safety of comfortable solutions. If you are seeking superficial validation or surface-level &quote;fixes,&quote; NUWAT is not the fit."
+      "1": {
+        "question": "Who Is Nuwat Actually For?",
+        "answer": "NUWAT is reserved for founders and sovereign leaders who have outgrown conventional consulting. We engage with those ready to be challenged, held to a ruthless standard of accountability, and pushed beyond the safety of comfortable solutions."
+      },
+      "2": {
+        "question": "Who Is NUWAT Not A Fit For?",
+        "answer": "We are not a fit for those seeking superficial validation, quick fixes, or standard agency fulfillment. If you are looking to outsource responsibility rather than engage in a transformative partnership, NUWAT is likely not the right environment for you."
+      },
+      "3": {
+        "question": "What Industries Do You Work With?",
+        "answer": "We are industry-agnostic but stage-specific. Our expertise aligns best with high-growth technology ventures, luxury commerce, and sovereign capital operations where strategic depth and operational rigor are paramount."
+      },
+      "4": {
+        "question": "Do You Offer Fixed Packages Or Pricing?",
+        "answer": "No. Every engagement is bespoke. We structure our commercial terms based on the complexity of the challenge, the scope of the intervention, and the projected value we create, rather than selling standardized time blocks."
+      },
+      "5": {
+        "question": "How Selective Is Your Engagement Process?",
+        "answer": "Extremely. We accept a limited number of partners annually to ensure maximum attention and impact. Our vetting process assesses not just business viability, but alignment in vision, temperament, and readiness for rigorous change."
+      },
+      "6": {
+        "question": "How Long Do Engagements Typically Last?",
+        "answer": "Engagements typically range from 6 to 18 months. We aim for deep, structural impact which requires time to implement and stabilize. We are not designed for transactional, short-term advisory stints."
+      },
+      "7": {
+        "question": "Do You Take On Short-Term Or One-Off Projects?",
+        "answer": "Rarely. On occasion, we may accept a high-leverage strategic audit or specific negotiation support, but our model is built around sustained operational partnership rather than ad-hoc project work."
+      },
+      "8": {
+        "question": "Do You Work Internationally?",
+        "answer": "Yes. We operate globally, serving clients across North America, EMEA, and APAC. Our infrastructure is digital-first, allowing us to embed seamlessly into distributed teams and international operations."
+      },
+      "9": {
+        "question": "Is NUWAT A Consulting Firm Or An Operating Partner?",
+        "answer": "We function closer to an operating partner. Unlike traditional consultants who deliver slide decks and leave, we embed ourselves within your leadership structure to execute, oversee, and drive the outcomes we prescribe."
+      },
+      "10": {
+        "question": "How Involved Are You During An Engagement?",
+        "answer": "We are high-touch and deeply integrated. Expect daily communication, direct access to our principals, and hands-on involvement in critical decision-making processes. We do not stand on the sidelines."
+      },
+      "11": {
+        "question": "What Happens After I Request Consideration?",
+        "answer": "Our team will review your submission to assess preliminary fit. If aligned, we will schedule a discovery dialogue to explore your specific challenges. Following this, we will determine if a formal proposal is warranted."
       }
     }
   }

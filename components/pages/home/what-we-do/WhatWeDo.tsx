@@ -74,7 +74,7 @@ const WhatWeDo = ({ content, aboutNuwat }: WhatWeDoProps) => {
               variants={blurFadeVariant}
               custom={0.3}
             >
-              <PrimaryButton title={aboutNuwat} />
+              <PrimaryButton title={aboutNuwat} link={"/about"} />
             </motion.div>
           </div>
         </motion.div>

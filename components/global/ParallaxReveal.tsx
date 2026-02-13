@@ -35,21 +35,16 @@ export default function ParallaxReveal({
     offset: ["start end", "end start"],
   });
 
-  // Smooth out the scroll progress
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
   });
 
-  // Zoom effect: 1.2 -> 1.0
   const scale = useTransform(smoothProgress, [0, 0.5], [1.2, 1.0]);
 
-  // Parallax effect: Slight vertical movement
   const y = useTransform(smoothProgress, [0, 1], ["-10%", "10%"]);
 
-  // Exit animation: Fade out and blur as it leaves the viewport
-  // 0.5 is when it's fully in view center, 1.0 is when it's leaving
   const opacity = useTransform(smoothProgress, [0.7, 1], [1, 0.7]);
   const blurValue = useTransform(smoothProgress, [0.7, 1], [0, 10]);
   const blur = useMotionTemplate`blur(${blurValue}px)`;
@@ -58,7 +53,7 @@ export default function ParallaxReveal({
     <div
       ref={containerRef}
       className={cn(
-        "relative overflow-hidden rounded-2xl w-full h-[500px]",
+        "relative overflow-hidden rounded-2xl w-full h-62.5 md:h-125 lg:h-full",
         containerClassName,
       )}
     >

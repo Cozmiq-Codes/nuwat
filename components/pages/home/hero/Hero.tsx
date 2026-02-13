@@ -36,7 +36,7 @@ const Hero = ({ content, common }: HeroProps) => {
       {/* Main content wrapper */}
       <div className="main-container min-h-svh flex flex-col justify-between py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
         {/* Hero Top */}
-        <div className="mt-20 flex-1 flex flex-col items-center justify-center text-center gap-6 sm:gap-8">
+        <div className="mt-32 flex-1 flex flex-col items-center justify-center text-center gap-6 sm:gap-8">
           <FadeIn delay={0.1} y={20} className="flex justify-center w-full">
             <SectionTag title={content.tag} icon={true} />
           </FadeIn>
@@ -46,7 +46,7 @@ const Hero = ({ content, common }: HeroProps) => {
               <h1
                 className="
                     text-[#F2F7FE] font-semibold capitalize
-                    text-5xl lg:text-[56px]
+                    text-[40px] lg:text-[56px]
                     leading-[1.1]
                     lg:leading-16.25
                     max-w-[90%] md:max-w-2xl lg:max-w-222.5
@@ -77,8 +77,14 @@ const Hero = ({ content, common }: HeroProps) => {
             y={20}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center items-center"
           >
-            <PrimaryButton title={common.buttons.applyNow} />
-            <SecondaryBtn title={common.buttons.exploreApproach} />
+            <PrimaryButton
+              title={common.buttons.applyNow}
+              link={"https://calendly.com/nuwatventures-sales/30min"}
+            />
+            <SecondaryBtn
+              title={common.buttons.exploreApproach}
+              link={"/services"}
+            />
           </FadeIn>
         </div>
 

@@ -104,14 +104,20 @@ const Navbar = ({ nav, common, lang }: NavbarProps) => {
             </ul>
             <div className={"flex flex-col gap-4 lg:hidden mt-4"}>
               <LanguageSwitcher />
-              <SecondaryBtn title={common.buttons.register} />
+              <SecondaryBtn
+                title={common.buttons.register}
+                link={"https://calendly.com/nuwatventures-sales/30min"}
+              />
             </div>
           </div>
 
           <div className="flex items-center gap-4">
             <div className={"hidden lg:flex items-center gap-2"}>
               <LanguageSwitcher />
-              <SecondaryBtn title={common.buttons.register} />
+              <SecondaryBtn
+                title={common.buttons.register}
+                link={"https://calendly.com/nuwatventures-sales/30min"}
+              />
             </div>
 
             <button
