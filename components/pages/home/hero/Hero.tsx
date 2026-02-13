@@ -77,8 +77,14 @@ const Hero = ({ content, common }: HeroProps) => {
             y={20}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center items-center"
           >
-            <PrimaryButton title={common.buttons.applyNow} link={"https://calendly.com/nuwatventures-sales/30min"}/>
-            <SecondaryBtn title={common.buttons.exploreApproach} link={"/services"}/>
+            <PrimaryButton
+              title={common.buttons.applyNow}
+              link={"https://calendly.com/nuwatventures-sales/30min"}
+            />
+            <SecondaryBtn
+              title={common.buttons.exploreApproach}
+              link={"/services"}
+            />
           </FadeIn>
         </div>
 

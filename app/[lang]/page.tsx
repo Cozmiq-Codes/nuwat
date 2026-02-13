@@ -36,13 +36,13 @@ const Home = async ({ params }: PageProps) => {
 
       {/* Vertical Image Start */}
       <section className={"mx-5"}>
-          <ParallaxReveal
-              src={HeroImage}
-              alt="Hero Image"
-              containerClassName="my-10"
-              width={10000}
-              height={10000}
-          />
+        <ParallaxReveal
+          src={HeroImage}
+          alt="Hero Image"
+          containerClassName="my-10"
+          width={10000}
+          height={10000}
+        />
       </section>
       {/* Vertical Image End */}
 
