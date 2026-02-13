@@ -306,12 +306,22 @@
           "title": "We don't run vanity campaigns.",
           "description": "We are not a marketing firm; we are an industrial engine. If it doesn't move the bottom line or secure the foundation, we don't touch it."
         },
-        "superficial": { "title": "NUWAT Does Not Give Superficial" },
-        "cookieCutter": { "title": "We Do Not Offer Cookie-Cutter Solutions" },
-        "spreadsheet": {
-          "title": "We Don't Promise Targets Based On A Spreadsheet."
+        "superficial": {
+          "title": "NUWAT Does Not Give Superficial",
+          "description": "We do not engage in cosmetic updates. If the core structure is flawed, a fresh coat of paint is a waste of capital. We rebuild from the foundation up."
         },
-        "upstream": { "title": "We Work Upstream." }
+        "cookieCutter": {
+          "title": "We Do Not Offer Cookie-Cutter Solutions",
+          "description": "Every mandate is unique because every market position is unique. We refuse to apply templates to complex problems. Your strategy is engineered specifically for your dominance."
+        },
+        "spreadsheet": {
+          "title": "We Don't Promise Targets Based On A Spreadsheet.",
+          "description": "Projections are not reality. We deal in executed outcomes, not theoretical gains. We measure success by market capture, not by cell formulas."
+        },
+        "upstream": {
+          "title": "We Work Upstream.",
+          "description": "We solve problems at the source. Treating symptoms is for the weak; we eradicate the disease by restructuring the decision-making architecture itself."
+        }
       }
     },
     "highEngage": {
