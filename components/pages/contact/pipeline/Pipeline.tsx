@@ -28,8 +28,6 @@ const Pipeline = ({ title, subtitle, items }: PipelineProps) => {
     mandate: md,
   };
 
-  const CARD_DURATION = 0.5;
-
   return (
     <section
       className={
